@@ -1,0 +1,2122 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الدليل التغذوي لمرضى التهاب القولون التقرحي في مصر</title>
+    <meta name="description" content="دليل تغذوي عملي وشامل لمرضى التهاب القولون التقرحي في مصر، مبني على أحدث الأدلة العلمية والمبادئ التوجيهية الطبية.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><circle cx='12' cy='12' r='10' fill='%235F6F3B'/></svg>">
+    
+    <!-- Google Fonts: Cairo & Tajawal -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* ===== BASE OVERFLOW FIXES ===== */
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-color: #F7F2E8; /* Warm beige */
+            --primary-green: #5F6F3B; /* Olive green */
+            --primary-blue: #2F6F8F; /* Medical blue */
+            --text-dark: #2B2B2B; /* Dark text */
+            --text-light: #5A5A5A;
+            --card-green: #EEF4E6; /* Light green */
+            --card-blue: #EAF4F8; /* Light blue */
+            --warn-bg: #FFF3CD; /* Soft orange */
+            --warn-border: #D97706;
+            --white: #FFFFFF;
+            --border-radius: 12px;
+            --box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            --content-width: 1050px;
+        }
+
+        body {
+            font-family: "Tajawal", "Cairo", "Noto Sans Arabic", "Segoe UI", Tahoma, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-dark);
+            line-height: 1.8;
+            font-size: 18px;
+            margin: 0;
+            padding: 0;
+            direction: rtl;
+            text-align: right;
+            overflow-x: hidden;
+            max-width: 100%;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: "Cairo", sans-serif;
+            color: var(--primary-blue);
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        h1 { font-size: 2.5rem; font-weight: 800; color: var(--primary-green); }
+        h2 { font-size: 2rem; border-bottom: 2px solid var(--card-blue); padding-bottom: 0.5rem; }
+        h3 { font-size: 1.5rem; color: var(--primary-green); }
+
+        a {
+            color: var(--primary-blue);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--primary-green);
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: var(--content-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            padding: 4rem 2rem;
+            text-align: center;
+            margin: 2rem auto;
+            box-shadow: var(--box-shadow);
+            border-top: 8px solid var(--primary-green);
+        }
+
+        .hero h1 { margin-top: 0; margin-bottom: 1rem; }
+        .hero .subtitle { font-size: 1.5rem; color: var(--primary-blue); font-weight: 600; margin-bottom: 2rem; }
+        .hero .disclaimer-small { font-size: 1rem; color: var(--text-light); background: var(--card-blue); display: inline-block; padding: 0.5rem 1rem; border-radius: 20px;}
+
+        /* Icon styling */
+        .icon {
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+            margin-bottom: 1rem;
+            fill: var(--primary-green);
+        }
+
+        /* Medical Disclaimer Box */
+        .medical-disclaimer {
+            background-color: var(--warn-bg);
+            border-right: 6px solid var(--warn-border);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            margin: 2rem 0;
+            font-weight: 500;
+        }
+        .medical-disclaimer strong { color: var(--warn-border); font-size: 1.2rem; display: block; margin-bottom: 0.5rem;}
+
+        /* Warnings & Notes */
+        .warning-box {
+            background-color: var(--warn-bg);
+            border-right: 6px solid var(--warn-border);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            margin: 1.5rem 0;
+        }
+        .warning-box strong { color: var(--warn-border); }
+
+        .note-box {
+            background-color: var(--card-blue);
+            border-right: 6px solid var(--primary-blue);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            margin: 1.5rem 0;
+        }
+        .note-box strong { color: var(--primary-blue); }
+
+        /* General Section Content */
+        section {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 2rem;
+            box-shadow: var(--box-shadow);
+        }
+        
+        .section-summary {
+            background: var(--card-green);
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-green);
+        }
+
+        /* Table of Contents */
+        .toc {
+            background: var(--card-blue);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            margin-bottom: 3rem;
+        }
+        .toc h2 { border: none; margin-top: 0; color: var(--primary-blue); }
+        .toc ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+        .toc li a {
+            display: block;
+            background: var(--white);
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            font-weight: 500;
+            border-right: 4px solid var(--primary-blue);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .toc li a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-decoration: none;
+        }
+
+        /* Tables */
+        .table-wrapper {
+            width: 100%;
+            max-width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            margin: 2rem 0;
+            border-radius: 8px;
+            box-shadow: var(--box-shadow);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--white);
+            min-width: 760px;
+        }
+        th, td {
+            padding: 1rem;
+            border: 1px solid #E0E0E0;
+            text-align: right;
+            vertical-align: top;
+        }
+        th {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            font-family: "Cairo", sans-serif;
+            font-weight: 700;
+        }
+        tr:nth-child(even) { background-color: #F9F9F9; }
+        
+        /* Flare Timeline */
+        .timeline {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--card-blue);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            margin: 2rem 0;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .timeline-step {
+            flex: 1;
+            text-align: center;
+            font-weight: bold;
+            color: var(--primary-blue);
+            min-width: 120px;
+            position: relative;
+        }
+        .timeline-step:not(:last-child)::after {
+            content: '←';
+            position: absolute;
+            left: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5rem;
+            color: var(--primary-green);
+        }
+        /* FAQ Cards */
+        .faq-card {
+            background: #FDFDFD;
+            border: 1px solid #E0E0E0;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            border-right: 4px solid var(--primary-green);
+        }
+        .faq-card strong {
+            display: block;
+            color: var(--primary-blue);
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            font-family: "Cairo", sans-serif;
+        }
+
+        /* English Terms / LTR */
+        .en-term {
+            direction: ltr;
+            display: inline-block;
+            font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+        }
+        
+        /* References */
+        .references-list {
+            list-style: none;
+            padding: 0;
+        }
+        .references-list li {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px dashed #CCC;
+        }
+        .references-list li:last-child { border-bottom: none; }
+        .ltr-text {
+            direction: ltr;
+            unicode-bidi: isolate;
+            display: inline-block;
+            text-align: left;
+            width: 100%;
+            overflow-wrap: anywhere;
+            word-break: break-word;
+        }
+        .doi-link {
+            direction: ltr;
+            unicode-bidi: isolate;
+            overflow-wrap: anywhere;
+            word-break: break-word;
+            display: inline-block;
+        }
+        .en-term {
+            overflow-wrap: anywhere;
+            word-break: break-word;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            text-align: center;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+            border-radius: var(--border-radius) var(--border-radius) 0 0;
+        }
+        footer .closing-message {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem auto;
+            line-height: 1.6;
+        }
+
+        /* Print Button */
+        .print-btn {
+            display: block;
+            margin: 1.5rem auto 0 auto;
+            padding: 0.75rem 2rem;
+            background-color: var(--primary-green);
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            font-family: "Cairo", "Tajawal", sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background-color 0.2s ease, transform 0.1s ease;
+        }
+        .print-btn:hover {
+            background-color: #4a5630;
+            transform: translateY(-1px);
+        }
+        .print-btn:active {
+            transform: translateY(0);
+        }
+
+        /* Lists */
+        ul { padding-right: 1.5rem; }
+        li { margin-bottom: 0.5rem; }
+
+        /* Strength badges */
+        .badge {
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.9em;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+        .badge-strong { background: var(--card-green); color: var(--primary-green); border: 1px solid var(--primary-green); }
+        .badge-mod { background: var(--card-blue); color: var(--primary-blue); border: 1px solid var(--primary-blue); }
+        .badge-cond { background: #FFF3CD; color: #D97706; border: 1px solid #D97706; }
+
+        /* Images and Visual Blocks */
+        .visual-block {
+            margin: 2rem 0;
+            text-align: center;
+            break-inside: avoid;
+        }
+        .visual-block img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 16px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            background: #F7F2E8;
+        }
+        .visual-caption {
+            margin-top: 0.75rem;
+            font-size: 0.95rem;
+            color: #5A5A5A;
+            text-align: center;
+        }
+        .hero-visual {
+            max-width: 430px;
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 2rem auto;
+            border-radius: 18px;
+        }
+
+
+        .poster-visual {
+            max-width: 820px;
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 1rem auto;
+            border-radius: 16px;
+        }
+        /* Overlay classes removed — posters contain their own text */
+        .visual-overlay { max-width: 100%; margin: 2rem auto; text-align: center; overflow: hidden; }
+        .visual-overlay img { width: 100%; height: auto; display: block; border-radius: 16px; box-shadow: 0 8px 20px rgba(0,0,0,0.08); }
+        .overlay-label { display: none; }
+
+        /* ===== MOBILE RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            body {
+                font-size: 16px;
+                line-height: 1.75;
+            }
+            .container {
+                padding: 0 10px;
+            }
+            .hero {
+                padding: 2rem 1rem;
+                margin: 1rem 0;
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+                line-height: 1.45;
+            }
+            .hero .subtitle {
+                font-size: 1.1rem;
+            }
+            section {
+                padding: 1.25rem;
+                margin-bottom: 1.2rem;
+            }
+            h1 { font-size: 1.8rem; }
+            h2 { font-size: 1.45rem; }
+            h3 { font-size: 1.2rem; }
+            .toc {
+                padding: 1rem;
+            }
+            .toc ul {
+                grid-template-columns: 1fr;
+            }
+            .toc li a {
+                padding: 0.8rem;
+            }
+            .visual-block {
+                margin: 1.2rem 0;
+            }
+            .hero-visual {
+                max-width: 100%;
+                margin: 1rem auto;
+            }
+            .poster-visual {
+                max-width: 100%;
+            }
+            .visual-caption { font-size: 0.85rem; }
+            th, td {
+                padding: 0.75rem;
+                font-size: 0.9rem;
+            }
+            ul {
+                padding-right: 1.2rem;
+            }
+            .timeline { flex-direction: column; align-items: stretch; }
+            .timeline-step:not(:last-child)::after {
+                content: '↓';
+                position: static;
+                display: block;
+                margin-top: 0.5rem;
+                transform: none;
+            }
+        }
+
+        @media (max-width: 430px) {
+            .container {
+                padding: 0 8px;
+            }
+            .hero h1 {
+                font-size: 1.55rem;
+            }
+            h2 { font-size: 1.3rem; }
+            h3 { font-size: 1.1rem; }
+            section {
+                padding: 1rem 0.8rem;
+            }
+            .medical-disclaimer,
+            .warning-box,
+            .note-box {
+                padding: 1rem;
+            }
+            .faq-card {
+                padding: 1rem;
+            }
+        }
+
+        /* Screen/print toggle */
+        .nowrap {
+            white-space: nowrap;
+        }
+
+        .print-cards {
+            display: none !important;
+        }
+
+        /* Print / PDF Styles */
+        @media print {
+            @page {
+                size: A4 portrait;
+                margin: 12mm;
+            }
+
+            body {
+                font-size: 10pt;
+                line-height: 1.45;
+                background: #ffffff !important;
+                color: black;
+            }
+
+            .container {
+                width: 100% !important;
+                max-width: none !important;
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+
+            section {
+                padding: 8mm !important;
+                margin-bottom: 8mm !important;
+                box-shadow: none !important;
+                border: 1px solid #dddddd !important;
+                break-inside: auto;
+                page-break-inside: auto;
+            }
+
+            /* Force tables to fit A4 width — overrides both screen min-width values */
+            .table-wrapper {
+                overflow: visible !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                box-shadow: none !important;
+            }
+
+            table {
+                width: 100% !important;
+                min-width: 0 !important;
+                max-width: 100% !important;
+                border-collapse: collapse !important;
+                font-size: 8.5pt !important;
+            }
+
+            th,
+            td {
+                padding: 4px 5px !important;
+                white-space: normal !important;
+                overflow-wrap: anywhere !important;
+                word-break: break-word !important;
+                line-height: 1.35 !important;
+                vertical-align: top !important;
+            }
+
+            th {
+                font-size: 8.5pt !important;
+            }
+
+            .badge {
+                font-size: 7.5pt !important;
+                padding: 1px 3px !important;
+                white-space: normal !important;
+            }
+
+            .visual-block,
+            .visual-overlay,
+            .warning-box,
+            .note-box,
+            .medical-disclaimer {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+
+            .page-break {
+                page-break-before: auto !important;
+                break-before: auto !important;
+            }
+
+            img {
+                max-width: 100% !important;
+                height: auto !important;
+                box-shadow: none !important;
+            }
+
+            a { color: black; text-decoration: none; }
+            .hero, footer { background: none !important; color: black; border: 1px solid #ccc; }
+            .warning-box, .note-box, .medical-disclaimer { border: 1px solid black !important; background: white !important; }
+
+            .screen-table { display: none !important; }
+
+            .print-cards { display: block !important; }
+
+            .print-card {
+                border: 1px solid #d8d8d8;
+                border-radius: 6px;
+                padding: 8px 10px;
+                margin: 0 0 8px 0;
+                break-inside: avoid;
+                page-break-inside: avoid;
+                background: #ffffff;
+            }
+
+            .print-card h4 {
+                margin: 0 0 5px 0;
+                color: #2F6F8F;
+                font-size: 11pt;
+                line-height: 1.4;
+            }
+
+            .print-card p {
+                margin: 3px 0;
+                font-size: 9pt;
+                line-height: 1.5;
+            }
+
+            .print-card .label {
+                font-weight: 700;
+                color: #5F6F3B;
+            }
+
+            .nowrap,
+            .en-term {
+                white-space: nowrap;
+                direction: ltr;
+                unicode-bidi: isolate;
+            }
+
+            .no-print { display: none !important; }
+        }
+
+        /* Severity cards — Section 1.4 */
+        .severity-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .severity-card {
+            background: #ffffff;
+            border: 1px solid #d8d8d8;
+            border-right: 6px solid #5F6F3B;
+            border-radius: 14px;
+            padding: 1rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+        }
+
+        .severity-card h4 {
+            color: #2F6F8F;
+            margin-top: 0;
+            margin-bottom: 0.6rem;
+        }
+
+        .severity-card p {
+            margin: 0.45rem 0;
+            line-height: 1.7;
+        }
+
+        .warning-card {
+            border-right-color: #D97706;
+            background: #FFF8E8;
+        }
+
+        .danger-card {
+            border-right-color: #B91C1C;
+            background: #FFF1F1;
+        }
+
+        .reference-note {
+            font-size: 0.95rem;
+            color: #555;
+            background: #F7F2E8;
+            border-right: 4px solid #2F6F8F;
+            padding: 0.8rem 1rem;
+            border-radius: 10px;
+        }
+
+        @media print {
+            .severity-cards {
+                display: block !important;
+            }
+
+            .severity-card {
+                break-inside: avoid;
+                page-break-inside: avoid;
+                margin-bottom: 10px;
+                box-shadow: none !important;
+            }
+        }
+
+        /* Diary cards */
+        .diary-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .diary-card {
+            background: #ffffff;
+            border: 1px solid #d8d8d8;
+            border-right: 6px solid #2F6F8F;
+            border-radius: 14px;
+            padding: 1rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+        }
+
+        .diary-card h4 {
+            color: #2F6F8F;
+            margin-top: 0;
+            margin-bottom: 0.6rem;
+        }
+
+        .diary-card p {
+            margin: 0.4rem 0;
+            line-height: 1.6;
+        }
+
+        @media print {
+            .diary-cards {
+                display: block !important;
+            }
+
+            .diary-card {
+                break-inside: avoid;
+                page-break-inside: avoid;
+                margin-bottom: 10px;
+                box-shadow: none !important;
+            }
+        }
+    </style>
+    <link rel="stylesheet" media="print" href="print-improved.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1.01-13.84c-1.34.42-2.34 1.58-2.67 2.94-.09.38-.45.62-.83.56-.38-.05-.64-.42-.58-.8.44-1.83 1.76-3.37 3.52-3.92.38-.12.78.08.9.46.12.38-.08.78-.46.9l.12-.14zM12 4a8 8 0 100 16 8 8 0 000-16z"/>
+        </svg>
+        <h1>الدليل التغذوي لمرضى التهاب القولون التقرحي في مصر</h1>
+        
+        <div class="visual-block">
+            <img src="assets/cover-poster.jpg" alt="رسم توضيحي يربط بين التغذية وصحة القولون." class="hero-visual">
+            <div class="visual-caption">رسم توضيحي يربط بين التغذية وصحة القولون.</div>
+        </div>
+
+        <div class="subtitle">دليل عملي قائم على الأدلة العلمية</div>
+        <div class="disclaimer-small">نسخة تثقيفية لا تغني عن الاستشارة الطبية</div>
+    </header>
+
+    <!-- Medical Disclaimer Box -->
+    <div class="medical-disclaimer">
+        <strong>تنبيه مهم:</strong>
+        تم إعداد هذا الدليل للأغراض التثقيفية والتعليمية فقط، وهو مبني على أحدث الأدلة العلمية والمبادئ التوجيهية العالمية. التغذية السليمة هي جزء داعم ومكمل لخطة العلاج، ولكنها لا تحل أبداً محل الأدوية الموصوفة أو الاستشارة الطبية المباشرة من الطبيب المعالج. يجب استشارة طبيبك أو أخصائي التغذية العلاجية قبل إجراء أي تغييرات جذرية على نظامك الغذائي، خاصة أثناء فترات نشاط المرض.
+    </div>
+
+    <button class="print-btn no-print" onclick="window.print()">🖨️ طباعة الدليل / حفظ PDF</button>
+
+    <!-- Table of Contents -->
+    <nav class="toc no-print">
+        <h2>جدول المحتويات</h2>
+        <ul>
+            <li><a href="#summary">الملخص التنفيذي</a></li>
+            <li><a href="#section-1">القسم 1: المقدمة: ما هو المرض؟</a>
+                <ul>
+                    <li><a href="#symptoms-severity">1.4 الأعراض الشائعة وتصنيف شدة المرض</a></li>
+                    <li><a href="#extraintestinal-symptoms">1.5 أعراض خارج الجهاز الهضمي لا تهملها</a></li>
+                </ul>
+            </li>
+            <li><a href="#section-2">القسم 2: كيف يؤثر الغذاء على التهاب القولون؟</a></li>
+            <li><a href="#section-3">القسم 3: الأنظمة الغذائية المعتمدة علمياً</a></li>
+            <li><a href="#section-4">القسم 4: الأطعمة المسموح بها والممنوعة</a></li>
+            <li><a href="#section-5">القسم 5: التغذية في فترة الانتكاس</a>
+                <ul>
+                    <li><a href="#flare-action-plan">5.7 ماذا أفعل عند بداية الانتكاسة؟</a></li>
+                </ul>
+            </li>
+            <li><a href="#section-6">القسم 6: الحساسيات والتعذرات الغذائية</a></li>
+            <li><a href="#section-7">القسم 7: التغذية المدعمة للميكروبيوم</a></li>
+            <li><a href="#section-8">القسم 8: العناصر الغذائية والمكملات</a></li>
+            <li><a href="#section-9">القسم 9: خطة غذائية نموذجية أسبوعية</a></li>
+            <li><a href="#section-10">القسم 10: نصائح الطهي والتحضير</a></li>
+            <li><a href="#section-11">القسم 11: التغذية والصحة النفسية</a></li>
+            <li><a href="#section-12">القسم 12: متى تُراجع طبيبك؟</a></li>
+            <li><a href="#section-13">القسم 13: الأسئلة الشائعة</a></li>
+            <li><a href="#food-symptom-diary">ملحق عملي: يوميات الطعام والأعراض لمدة 7 أيام</a></li>
+            <li><a href="#section-14">القسم 14: المراجع والمصادر</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Executive Summary -->
+        <section id="summary">
+            <h2>الملخص التنفيذي</h2>
+            <p>يهدف هذا الدليل لتوفير مرجع علمي وعملي وشامل للمريض المصري المصاب بالتهاب القولون التقرحي. يستعرض الدليل كيفية تأثير الغذاء على جدار الأمعاء والبكتيريا النافعة، ويقدم تصنيفاً تفصيلياً للأطعمة المصرية الشائعة بناءً على مدى ملاءمتها في فترتي "نشاط المرض" (الانتكاسة) و"الكمون" (الهدوء). يؤكد الدليل على أن الغذاء قد يساعد في السيطرة على الأعراض وتقليل الالتهاب، ولكنه ليس بديلاً عن العلاج الطبي. يتميز الدليل بتوضيح قوة الأدلة العلمية لكل توصية، مع خطط عملية ونصائح نفسية لضمان تلقي المريض معلومات دقيقة وآمنة وداعمة.</p>
+        </section>
+
+        <!-- Section 1 -->
+        <section id="section-1">
+            <h2>1. المقدمة: ما هو التهاب القولون التقرحي؟</h2>
+            <div class="section-summary">ملخص القسم: التهاب القولون التقرحي هو مرض مناعي مزمن يصيب الأمعاء ويتميز بفترات من النشاط والكمون. تلعب التغذية دوراً داعماً ومحورياً في تحسين جودة الحياة وتقليل الأعراض، لكنها لا تغني أبداً عن الالتزام بالعلاج الطبي.</div>
+            
+            <h3>1.1 ما هو المرض؟</h3>
+            <p>التهاب القولون التقرحي (<span class="en-term">Ulcerative Colitis</span>) هو مرض مناعي مزمن يتسبب في حدوث التهابات وتقرحات سطحية متصلة في البطانة الداخلية للأمعاء الغليظة (القولون) والمستقيم. يتسم هذا المرض بمسار متأرجح؛ حيث يمر المريض بفترات تنشط فيها الأعراض وتُعرف بالانتكاسات (<span class="en-term">Flares</span>)، تعقبها فترات من الهدوء وتراجع الأعراض تُعرف بالكمون (<span class="en-term">Remission</span>).</p>
+
+            <h3>1.2 أسباب المرض وتطوره</h3>
+            <p>لا يوجد سبب واحد ومباشر للإصابة بالمرض. تشير الأدلة العلمية إلى أنه ينتج عن تفاعل معقد يجمع بين الاستعداد الوراثي، ووجود خلل في استجابة الجهاز المناعي، بالإضافة إلى محفزات بيئية مختلفة (Li et al., 2026). يؤدي هذا التفاعل إلى استجابة مناعية مفرطة تهاجم جدار القولون السليم.</p>
+
+            <h3>1.3 علاقة التغذية بالمرض</h3>
+            <p>يعد الغذاء أداة يومية داعمة ومهمة بيد المريض للمساعدة في إدارة مرضه جنباً إلى جنب مع علاجه الطبي. الأنظمة الغذائية الغربية المليئة بالأطعمة فائقة المعالجة، والدهون المشبعة، والسكريات، ترتبط بتغييرات سلبية في بيئة الأمعاء قد تساهم في تهيج الالتهابات (Herrador-López et al., 2023). وفي المقابل، تدعم التغذية السليمة المتوازنة صحة خلايا القولون وقد تساعد في إطالة فترات الهدوء.</p>
+            <p><span class="badge badge-strong">أدلة قوية</span> التعديلات الغذائية تُعد تدخلاً داعماً يهدف إلى تحسين جودة الحياة وتخفيف العبء على الأمعاء، وليست بديلاً عن الأدوية والمتابعة الطبية (Hashash et al., 2024).</p>
+
+            <h3 id="symptoms-severity">1.4 الأعراض الشائعة وتصنيف شدة المرض</h3>
+
+            <div class="section-summary">ملخص القسم: تختلف أعراض التهاب القولون التقرحي من مريض لآخر حسب شدة الالتهاب وامتداده داخل القولون. يساعد فهم الأعراض ودرجات الشدة على معرفة متى يمكن الاكتفاء بالمتابعة العادية، ومتى يجب التواصل العاجل مع الطبيب.</div>
+
+            <p>الأعراض الأكثر شيوعاً في التهاب القولون التقرحي تشمل الإسهال، وجود دم أو مخاط مع البراز، الإلحاح الشديد لدخول الحمام، زيادة عدد مرات التبرز، ألم أو تقلصات أسفل البطن، الشعور بعدم اكتمال الإخراج، التعب العام، فقدان الشهية، ونقص الوزن في بعض الحالات. وقد تظهر أعراض خارج القولون مثل آلام المفاصل أو مشاكل الجلد أو العينين، وهي تحتاج دائماً لتقييم طبي متخصص.</p>
+
+            <div class="note-box">
+                <strong>ملاحظة:</strong> وجود عرض واحد لا يكفي لتحديد شدة المرض. تقييم الشدة يعتمد على عدد مرات التبرز، كمية الدم، درجة الحرارة، النبض، الأنيميا، دلالات الالتهاب، نتائج منظار القولون، ورأي الطبيب المعالج.
+            </div>
+
+            <h4>تقسيم شدة التهاب القولون التقرحي بصورة مبسطة</h4>
+
+            <div class="severity-cards">
+
+                <div class="severity-card">
+                    <h4>مرحلة الكمون أو الهدوء</h4>
+                    <p><strong>الوصف:</strong> الأعراض غائبة أو محدودة جداً، ولا يوجد إسهال أو نزيف واضح.</p>
+                    <p><strong>المتابعة:</strong> الاستمرار على العلاج والمتابعة الدورية، وعدم إيقاف الدواء بسبب تحسن الأعراض.</p>
+                    <p><strong>التغذية:</strong> يناسبها غالباً نمط غذائي متوازن مثل حمية البحر الأبيض المتوسط مع مراعاة التحمل الشخصي.</p>
+                </div>
+
+                <div class="severity-card">
+                    <h4>نشاط خفيف</h4>
+                    <p><strong>الأعراض المحتملة:</strong> أقل من 4 مرات تبرز يومياً غالباً، مع أو بدون كمية بسيطة من الدم، ودون حرارة أو إرهاق شديد.</p>
+                    <p><strong>ما يجب فعله:</strong> التواصل مع الطبيب إذا استمرت الأعراض أو زاد الدم، وعدم الاعتماد على تعديل الطعام وحده.</p>
+                    <p><strong>التغذية:</strong> تقليل المهيجات مؤقتاً، وطهي الخضروات جيداً، ومراقبة تحمل الألياف والبقوليات.</p>
+                </div>
+
+                <div class="severity-card">
+                    <h4>نشاط متوسط</h4>
+                    <p><strong>الأعراض المحتملة:</strong> زيادة عدد مرات التبرز، وجود دم أو مخاط أو إلحاح واضح، مع مغص أو تعب يؤثر على النشاط اليومي.</p>
+                    <p><strong>ما يجب فعله:</strong> يحتاج إلى مراجعة الطبيب لتقييم نشاط الالتهاب والتحاليل وخطة العلاج.</p>
+                    <p><strong>التغذية:</strong> اختيار أطعمة أسهل في الهضم، وتقليل الألياف الخشنة والمقليات، والاهتمام بالسوائل.</p>
+                </div>
+
+                <div class="severity-card warning-card">
+                    <h4>نشاط شديد</h4>
+                    <p><strong>الأعراض المحتملة:</strong> 6 مرات تبرز أو أكثر يومياً، دم واضح، ضعف شديد، ألم ملحوظ، أو علامات أنيميا أو التهاب عام.</p>
+                    <p><strong>ما يجب فعله:</strong> يجب التواصل مع الطبيب فوراً، وقد يحتاج المريض إلى تقييم عاجل.</p>
+                    <p><strong>التغذية:</strong> لا تكفي التغذية وحدها. الأولوية لتقييم الطبيب وتعويض السوائل والأملاح عند الحاجة.</p>
+                </div>
+
+                <div class="severity-card danger-card">
+                    <h4>التهاب قولون تقرحي حاد شديد</h4>
+                    <p><strong>الأعراض التحذيرية:</strong> إسهال شديد متكرر مع نزيف واضح، حرارة، تسارع ضربات القلب، دوخة، جفاف، ألم شديد، قيء مستمر، أو ضعف شديد.</p>
+                    <p><strong>ما يجب فعله:</strong> هذه حالة تستدعي التوجه للطوارئ أو المستشفى فوراً، ولا يجوز التعامل معها بالغذاء أو السوائل المنزلية فقط.</p>
+                    <p><strong>التغذية:</strong> يتم تحديد التغذية والسوائل داخل الخطة الطبية حسب حالة المريض.</p>
+                </div>
+
+            </div>
+
+            <div class="warning-box">
+                <strong>تنبيه مهم:</strong> هذا التصنيف للتثقيف فقط، وليس أداة تشخيص ذاتي. إذا ظهرت أعراض شديدة، أو نزيف متكرر، أو حرارة، أو دوخة، أو علامات جفاف، أو فقدان وزن سريع؛ يجب التواصل مع الطبيب أو التوجه للطوارئ فوراً.
+            </div>
+
+            <p class="reference-note">يعتمد هذا التقسيم المبسط على مبادئ تقييم شدة التهاب القولون التقرحي المستخدمة في الإرشادات الطبية، ومنها معايير ترولوف وويتس، وإرشادات <span class="en-term">ECCO</span> و<span class="en-term">AGA</span> و<span class="en-term">NICE</span> لتصنيف النشاط إلى خفيف ومتوسط وشديد.</p>
+
+            <h3 id="extraintestinal-symptoms">1.5 أعراض خارج الجهاز الهضمي لا تهملها</h3>
+
+            <div class="section-summary">ملخص القسم: التهاب القولون التقرحي لا يؤثر دائماً على القولون فقط. عند بعض المرضى قد تظهر أعراض في المفاصل، العين، الجلد، الفم، أو الدم. معرفة هذه العلامات تساعد المريض على طلب المساعدة في الوقت المناسب.</div>
+
+            <p>قد تظهر لدى بعض مرضى التهاب القولون التقرحي أعراض خارج الجهاز الهضمي، وتسمى أحياناً المظاهر خارج الأمعاء. لا يعني ظهورها بالضرورة وجود خطر فوري، لكنها تحتاج إلى الانتباه، خاصة إذا كانت شديدة أو متكررة أو ظهرت مع نشاط أعراض القولون.</p>
+
+            <div class="severity-cards">
+                <div class="severity-card">
+                    <h4>آلام المفاصل</h4>
+                    <p>قد يشعر بعض المرضى بألم أو تيبس في المفاصل، خاصة الركبتين أو الكاحلين أو اليدين. إذا كان الألم شديداً أو مصحوباً بتورم، يجب إبلاغ الطبيب.</p>
+                </div>
+                <div class="severity-card">
+                    <h4>تقرحات الفم</h4>
+                    <p>قد تظهر قرح صغيرة مؤلمة داخل الفم، خصوصاً أثناء فترات نشاط المرض أو مع نقص بعض العناصر الغذائية.</p>
+                </div>
+                <div class="severity-card warning-card">
+                    <h4>أعراض العين</h4>
+                    <p>احمرار العين، ألم العين، الحساسية للضوء، أو زغللة النظر لا يجب تجاهلها، لأنها قد تحتاج إلى تقييم طبي سريع.</p>
+                </div>
+                <div class="severity-card">
+                    <h4>أعراض الجلد</h4>
+                    <p>قد تظهر طفح جلدي، تقرحات، أو كتل مؤلمة تحت الجلد. إذا كانت مؤلمة أو متزايدة أو مصحوبة بحرارة، يجب مراجعة الطبيب.</p>
+                </div>
+                <div class="severity-card">
+                    <h4>الإرهاق والأنيميا</h4>
+                    <p>التعب الشديد، الدوخة، ضيق النفس مع المجهود، أو شحوب الوجه قد تكون علامات على أنيميا أو نقص عناصر غذائية.</p>
+                </div>
+                <div class="severity-card">
+                    <h4>فقدان وزن غير مبرر</h4>
+                    <p>فقدان الوزن السريع أو غير المقصود قد يدل على نشاط المرض، سوء تغذية، أو نقص في الامتصاص، ويحتاج إلى متابعة.</p>
+                </div>
+            </div>
+
+            <div class="warning-box">
+                <strong>تنبيه مهم:</strong> ألم أو احمرار العين مع زغللة، ألم مفصل شديد مع تورم، طفح جلدي مؤلم، فقدان وزن سريع، أو إرهاق شديد مستمر؛ كلها علامات تستدعي التواصل مع الطبيب وعدم الاكتفاء بتعديل الغذاء.
+            </div>
+
+        </section>
+
+        <!-- Section 2 -->
+        <section id="section-2">
+            <h2>2. كيف يؤثر الغذاء على التهاب القولون؟</h2>
+            <div class="section-summary">ملخص القسم: يتفاعل الغذاء بشكل مباشر مع البكتيريا النافعة وجدار الأمعاء. الخيارات الغذائية الصحية تساعد في بناء حاجز حماية قوي، في حين أن الأطعمة المصنعة تضر بهذا الحاجز وتُحفز الاستجابة الالتهابية.</div>
+
+            
+            <div class="visual-block poster-block">
+                <img src="assets/food-effect-poster.jpg" alt="الغذاء يؤثر في الميكروبيوم، والحاجز المخاطي، والاستجابة الالتهابية." class="poster-visual" loading="lazy">
+                <div class="visual-caption">الغذاء يؤثر في الميكروبيوم، والحاجز المخاطي، والاستجابة الالتهابية.</div>
+            </div>
+
+
+            <h3>2.1 ميكروبيوم الأمعاء (<span class="en-term">Gut Microbiome</span>)</h3>
+            <p>يحتوي الجهاز الهضمي على تريليونات من الكائنات الدقيقة المفيدة التي تلعب دوراً حاسماً في الهضم وتنظيم المناعة. الأنماط الغذائية التي تفتقر إلى الألياف وتعتمد بكثافة على الأطعمة المصنعة تُحدث خللاً في توازن هذه البكتيريا، مما يقلل من تنوعها ويسمح بنمو سلالات قد تحفز الالتهاب (Herrador-López et al., 2023).</p>
+
+            <h3>2.2 الحاجز المخاطي (<span class="en-term">Mucosal Barrier</span>)</h3>
+            <p>يمكن تخيل البطانة الداخلية للقولون كـ "سور حماية" يمنع تسرب السموم إلى مجرى الدم. تعمل الألياف الغذائية القابلة للذوبان كغذاء للبكتيريا النافعة، التي تقوم بدورها بإنتاج أحماض دهنية قصيرة السلسلة تغذي وتقوي هذا السور (Li et al., 2026).</p>
+
+            <h3>2.3 الاستجابة الالتهابية (<span class="en-term">Inflammatory Response</span>)</h3>
+            <p>تحتوي العديد من الأطعمة الحديثة على إضافات مثل المستحلبات الصناعية (<span class="en-term">Emulsifiers</span>). تشير الأبحاث إلى أن هذه المواد قد تتفاعل سلباً مع حاجز الأمعاء، مما يُستفز جهاز المناعة ليقوم برد فعل التهابي (Hashash et al., 2024).</p>
+
+            <h3>2.4 مثال عملي من المائدة المصرية</h3>
+            <p>وجبة سريعة من الخبز الأبيض واللحوم المصنعة تفتقر للمغذيات وتُجهد الأمعاء. في المقابل، وجبة من الزبادي الطبيعي مع قليل من زيت الزيتون توفر بكتيريا نافعة ودهوناً صحية تساهم في ترميم جدار القولون بلطف ودعمه.</p>
+        </section>
+
+<!-- Section 3 -->
+        <section id="section-3">
+            <h2>3. الأنظمة الغذائية المعتمدة علمياً</h2>
+            <div class="section-summary">ملخص القسم: لا يوجد نظام غذائي واحد ثابت يناسب الجميع في كل المراحل. الجدول التالي يوضح الخيارات المدروسة علمياً، وكيفية توظيفها ومحاذيرها بشكل صحيح لمرضى التهاب القولون التقرحي.</div>
+
+            <h3>3.1 حمية البحر الأبيض المتوسط: الأساس العملي في فترة الهدوء</h3>
+            <p><span class="badge badge-strong">أدلة قوية</span> (Hashash et al., 2024; Haskey et al., 2022; Herrador-López et al., 2023)</p>
+            <p>حمية البحر الأبيض المتوسط ليست قائمة جامدة، بل نمط غذائي متوازن يعتمد على زيت الزيتون، والخضروات، والفواكه، والأسماك، والحبوب، والبقوليات بقدر التحمل، مع تقليل اللحوم المصنعة والسكريات والأطعمة فائقة المعالجة. يناسب هذا النمط غالباً فترة الهدوء، لأنه يساعد على تنوع الغذاء ودعم الميكروبيوم وتقليل الاعتماد على الأطعمة المهيجة.</p>
+            <p>في البيئة المصرية يمكن تطبيقه بصورة عملية من خلال: زيت الزيتون، السمك المشوي، الأرز أو الخبز البلدي حسب التحمل، الخضروات المطبوخة مثل الملوخية والكوسة والجزر، الزبادي الطبيعي، الجبن القريش، والفاكهة المقشرة عند الحاجة.</p>
+            <p>عند ظهور أعراض خفيفة يمكن تعديل الحمية دون إلغائها: تُطهى الخضروات جيداً، تُقشر الفاكهة، تُقلل البقوليات مؤقتاً، وتُستبدل المقليات بالأطعمة المشوية أو المسلوقة أو المطهية بالبخار.</p>
+            <div class="note-box">
+                <strong>ملاحظة:</strong> حمية البحر الأبيض المتوسط هي خيار عملي مناسب غالباً في فترة الهدوء، لكنها لا تُعد علاجاً مستقلاً، ولا تكفي وحدها أثناء الانتكاسة النشطة.
+            </div>
+
+            <h3>3.2 حمية الفودماب المنخفضة: للأعراض الوظيفية لا لعلاج الالتهاب</h3>
+            <p><span class="badge badge-mod">أدلة متوسطة</span> (Peng et al., 2022)</p>
+            <p>الفودماب (<span class="en-term">FODMAP</span>) هي أنواع من الكربوهيدرات قصيرة السلسلة التي قد تتخمر داخل الأمعاء وتسبب غازات وانتفاخاً وتقلصات لدى بعض المرضى. لذلك قد تساعد هذه الحمية في تخفيف الأعراض الوظيفية مثل الانتفاخ والغازات وعدم الارتياح، لكنها لا تُثبت التئام الغشاء المخاطي ولا تعالج الالتهاب نفسه.</p>
+            <p>تُطبّق هذه الحمية على مراحل قصيرة ومنظمة: مرحلة تقليل مؤقتة، ثم إعادة إدخال تدريجية للأطعمة، ثم تخصيص النظام حسب التحمل الشخصي. لا يُنصح باتباعها لفترات طويلة دون إشراف لأنها قد تقلل تنوع الغذاء وتضعف تنوع الميكروبيوم وتزيد الخوف من الطعام.</p>
+            <p>أطعمة مصرية قد تُختبر بحذر: الفول، العدس، البصل، الثوم، الكشري، بعض الفواكه، والقمح لدى بعض المرضى. ومن الخيارات الأسهل غالباً: الأرز، البطاطس، الجزر المطبوخ، الكوسة المطبوخة، الموز الناضج، البيض، السمك، والدجاج.</p>
+            <div class="warning-box">
+                <strong>تنبيه مهم:</strong> لا يُنصح باتباع أي حمية صارمة أو استبعاد مجموعات غذائية كاملة دون إشراف طبي أو تغذوي، خاصة أثناء الانتكاسة أو مع فقدان الوزن أو الأنيميا أو العلاج بالكورتيزون أو العلاج البيولوجي.
+            </div>
+
+            <h3>مقارنة الأنظمة الغذائية الرئيسية</h3>
+            <p>يوضح الجدول التالي أبرز الأنظمة الغذائية المدروسة لمرضى التهاب القولون التقرحي، مع قوة الأدلة العلمية ومحاذيرها العملية. مرّر الجدول يميناً ويساراً على الهاتف لرؤية كل الأعمدة.</p>
+
+<div class="table-wrapper screen-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>النظام الغذائي</th>
+                            <th>الفكرة الرئيسية</th>
+                            <th>أفضل استخدام</th>
+                            <th>قوة الأدلة</th>
+                            <th>الملاءمة للمريض المصري</th>
+                            <th>محاذير عملية</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>حمية البحر الأبيض المتوسط</strong><br>(<span class="en-term">Mediterranean Diet</span>)</td>
+                            <td>زيت الزيتون، الخضروات، الفواكه، الأسماك، وتقليل اللحوم الحمراء والمصنعة.</td>
+                            <td>فترة الكمون كنمط حياة مستدام للمساعدة في الوقاية.</td>
+                            <td><span class="badge badge-strong">أدلة قوية</span><br>(Hashash et al., 2024)</td>
+                            <td>ممتازة، تعتمد على مكونات متوفرة كالأسماك والزيتون.</td>
+                            <td>قد تحتاج لتعديل قوام الخضروات النيئة إذا ظهرت أعراض.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>الحمية المتوسطية المعدلة</strong><br>(<span class="en-term">Modified Mediterranean</span>)</td>
+                            <td>نفس المبادئ، مع تعديل القوام (طهي الخضروات، هرسها، تقشير الفواكه).</td>
+                            <td>الانتكاسات الخفيفة إلى المتوسطة، أو تضيق الأمعاء.</td>
+                            <td><span class="badge badge-cond">رأي الخبراء</span></td>
+                            <td>مثالية للحد من الاحتكاك الجسدي بالقولون المتقرح.</td>
+                            <td>تأكد من الطهي الجيد وتجنب القشور القاسية أثناء الانتكاسة.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>نمط غذائي مقلل للمحفزات الالتهابية</strong></td>
+                            <td>تجنب الأطعمة فائقة المعالجة، والسكريات المضافة، والدهون المتحولة.</td>
+                            <td>جميع المراحل، لتقليل محفزات الالتهاب.</td>
+                            <td><span class="badge badge-strong">قوية/متوسطة</span></td>
+                            <td>تتطلب تقليل الاعتماد على الوجبات السريعة والمعلبات.</td>
+                            <td>قد تحتاج وقتاً لتغيير العادات وتقليل الحلويات الجاهزة.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>نهج الألياف القابلة للذوبان</strong><br>(<span class="en-term">Soluble fiber approach</span>)</td>
+                            <td>الاعتماد على الألياف الناعمة (لب الفاكهة، الشوفان) وتجنب الخشنة.</td>
+                            <td>الانتقال التدريجي من الانتكاسة نحو الهدوء.</td>
+                            <td><span class="badge badge-mod">أدلة متوسطة</span><br>(Halmos et al., 2024)</td>
+                            <td>جيد جداً باستخدام الفواكه المقشرة والشوفان.</td>
+                            <td>يُحذر من الألياف غير القابلة للذوبان (البذور/القشور) أثناء النشاط.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>حمية الفودماب</strong><br>(<span class="en-term">Low-FODMAP Diet</span>)</td>
+                            <td>تقليل الكربوهيدرات القابلة للتخمر (البصل، الثوم، البقوليات).</td>
+                            <td>قد تقلل أعراض الغازات والانتفاخ.</td>
+                            <td><span class="badge badge-mod">أدلة متوسطة</span><br>(Peng et al., 2022)</td>
+                            <td>صعبة قليلاً لاعتمادنا على البصل والبقوليات.</td>
+                            <td><strong>تُستخدم مؤقتاً فقط</strong> للتحكم بالأعراض؛ لا تعالج الالتهاب وقد تضر الميكروبيوم إذا طالت.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>التغذية المعوية الحصرية</strong><br>(<span class="en-term">Exclusive Enteral Nutrition</span>)</td>
+                            <td>تركيبات طبية سائلة سهلة الامتصاص.</td>
+                            <td>حالات سوء التغذية الشديدة أو التحضير للجراحة.</td>
+                            <td><span class="badge badge-mod">أدلة متوسطة</span><br>في البالغين (Chu et al., 2025)</td>
+                            <td>يتم توفيرها تحت إشراف طبي بالمستشفيات.</td>
+                            <td>ليست علاجاً أساسياً للمرضى المستقرين؛ تُستخدم طبياً.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>حمية الكربوهيدرات المحددة</strong><br>(<span class="en-term">SCD</span>)</td>
+                            <td>المنع الصارم لجميع الحبوب المعقدة والنشويات والسكريات.</td>
+                            <td>يُفضل عدم الاعتماد عليها كبديل للعلاج.</td>
+                            <td><span class="badge badge-cond">أدلة محدودة</span><br>(Abbas et al., 2023)</td>
+                            <td>قاسية لتعارضها مع الاعتماد على الأرز والخبز.</td>
+                            <td>قاسية جداً، قد تسبب سوء التغذية، ولم يثبت تفوقها علمياً على الغذاء الصحي.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="print-cards">
+                <div class="print-card">
+                    <h4>حمية البحر الأبيض المتوسط <span class="en-term nowrap">(Mediterranean Diet)</span></h4>
+                    <p><span class="label">الفكرة الرئيسية:</span> زيت الزيتون، الخضروات، الفواكه، الأسماك، وتقليل اللحوم الحمراء والمصنعة.</p>
+                    <p><span class="label">أفضل استخدام:</span> فترة الكمون كنمط حياة مستدام للمساعدة في الوقاية.</p>
+                    <p><span class="label">قوة الأدلة:</span> أدلة قوية — <span class="en-term nowrap">(Hashash et al., 2024)</span></p>
+                    <p><span class="label">الملاءمة للمريض المصري:</span> ممتازة، تعتمد على مكونات متوفرة كالأسماك والزيتون.</p>
+                    <p><span class="label">محاذير عملية:</span> قد تحتاج لتعديل قوام الخضروات النيئة إذا ظهرت أعراض.</p>
+                </div>
+                <div class="print-card">
+                    <h4>الحمية المتوسطية المعدلة <span class="en-term nowrap">(Modified Mediterranean)</span></h4>
+                    <p><span class="label">الفكرة الرئيسية:</span> نفس المبادئ، مع تعديل القوام (طهي الخضروات، هرسها، تقشير الفواكه).</p>
+                    <p><span class="label">أفضل استخدام:</span> الانتكاسات الخفيفة إلى المتوسطة، أو تضيق الأمعاء.</p>
+                    <p><span class="label">قوة الأدلة:</span> رأي الخبراء</p>
+                    <p><span class="label">الملاءمة للمريض المصري:</span> مثالية للحد من الاحتكاك الجسدي بالقولون المتقرح.</p>
+                    <p><span class="label">محاذير عملية:</span> تأكد من الطهي الجيد وتجنب القشور القاسية أثناء الانتكاسة.</p>
+                </div>
+                <div class="print-card">
+                    <h4>نمط غذائي مقلل للمحفزات الالتهابية</h4>
+                    <p><span class="label">الفكرة الرئيسية:</span> تجنب الأطعمة فائقة المعالجة، والسكريات المضافة، والدهون المتحولة.</p>
+                    <p><span class="label">أفضل استخدام:</span> جميع المراحل، لتقليل محفزات الالتهاب.</p>
+                    <p><span class="label">قوة الأدلة:</span> قوية/متوسطة</p>
+                    <p><span class="label">الملاءمة للمريض المصري:</span> تتطلب تقليل الاعتماد على الوجبات السريعة والمعلبات.</p>
+                    <p><span class="label">محاذير عملية:</span> قد تحتاج وقتاً لتغيير العادات وتقليل الحلويات الجاهزة.</p>
+                </div>
+                <div class="print-card">
+                    <h4>نهج الألياف القابلة للذوبان <span class="en-term nowrap">(Soluble Fiber Approach)</span></h4>
+                    <p><span class="label">الفكرة الرئيسية:</span> الاعتماد على الألياف الناعمة (لب الفاكهة، الشوفان) وتجنب الخشنة.</p>
+                    <p><span class="label">أفضل استخدام:</span> الانتقال التدريجي من الانتكاسة نحو الهدوء.</p>
+                    <p><span class="label">قوة الأدلة:</span> أدلة متوسطة — <span class="en-term nowrap">(Halmos et al., 2024)</span></p>
+                    <p><span class="label">الملاءمة للمريض المصري:</span> جيد جداً باستخدام الفواكه المقشرة والشوفان.</p>
+                    <p><span class="label">محاذير عملية:</span> يُحذر من الألياف غير القابلة للذوبان (البذور/القشور) أثناء النشاط.</p>
+                </div>
+                <div class="print-card">
+                    <h4>حمية الفودماب <span class="en-term nowrap">(Low-FODMAP Diet)</span></h4>
+                    <p><span class="label">الفكرة الرئيسية:</span> تقليل الكربوهيدرات القابلة للتخمر (البصل، الثوم، البقوليات).</p>
+                    <p><span class="label">أفضل استخدام:</span> قد تقلل أعراض الغازات والانتفاخ.</p>
+                    <p><span class="label">قوة الأدلة:</span> أدلة متوسطة — <span class="en-term nowrap">(Peng et al., 2022)</span></p>
+                    <p><span class="label">الملاءمة للمريض المصري:</span> صعبة قليلاً لاعتمادنا على البصل والبقوليات.</p>
+                    <p><span class="label">محاذير عملية:</span> تُستخدم مؤقتاً فقط للتحكم بالأعراض؛ لا تعالج الالتهاب وقد تضر الميكروبيوم إذا طالت.</p>
+                </div>
+                <div class="print-card">
+                    <h4>التغذية المعوية الحصرية <span class="en-term nowrap">(Exclusive Enteral Nutrition)</span></h4>
+                    <p><span class="label">الفكرة الرئيسية:</span> تركيبات طبية سائلة سهلة الامتصاص.</p>
+                    <p><span class="label">أفضل استخدام:</span> حالات سوء التغذية الشديدة أو التحضير للجراحة.</p>
+                    <p><span class="label">قوة الأدلة:</span> أدلة متوسطة في البالغين — <span class="en-term nowrap">(Chu et al., 2025)</span></p>
+                    <p><span class="label">الملاءمة للمريض المصري:</span> يتم توفيرها تحت إشراف طبي بالمستشفيات.</p>
+                    <p><span class="label">محاذير عملية:</span> ليست علاجاً أساسياً للمرضى المستقرين؛ تُستخدم طبياً.</p>
+                </div>
+                <div class="print-card">
+                    <h4>حمية الكربوهيدرات المحددة <span class="en-term nowrap">(SCD)</span></h4>
+                    <p><span class="label">الفكرة الرئيسية:</span> المنع الصارم لجميع الحبوب المعقدة والنشويات والسكريات.</p>
+                    <p><span class="label">أفضل استخدام:</span> يُفضل عدم الاعتماد عليها كبديل للعلاج.</p>
+                    <p><span class="label">قوة الأدلة:</span> أدلة محدودة — <span class="en-term nowrap">(Abbas et al., 2023)</span></p>
+                    <p><span class="label">الملاءمة للمريض المصري:</span> قاسية لتعارضها مع الاعتماد على الأرز والخبز.</p>
+                    <p><span class="label">محاذير عملية:</span> قاسية جداً، قد تسبب سوء التغذية، ولم يثبت تفوقها علمياً على الغذاء الصحي.</p>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Section 4 -->
+        <section id="section-4">
+            <h2>4. الأطعمة المسموح بها والتي تُستخدم بحذر والتي يُفضّل تجنبها</h2>
+            <div class="section-summary">ملخص القسم: تطبيق التوصيات العلمية على الأطعمة المصرية اليومية يساعد في اتخاذ قرارات واقعية.</div>
+            
+            <div class="note-box">
+                <strong>ملاحظة:</strong> التوصيات في هذا الجدول مبنية غالباً على <strong>رأي الخبراء</strong> والممارسة الإكلينيكية عبر تطبيق القواعد العلمية المتعلقة بقوام الألياف، ومحتوى الدهون، ومستويات الفودماب على الأطعمة المحلية (Hashash et al., 2024; Herrador-López et al., 2023; Peng et al., 2022).
+            </div>
+
+            
+            <div class="visual-block poster-block">
+                <img src="assets/egyptian-foods-poster.jpg" alt="تصنيف بصري مبسط للأطعمة المصرية حسب درجة الملاءمة." class="poster-visual" loading="lazy">
+                <div class="visual-caption">تصنيف بصري مبسط للأطعمة المصرية حسب درجة الملاءمة.</div>
+            </div>
+
+
+            <div class="table-wrapper screen-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>فئة الطعام</th>
+                            <th>الصنف المصري</th>
+                            <th>أفضل مرحلة للتناول</th>
+                            <th>سبب التوصية وطريقة التحضير المثلى</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>مناسب:</strong> <strong>مفيدة وجيدة التحمل</strong></td>
+                            <td><strong>الخبز البلدي</strong></td>
+                            <td>فترة الكمون (الهدوء)</td>
+                            <td>غني بالألياف المفيدة أثناء الهدوء. في الانتكاسات الشديدة، قد يكون التوست الأبيض أسهل هضماً ومؤقتاً.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>مناسب:</strong> <strong>مفيدة وجيدة التحمل</strong></td>
+                            <td><strong>الملوخية</strong></td>
+                            <td>جميع المراحل</td>
+                            <td>خضار مطبوخ وناعم (ألياف ذائبة). تختلف القدرة على تحملها؛ يُفضل طهيها بدهون قليلة وتقليل الثوم جداً.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>مناسب:</strong> <strong>مفيدة وجيدة التحمل</strong></td>
+                            <td><strong>الأرز الأبيض</strong></td>
+                            <td>الانتكاسة والهدوء</td>
+                            <td>طعام قليل الفضلات (<span class="en-term">Low-residue</span>) وأسهل في الهضم لإراحة الأمعاء وقت النشاط والإسهال.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>مناسب:</strong> <strong>مفيدة وجيدة التحمل</strong></td>
+                            <td><strong>مرق الكوارع</strong></td>
+                            <td>فترات الانتكاسة</td>
+                            <td>يجب أن يكون <strong>مرقاً منزوع الدهن</strong> (شوربة صافية). يوفر سوائل مغذية بأحماض أمينية لقولون متهيج.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>مناسب:</strong> <strong>مفيدة وجيدة التحمل</strong></td>
+                            <td><strong>الزبادي والجبن القريش</strong></td>
+                            <td>جميع المراحل</td>
+                            <td>غالباً جيد التحمل ومصدر للكالسيوم وبروبيوتيك طبيعي. (يُستبعد في حالة حساسية اللاكتوز المؤكدة).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>مناسب:</strong> <strong>مفيدة وجيدة التحمل</strong></td>
+                            <td><strong>الزيتون وزيت الزيتون</strong></td>
+                            <td>جميع المراحل</td>
+                            <td>دهون صحية مرتبطة بنمط غذائي مقلل للمحفزات الالتهابية. يُغسل الزيتون المخلل جيداً من الملح لتجنب احتباس السوائل.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>مناسب:</strong> <strong>مفيدة وجيدة التحمل</strong></td>
+                            <td><strong>الكبدة</strong></td>
+                            <td>جميع المراحل</td>
+                            <td>تساعد في تعويض نقص الحديد. تُسوى بالشوي أو التشويح الخفيف بزيت الزيتون ويُفضل تجنبها مقلية. تُؤكل مطهية جيداً وباعتدال، خاصة لمن يستخدمون علاجاً بيولوجياً أو كورتيزوناً. ولا يُنصح بالإفراط في تناولها أو تناولها يومياً.</td>
+                        </tr>
+                        <tr style="background-color: #fffaeb;">
+                            <td><strong>بحذر:</strong> <strong>تؤخذ بحذر وبالتدرج</strong></td>
+                            <td><strong>الفول المدمس</strong></td>
+                            <td>فترة الكمون</td>
+                            <td>قشرته خشنة وقد تسبب غازات. يُنصح بتناوله مقشراً (نابت مقشر) أو مضروباً في الخلاط وتجربة كميات صغيرة.</td>
+                        </tr>
+                        <tr style="background-color: #fffaeb;">
+                            <td><strong>بحذر:</strong> <strong>تؤخذ بحذر وبالتدرج</strong></td>
+                            <td><strong>الكشري</strong></td>
+                            <td>فترة الكمون الممتد</td>
+                            <td>وجبة ثقيلة وبقوليات. يُؤكل بحذر في فترات الهدوء التام، ويُفضل إعداده بنسخة خفيفة (تقليل العدس والصلصة).</td>
+                        </tr>
+                        <tr style="background-color: #fffaeb;">
+                            <td><strong>بحذر:</strong> <strong>تؤخذ بحذر وبالتدرج</strong></td>
+                            <td><strong>العدس والبسلة</strong></td>
+                            <td>فترة الكمون</td>
+                            <td>بقوليات مفيدة لكنها قد تزيد الغازات. تُهرس جيداً (كشوربة العدس) وتُتجنب أثناء الانتكاسات.</td>
+                        </tr>
+                        <tr style="background-color: #fffaeb;">
+                            <td><strong>بحذر:</strong> <strong>تؤخذ بحذر وبالتدرج</strong></td>
+                            <td><strong>مشروب التمر هندي</strong></td>
+                            <td>فترة الكمون</td>
+                            <td>مقبول في فترة الهدوء إذا حُضّر منزلياً بسكر قليل ولم يسبب أعراضاً لدى الشخص نفسه. لا يوجد دليل علمي خاص على فائدته لعلاج التهاب القولون التقرحي.</td>
+                        </tr>
+                        <tr style="background-color: #fce8e8;">
+                            <td><strong>يُفضّل تجنبه:</strong> <strong>يُفضّل تقليلها أو تجنبها</strong></td>
+                            <td><strong>الطعمية (الفلافل)</strong></td>
+                            <td>أوقات الانتكاسات</td>
+                            <td>القلي العميق في زيوت عالية الحرارة وتخمر البقوليات قد يهيجان الأمعاء المتقرحة بشدة.</td>
+                        </tr>
+                        <tr style="background-color: #fce8e8;">
+                            <td><strong>يُفضّل تجنبه:</strong> <strong>يُفضّل تقليلها أو تجنبها</strong></td>
+                            <td><strong>السمن البلدي / الزبدة</strong></td>
+                            <td>يُفضل التقليل دائماً</td>
+                            <td>الإسراف في الدهون المشبعة قد يرتبط بنمط غذائي أقل ملاءمة. يُنصح باستبدالها تدريجياً بزيت الزيتون.</td>
+                        </tr>
+                        <tr style="background-color: #fce8e8;">
+                            <td><strong>يُفضّل تجنبه:</strong> <strong>يُفضّل تقليلها أو تجنبها</strong></td>
+                            <td><strong>العصائر المعلبة والمشروبات الغازية</strong></td>
+                            <td>يُنصح بشدة بتجنبها</td>
+                            <td>السكريات المضافة والمستحلبات ترتبط بنمط غذائي غير ملائم وقد تفاقم الأعراض وتضر الميكروبيوم.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="print-cards">
+                <div class="print-card">
+                    <h4>مناسب: الخبز البلدي</h4>
+                    <p><span class="label">التصنيف:</span> مفيدة وجيدة التحمل</p>
+                    <p><span class="label">أفضل مرحلة:</span> فترة الكمون (الهدوء)</p>
+                    <p><span class="label">التوصية:</span> غني بالألياف المفيدة أثناء الهدوء. في الانتكاسات الشديدة، قد يكون التوست الأبيض أسهل هضماً ومؤقتاً.</p>
+                </div>
+                <div class="print-card">
+                    <h4>مناسب: الملوخية</h4>
+                    <p><span class="label">التصنيف:</span> مفيدة وجيدة التحمل</p>
+                    <p><span class="label">أفضل مرحلة:</span> جميع المراحل</p>
+                    <p><span class="label">التوصية:</span> خضار مطبوخ وناعم (ألياف ذائبة). تختلف القدرة على تحملها؛ يُفضل طهيها بدهون قليلة وتقليل الثوم جداً.</p>
+                </div>
+                <div class="print-card">
+                    <h4>مناسب: الأرز الأبيض</h4>
+                    <p><span class="label">التصنيف:</span> مفيدة وجيدة التحمل</p>
+                    <p><span class="label">أفضل مرحلة:</span> الانتكاسة والهدوء</p>
+                    <p><span class="label">التوصية:</span> طعام قليل الفضلات وأسهل في الهضم لإراحة الأمعاء وقت النشاط والإسهال.</p>
+                </div>
+                <div class="print-card">
+                    <h4>مناسب: مرق الكوارع</h4>
+                    <p><span class="label">التصنيف:</span> مفيدة وجيدة التحمل</p>
+                    <p><span class="label">أفضل مرحلة:</span> فترات الانتكاسة</p>
+                    <p><span class="label">التوصية:</span> يجب أن يكون مرقاً منزوع الدهن (شوربة صافية). يوفر سوائل مغذية بأحماض أمينية لقولون متهيج.</p>
+                </div>
+                <div class="print-card">
+                    <h4>مناسب: الزبادي والجبن القريش</h4>
+                    <p><span class="label">التصنيف:</span> مفيدة وجيدة التحمل</p>
+                    <p><span class="label">أفضل مرحلة:</span> جميع المراحل</p>
+                    <p><span class="label">التوصية:</span> غالباً جيد التحمل ومصدر للكالسيوم وبروبيوتيك طبيعي. (يُستبعد في حالة حساسية اللاكتوز المؤكدة).</p>
+                </div>
+                <div class="print-card">
+                    <h4>مناسب: الزيتون وزيت الزيتون</h4>
+                    <p><span class="label">التصنيف:</span> مفيدة وجيدة التحمل</p>
+                    <p><span class="label">أفضل مرحلة:</span> جميع المراحل</p>
+                    <p><span class="label">التوصية:</span> دهون صحية مرتبطة بنمط غذائي مقلل للمحفزات الالتهابية. يُغسل الزيتون المخلل جيداً من الملح.</p>
+                </div>
+                <div class="print-card">
+                    <h4>مناسب: الكبدة</h4>
+                    <p><span class="label">التصنيف:</span> مفيدة وجيدة التحمل</p>
+                    <p><span class="label">أفضل مرحلة:</span> جميع المراحل</p>
+                    <p><span class="label">التوصية:</span> تساعد في تعويض نقص الحديد. تُسوى بالشوي أو التشويح الخفيف بزيت الزيتون ويُفضل تجنبها مقلية.</p>
+                </div>
+                <div class="print-card">
+                    <h4>بحذر: الفول المدمس</h4>
+                    <p><span class="label">التصنيف:</span> تؤخذ بحذر وبالتدرج</p>
+                    <p><span class="label">أفضل مرحلة:</span> فترة الكمون</p>
+                    <p><span class="label">التوصية:</span> قشرته خشنة وقد تسبب غازات. يُنصح بتناوله مقشراً أو مضروباً في الخلاط وتجربة كميات صغيرة.</p>
+                </div>
+                <div class="print-card">
+                    <h4>بحذر: الكشري</h4>
+                    <p><span class="label">التصنيف:</span> تؤخذ بحذر وبالتدرج</p>
+                    <p><span class="label">أفضل مرحلة:</span> فترة الكمون الممتد</p>
+                    <p><span class="label">التوصية:</span> وجبة ثقيلة وبقوليات. يُؤكل بحذر في فترات الهدوء التام، ويُفضل إعداده بنسخة خفيفة.</p>
+                </div>
+                <div class="print-card">
+                    <h4>بحذر: العدس والبسلة</h4>
+                    <p><span class="label">التصنيف:</span> تؤخذ بحذر وبالتدرج</p>
+                    <p><span class="label">أفضل مرحلة:</span> فترة الكمون</p>
+                    <p><span class="label">التوصية:</span> بقوليات مفيدة لكنها قد تزيد الغازات. تُهرس جيداً (كشوربة العدس) وتُتجنب أثناء الانتكاسات.</p>
+                </div>
+                <div class="print-card">
+                    <h4>بحذر: مشروب التمر هندي</h4>
+                    <p><span class="label">التصنيف:</span> تؤخذ بحذر وبالتدرج</p>
+                    <p><span class="label">أفضل مرحلة:</span> فترة الكمون</p>
+                    <p><span class="label">التوصية:</span> مقبول في فترة الهدوء إذا حُضّر منزلياً بسكر قليل ولم يسبب أعراضاً.</p>
+                </div>
+                <div class="print-card">
+                    <h4>يُفضّل تجنبه: الطعمية (الفلافل)</h4>
+                    <p><span class="label">التصنيف:</span> يُفضّل تقليلها أو تجنبها</p>
+                    <p><span class="label">أفضل مرحلة:</span> تجنب خاصة أثناء الانتكاسات</p>
+                    <p><span class="label">التوصية:</span> القلي العميق في زيوت عالية الحرارة وتخمر البقوليات قد يهيجان الأمعاء المتقرحة بشدة.</p>
+                </div>
+                <div class="print-card">
+                    <h4>يُفضّل تجنبه: السمن البلدي / الزبدة</h4>
+                    <p><span class="label">التصنيف:</span> يُفضّل تقليلها أو تجنبها</p>
+                    <p><span class="label">أفضل مرحلة:</span> يُفضل التقليل دائماً</p>
+                    <p><span class="label">التوصية:</span> الإسراف في الدهون المشبعة قد يرتبط بنمط غذائي أقل ملاءمة. يُنصح باستبدالها بزيت الزيتون.</p>
+                </div>
+                <div class="print-card">
+                    <h4>يُفضّل تجنبه: العصائر المعلبة والمشروبات الغازية</h4>
+                    <p><span class="label">التصنيف:</span> يُفضّل تقليلها أو تجنبها</p>
+                    <p><span class="label">أفضل مرحلة:</span> يُنصح بشدة بتجنبها</p>
+                    <p><span class="label">التوصية:</span> السكريات المضافة والمستحلبات ترتبط بنمط غذائي غير ملائم وقد تفاقم الأعراض وتضر الميكروبيوم.</p>
+                </div>
+            </div>
+
+            <h3>كيف تختبر تحملك للطعام؟</h3>
+            <p>استجابة القولون تختلف من مريض لآخر. لضمان سلامتك:</p>
+            <ul>
+                <li><strong>جرّب صنفاً واحداً جديداً في كل مرة:</strong> لتحديد السبب إذا حدث تعب.</li>
+                <li><strong>ابدأ بكميات صغيرة جداً:</strong> تناول ملعقة أو ملعقتين، وانتظر 24 ساعة.</li>
+                <li><strong>دوّن يومياتك الغذائية:</strong> اكتب ما تأكله والأعراض التي تشعر بها.</li>
+                <li><strong>تجنب التجارب أثناء الانتكاسات الشديدة:</strong> التزم بالأطعمة المريحة والآمنة التي اعتدت عليها.</li>
+                <li><strong>ناقش الأعراض المتكررة:</strong> استشر أخصائي التغذية لإيجاد بدائل غذائية تعوضك.</li>
+            </ul>
+
+            <div class="warning-box">
+                <strong>تنبيه مهم:</strong>
+                إذا أدى تناول طعام إلى تكرار النزيف، أو إسهال شديد ومتكرر، أو حمى، أو ألم حاد في البطن؛ يجب التوقف فوراً عن محاولات التعديل الغذائي والتوجه للتقييم الطبي العاجل.
+            </div>
+        </section>
+
+<!-- Section 5 -->
+        <section id="section-5">
+            <h2>5. التغذية في فترة الانتكاس</h2>
+            <div class="section-summary">ملخص القسم: خلال فترة نشاط المرض، يكون القولون ملتهباً، مما يتطلب تقليل العبء الهضمي مؤقتاً بأطعمة سهلة الهضم، والسوائل للمساعدة في تعويض الجفاف، مع التدرج في إدخال الطعام عند تحسن الحالة.</div>
+
+            
+            <div class="visual-block poster-block">
+                <img src="assets/flare-poster.jpg" alt="التدرج الغذائي أثناء الانتكاسة يساعد على تقليل العبء على الأمعاء." class="poster-visual" loading="lazy">
+                <div class="visual-caption">التدرج الغذائي أثناء الانتكاسة يساعد على تقليل العبء على الأمعاء.</div>
+            </div>
+
+
+            <h3>5.1 ماذا يحدث للقولون أثناء الانتكاسة؟</h3>
+            <p>تتزايد التقرحات، مما قد يفقد البطانة القدرة على امتصاص الماء ويسبب الإسهال. الألياف غير القابلة للذوبان تزيد الاحتكاك، لذا يُنصح المريض مؤقتاً بنظام غذائي قليل الفضلات (<span class="en-term">Low-residue diet</span>) للمساعدة في إراحة الأمعاء (Raine et al., 2021).</p>
+
+            <h3>5.2 التدرج في إدخال الطعام (<span class="en-term">Stepwise Reintroduction</span>)</h3>
+            <p><span class="badge badge-strong">أدلة قوية</span> (Hashash et al., 2024)</p>
+            <div class="timeline">
+                <div class="timeline-step">1. سوائل شفافة<br><small>(ماء، مرق صافي)</small></div>
+                <div class="timeline-step">2. سوائل كاملة<br><small>(شوربات مهروسة)</small></div>
+                <div class="timeline-step">3. أطعمة لينة<br><small>(مطبوخة وسهلة المضغ)</small></div>
+                <div class="timeline-step">4. عودة تدريجية<br><small>(عند توقف الإسهال)</small></div>
+            </div>
+
+            <h3>5.3 أطعمة يُنصح بها في أول 48–72 ساعة من الانتكاسة الشديدة:</h3>
+            <ul>
+                <li>مرق دجاج/لحم منزوع الدسم.</li>
+                <li>أرز أبيض مسلوق.</li>
+                <li>توست أبيض أو لباب الفينو.</li>
+                <li>بطاطس مهروسة (بدون زبدة أو حليب كامل).</li>
+                <li>زبادي قليل الدسم (إذا كان مقبولاً).</li>
+                <li>موز ناضج ومهروس.</li>
+            </ul>
+
+            
+            <div class="visual-block poster-block">
+                <img src="assets/hydration-poster.jpg" alt="الترطيب وملاحظة علامات الخطر جزء أساسي من التعامل مع الانتكاسات." class="poster-visual" loading="lazy">
+                <div class="visual-caption">الترطيب وملاحظة علامات الخطر جزء أساسي من التعامل مع الانتكاسات.</div>
+            </div>
+
+
+            <h3>5.4 تعويض السوائل (<span class="en-term">Oral Rehydration Therapy</span>)</h3>
+            <div class="note-box">
+                <strong>ملاحظة:</strong> يُفضّل دائماً استخدام أكياس محلول معالجة الجفاف الطبية من الصيدلية لأنها تحتوي على توازن أدق من الأملاح والجلوكوز. وفي حال عدم توافرها مؤقتاً، يمكن الاكتفاء بسوائل آمنة للحالات البسيطة جداً فقط، مثل الماء والشوربة الصافية، مع عدم الاعتماد على وصفات منزلية عند وجود إسهال شديد أو قيء مستمر أو علامات جفاف أو استخدام الكورتيزون. في هذه الحالات يجب التواصل مع الطبيب أو التوجه للطوارئ فوراً.
+                <br><br>قد يزيد الإسهال الشديد أو استخدام الكورتيزون من خطر اضطراب الأملاح، لذلك لا يُنصح بالاعتماد على محلول منزلي غير طبي في هذه الحالات.
+            </div>
+            <div class="warning-box">
+                <strong>تنبيه مهم:</strong> مرضى الكلى، الفشل القلبي، ارتفاع ضغط الدم غير المنتظم، أو من يعانون من جفاف شديد، يجب عليهم استشارة الطبيب أو التوجه للطوارئ فوراً وعدم الاعتماد على المحاليل المنزلية.
+            </div>
+
+            <h3>5.5 أطعمة يُفضل تجنبها أثناء الانتكاسة:</h3>
+            <p>الخضروات النيئة، القشور والبذور، البقوليات، الأطعمة المقلية، المشروبات الغازية، والأطعمة الحارة.</p>
+
+            <h3>5.6 العلامات التحذيرية الحمراء التي تتطلب رعاية طبية عاجلة:</h3>
+            <p>التغذية وحدها لا تكفي. توجه للمستشفى فوراً إذا ظهرت:</p>
+            <ul>
+                <li>نزيف شرجي كثيف.</li>
+                <li>حمى (ارتفاع الحرارة).</li>
+                <li>ألم حاد وشديد في البطن.</li>
+                <li>قيء مستمر.</li>
+                <li>علامات الجفاف مثل جفاف الفم، بول داكن أو قلة التبول، دوخة عند الوقوف، ضعف شديد، أو انقطاع البول لأكثر من ٨ ساعات.</li>
+                <li>فقدان وزن سريع.</li>
+                <li>دوار أو إغماء.</li>
+                <li>إسهال شديد لا يتوقف.</li>
+            </ul>
+
+            <h3 id="flare-action-plan">5.7 ماذا أفعل عند بداية الانتكاسة؟</h3>
+
+            <div class="note-box">
+                <strong>ملاحظة:</strong> هذه الخطوات لا تعالج الانتكاسة وحدها، لكنها تساعدك على التصرف بأمان حتى تتواصل مع طبيبك. لا توقف الدواء ولا تغيّر الجرعات من نفسك.
+            </div>
+
+            <div class="severity-cards">
+                <div class="severity-card">
+                    <h4>1. راقب الأعراض</h4>
+                    <p>دوّن عدد مرات التبرز، وجود الدم أو المخاط، درجة الألم، الحرارة، الشهية، وكمية السوائل التي تتناولها.</p>
+                </div>
+                <div class="severity-card">
+                    <h4>2. عدّل الطعام مؤقتاً</h4>
+                    <p>قلل الألياف الخشنة، البقوليات، المقليات، الأطعمة الحارة، والمشروبات الغازية. اختر أطعمة لينة وسهلة الهضم مثل الأرز، البطاطس المهروسة، الشوربة الصافية، التوست، والموز الناضج.</p>
+                </div>
+                <div class="severity-card">
+                    <h4>3. اهتم بالسوائل</h4>
+                    <p>اشرب الماء والسوائل الآمنة، واستخدم محلول الجفاف من الصيدلية عند الحاجة. لا تعتمد على وصفات منزلية عند وجود إسهال شديد، قيء، علامات جفاف، أو استخدام الكورتيزون.</p>
+                </div>
+                <div class="severity-card">
+                    <h4>4. لا توقف الدواء من نفسك</h4>
+                    <p>لا توقف أدوية القولون أو تغيّر جرعاتها دون الرجوع للطبيب، حتى لو ظننت أن الطعام هو السبب الرئيسي للأعراض.</p>
+                </div>
+                <div class="severity-card warning-card">
+                    <h4>5. تواصل مع الطبيب</h4>
+                    <p>إذا استمرت الأعراض أكثر من يومين، أو زاد الدم، أو تكرر الإسهال، أو ظهر تعب واضح، تواصل مع طبيب الجهاز الهضمي لتقييم الحالة.</p>
+                </div>
+                <div class="severity-card danger-card">
+                    <h4>6. اذهب للطوارئ عند علامات الخطر</h4>
+                    <p>اذهب للطوارئ فوراً عند نزيف شديد، حرارة، قيء مستمر، ألم شديد، دوخة، إغماء، جفاف، ضعف شديد، أو انقطاع البول لأكثر من ٨ ساعات.</p>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Section 6 -->
+        <section id="section-6">
+            <h2>6. دليل التعامل مع الحساسيات والتعذرات الغذائية</h2>
+            <div class="section-summary">ملخص القسم: من الضروري التفريق بين حساسية الطعام الحقيقية التي تثير المناعة، وعدم تحمل الطعام الذي يسبب غازات. يُنصح بتجنب حميات المنع القاسية العشوائية.</div>
+
+            <h3>6.1 الحساسية الحقيقية مقابل عدم التحمل</h3>
+            <p>حساسية الطعام (<span class="en-term">True food allergy</span>) تفاعل مناعي خطر، وهي غير شائعة كمسبب رئيسي لأعراض القولون التقرحي. أما عدم التحمل (<span class="en-term">Food intolerance</span>) فهو صعوبة في الهضم تنتج غازات تحاكي الأعراض لكنها لا تسبب تقرحات جديدة في القولون.</p>
+
+            <h3>6.2 عدم تحمل اللاكتوز (<span class="en-term">Lactose Intolerance</span>)</h3>
+            <ul>
+                <li><strong>الأعراض:</strong> غازات وإسهال ملحوظ بعد شرب الحليب.</li>
+                <li><strong>التوصية:</strong> الزبادي والجبن القريش غالباً أسهل في الهضم لاحتوائهما على بكتيريا تساعد في هضم اللاكتوز. يمكن استخدام حليب خالي اللاكتوز. لا تُقلل أو تمنع منتجات الألبان كلياً بدون تشخيص موكّد لعدم تحمل اللاكتوز، لأن حذفها قد يُعرّضك لنقص الكالسيوم وضعف العظام مع مرور الوقت (Kreienbuehl et al., 2024).</li>
+            </ul>
+
+            <h3>6.3 عدم تحمل الجلوتين والداء الزلاقي (<span class="en-term">Celiac Disease</span>)</h3>
+            <p><span class="badge badge-mod">توصية طبية</span> لا يُنصح باتباع حمية خالية من الجلوتين بشكل روتيني إلا إذا تم تشخيصك طبياً بالداء الزلاقي. بدائل الجلوتين الصحية (إن لزم الأمر): الأرز، البطاطس، الذرة، الشوفان المعتمد الخالي من الجلوتين (Roncoroni, n.d.).</p>
+
+            <h3>6.4 حساسية البيض</h3>
+            <p>يمكن استخدام الدواجن والأسماك كمصادر بروتين بديلة ومريحة.</p>
+
+            <h3>6.5 التعامل مع البقوليات (<span class="en-term">Legume intolerance</span>)</h3>
+            <p>انقعها طويلاً، تخلص من ماء النقع، تخلص من القشور (استخدم النابت المقشر)، واهرسها جيداً لتسهيل هضمها.</p>
+
+            <h3>6.6 حساسية المكسرات والصويا</h3>
+            <p>لا تمنعها إلا إذا ثبت طبياً إصابتك بحساسية تجاهها أو كانت تسبب لك أعراضاً واضحة.</p>
+
+            <div class="warning-box">
+                <strong>تنبيه مهم:</strong>
+                <span class="badge badge-strong">أدلة قوية</span> يُحذر بشدة من اتباع حميات الاستبعاد العشوائية (<span class="en-term">Broad elimination diets</span>) التي تمنع مجموعات غذائية كاملة بدون إشراف متخصص، فقد تؤدي لسوء التغذية وتضر بالصحة العامة (Peng et al., 2022).
+            </div>
+        </section>
+
+        <!-- Section 7 -->
+        <section id="section-7">
+            <h2>7. التغذية المدعمة للميكروبيوم</h2>
+            <div class="section-summary">ملخص القسم: الأمعاء الصحية تعتمد على مجتمع بكتيري متنوع. دعم هذا التنوع بالبكتيريا النافعة (البروبيوتيك) والألياف المغذية لها (البريبيوتيك) قد يساعد في حماية الجدار.</div>
+
+            
+            <div class="visual-block poster-block">
+                <img src="assets/microbiome-poster.jpg" alt="دعم الميكروبيوم يعتمد على التنوع الغذائي والألياف المناسبة." class="poster-visual" loading="lazy">
+                <div class="visual-caption">دعم الميكروبيوم يعتمد على التنوع الغذائي والألياف المناسبة.</div>
+            </div>
+
+
+            <h3>7.1 التنوع الميكروبي (<span class="en-term">Microbial Diversity</span>) والأحماض الدهنية</h3>
+            <p>تغذية البكتيريا النافعة يحفزها على إفراز مواد نافعة تسمى الأحماض الدهنية قصيرة السلسلة (<span class="en-term">Short-chain fatty acids</span>)، وهي غذاء مفضل لخلايا القولون للمساعدة في التجدد وتقليل مؤشرات الالتهاب (Li et al., 2026).</p>
+
+            <h3>7.2 الأطعمة الداعمة للبكتيريا (البروبيوتيك)</h3>
+            <p>الزبادي الطبيعي، والكفير إن توفر، أو الزبادي الطبيعي واللبن الرايب الموثوق. يُنصح بتجنب المخللات التقليدية لاحتوائها على ملح عالٍ واحتمالية تلوثها، وتُتجنب أثناء الانتكاسة.</p>
+
+            <h3>7.3 الأطعمة المغذية للبكتيريا (البريبيوتيك - الألياف)</h3>
+            <ul>
+                <li><strong>الألياف القابلة للذوبان (<span class="en-term">Soluble fiber</span>):</strong> كالشوفان والفواكه المطبوخة والمقشرة.</li>
+                <li><strong>البصل والثوم والبقوليات:</strong> تُستهلك <strong>فقط</strong> في مرحلة الكمون وبكميات تتزايد تدريجياً لتجنب الغازات.</li>
+            </ul>
+
+            <h3>7.4 المكملات الحيوية (<span class="en-term">Commercial Probiotics</span>)</h3>
+            <p><span class="badge badge-mod">أدلة متوسطة وتعتمد على السلالة والحالة</span> قد تفيد بعض التركيبات متعددة السلالات المحددة في حالات التهاب القولون التقرحي الخفيف إلى المتوسط كعلاج مساعد فقط، وقد تفيد تركيبات معينة في حالات التهاب الجيبة بعد الجراحة. لا توجد توصية عامة باستخدام أي بروبيوتيك لكل المرضى، ويجب اختيار النوع والجرعة بمعرفة الطبيب أو أخصائي الجهاز الهضمي (Sood et al., 2009; Mimura et al., 2004).</p>
+
+            <div class="warning-box">
+                <strong>تنبيه مهم وقت الانتكاسات والمناعة الضعيفة:</strong>
+                لا تقم بتجربة أطعمة متخمرة جديدة أو زيادة الألياف، أو تناول بروبيوتيك من تلقاء نفسك أثناء الانتكاسة الشديدة أو إذا كنت تتناول أدوية مثبطة للمناعة دون استشارة طبية.
+            </div>
+        </section>
+
+<!-- Section 8 -->
+        <section id="section-8">
+            <h2>8. العناصر الغذائية الحرجة والمكملات الغذائية</h2>
+            <div class="section-summary">ملخص القسم: مرضى القولون التقرحي عُرضة لنقص الفيتامينات والمعادن نتيجة النزيف المستمر وضعف الامتصاص. التعويض السليم قد يساعد في الحماية من الأنيميا وهشاشة العظام.</div>
+
+            
+            <div class="visual-block poster-block">
+                <img src="assets/nutrients-poster.jpg" alt="عناصر غذائية مهمة يجب متابعتها بالتحاليل عند الحاجة." class="poster-visual" loading="lazy">
+                <div class="visual-caption">عناصر غذائية مهمة يجب متابعتها بالتحاليل عند الحاجة.</div>
+            </div>
+
+
+            <div class="table-wrapper screen-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>العنصر</th>
+                            <th>سبب النقص والمخاوف</th>
+                            <th>مصادر من المائدة المصرية</th>
+                            <th>متى نلجأ للمكملات؟ (قوة الدليل)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>الحديد</strong></td>
+                            <td>النزيف المستمر يسبب الإرهاق والأنيميا.</td>
+                            <td>الكبدة (مطهية جيداً وباعتدال ولا يُفرط فيها)، اللحوم (باعتدال)، البيض.</td>
+                            <td><span class="badge badge-strong">أدلة قوية</span> عند تأكيد الأنيميا. <strong>تنويه:</strong> قد يُفضَّل الحديد الوريدي (<span class="en-term">IV iron</span>) في بعض الحالات، ويعتمد القرار على شدة الأنيميا ونشاط المرض ومدى تحمل المريض للحديد الفموي (Snook et al., 2021).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>فيتامين د</strong></td>
+                            <td>ضعف الامتصاص. قد يؤثر على المناعة والعظام.</td>
+                            <td>الأسماك الدهنية، صفار البيض، الشمس.</td>
+                            <td><span class="badge badge-strong">أدلة قوية</span> يُنصح بفحصه وتعويضه بانتظام (Nicholson et al., 2012).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>الكالسيوم</strong></td>
+                            <td>الكورتيزون يسحب الكالسيوم ويزيد من خطر هشاشة العظام.</td>
+                            <td>الزبادي، الجبن القريش، السمسم (باعتدال).</td>
+                            <td><span class="badge badge-strong">أدلة قوية</span> يُوصى بها بقوة عند الحاجة، ويحدد الطبيب الجرعة ومدة الاستخدام بناءً على التحاليل والحالة الإكلينيكية لمن يتعاطى الكورتيزون بانتظام (Kreienbuehl et al., 2024).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>حمض الفوليك</strong></td>
+                            <td>استخدام بعض الأدوية كالسلفاسالازين تعيق امتصاصه.</td>
+                            <td>الخضروات الورقية المطبوخة.</td>
+                            <td><span class="badge badge-strong">أدلة قوية</span> يوصف طبياً كإجراء داعم مع هذه الأدوية (Gordon et al., 2023).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>فيتامين ب12</strong></td>
+                            <td>استئصال جزء من الأمعاء أو ضعف عام في الامتصاص.</td>
+                            <td>الدواجن، البيض، الأسماك.</td>
+                            <td><span class="badge badge-cond">توصية مشروطة</span> الفحص الدوري عند ظهور أعراض كالتنميل.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>الزنك</strong></td>
+                            <td>الإسهال المزمن يقلل الزنك مما قد يضعف التئام الجروح.</td>
+                            <td>الكبدة (تُؤكل مطهية جيداً وباعتدال)، الدواجن.</td>
+                            <td><span class="badge badge-mod">أدلة متوسطة</span> قد تساعد المكملات في التئام التقرحات مع الإسهال (Sakurai, 2022).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>الأوميجا 3</strong></td>
+                            <td>قلة تناول الأسماك.</td>
+                            <td>السردين، الماكريل.</td>
+                            <td><span class="badge badge-cond">أدلة محدودة</span> تناول الأسماك مفيد للالتهاب العام، لكن الكبسولات وحدها لا تُعد علاجاً أساسياً (Marton et al., 2019).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>البروتين</strong></td>
+                            <td>الانتكاسات قد تزيد هدم العضلات وتساهم في سوء التغذية.</td>
+                            <td>الدجاج، البيض، السمك، الجبن.</td>
+                            <td><span class="badge badge-cond">توصية مشروطة</span> يُنصح برفع البروتين وقت نشاط المرض والتعافي (Hashash et al., 2024).</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="print-cards">
+                <div class="print-card">
+                    <h4>الحديد</h4>
+                    <p><span class="label">سبب النقص والمخاوف:</span> النزيف المستمر يسبب الإرهاق والأنيميا.</p>
+                    <p><span class="label">مصادر من المائدة المصرية:</span> الكبدة (مطهية جيداً وباعتدال ولا يُفرط فيها)، اللحوم (باعتدال)، البيض.</p>
+                    <p><span class="label">متى نلجأ للمكملات؟:</span> أدلة قوية عند تأكيد الأنيميا. قد يُفضَّل الحديد الوريدي <span class="en-term nowrap">(IV iron)</span> في بعض الحالات، ويعتمد القرار على شدة الأنيميا ونشاط المرض <span class="en-term nowrap">(Snook et al., 2021)</span>.</p>
+                </div>
+                <div class="print-card">
+                    <h4>فيتامين د</h4>
+                    <p><span class="label">سبب النقص والمخاوف:</span> ضعف الامتصاص. قد يؤثر على المناعة والعظام.</p>
+                    <p><span class="label">مصادر من المائدة المصرية:</span> الأسماك الدهنية، صفار البيض، التعرض للشمس.</p>
+                    <p><span class="label">متى نلجأ للمكملات؟:</span> أدلة قوية. يُنصح بفحصه وتعويضه بانتظام <span class="en-term nowrap">(Nicholson et al., 2012)</span>.</p>
+                </div>
+                <div class="print-card">
+                    <h4>الكالسيوم</h4>
+                    <p><span class="label">سبب النقص والمخاوف:</span> الكورتيزون يسحب الكالسيوم ويزيد من خطر هشاشة العظام.</p>
+                    <p><span class="label">مصادر من المائدة المصرية:</span> الزبادي، الجبن القريش، السمسم (باعتدال).</p>
+                    <p><span class="label">متى نلجأ للمكملات؟:</span> أدلة قوية. يُوصى به بقوة لمن يتعاطى الكورتيزون بانتظام، ويحدد الطبيب الجرعة والمدة <span class="en-term nowrap">(Kreienbuehl et al., 2024)</span>.</p>
+                </div>
+                <div class="print-card">
+                    <h4>حمض الفوليك</h4>
+                    <p><span class="label">سبب النقص والمخاوف:</span> استخدام بعض الأدوية كالسلفاسالازين تعيق امتصاصه.</p>
+                    <p><span class="label">مصادر من المائدة المصرية:</span> الخضروات الورقية المطبوخة.</p>
+                    <p><span class="label">متى نلجأ للمكملات؟:</span> أدلة قوية. يوصف طبياً كإجراء داعم مع هذه الأدوية <span class="en-term nowrap">(Gordon et al., 2023)</span>.</p>
+                </div>
+                <div class="print-card">
+                    <h4>فيتامين ب12</h4>
+                    <p><span class="label">سبب النقص والمخاوف:</span> استئصال جزء من الأمعاء أو ضعف عام في الامتصاص.</p>
+                    <p><span class="label">مصادر من المائدة المصرية:</span> الدواجن، البيض، الأسماك.</p>
+                    <p><span class="label">متى نلجأ للمكملات؟:</span> توصية مشروطة. الفحص الدوري عند ظهور أعراض كالتنميل.</p>
+                </div>
+                <div class="print-card">
+                    <h4>الزنك</h4>
+                    <p><span class="label">سبب النقص والمخاوف:</span> الإسهال المزمن يقلل الزنك مما قد يضعف التئام الجروح.</p>
+                    <p><span class="label">مصادر من المائدة المصرية:</span> الكبدة (مطهية جيداً وباعتدال)، الدواجن.</p>
+                    <p><span class="label">متى نلجأ للمكملات؟:</span> أدلة متوسطة. قد تساعد المكملات في التئام التقرحات مع الإسهال <span class="en-term nowrap">(Sakurai, 2022)</span>.</p>
+                </div>
+                <div class="print-card">
+                    <h4>أوميجا 3</h4>
+                    <p><span class="label">سبب النقص والمخاوف:</span> قلة تناول الأسماك الدهنية.</p>
+                    <p><span class="label">مصادر من المائدة المصرية:</span> السردين، الماكريل.</p>
+                    <p><span class="label">متى نلجأ للمكملات؟:</span> أدلة محدودة. تناول الأسماك مفيد للالتهاب العام، لكن الكبسولات وحدها لا تُعد علاجاً أساسياً <span class="en-term nowrap">(Marton et al., 2019)</span>.</p>
+                </div>
+                <div class="print-card">
+                    <h4>البروتين</h4>
+                    <p><span class="label">سبب النقص والمخاوف:</span> الانتكاسات قد تزيد هدم العضلات وتساهم في سوء التغذية.</p>
+                    <p><span class="label">مصادر من المائدة المصرية:</span> الدجاج، البيض، السمك، الجبن.</p>
+                    <p><span class="label">متى نلجأ للمكملات؟:</span> توصية مشروطة. يُنصح برفع البروتين وقت نشاط المرض والتعافي <span class="en-term nowrap">(Hashash et al., 2024)</span>.</p>
+                </div>
+            </div>
+            
+            <div class="warning-box">
+                <strong>تنبيه مهم:</strong> لا تتناول المكملات دون تحاليل دورية وتوصية مباشرة من معالجك؛ تناول جرعات زائدة قد يضر الكلى أو المعدة ويتعارض مع خطتك العلاجية.
+            </div>
+        </section>
+
+        <!-- Section 9 -->
+        <section id="section-9">
+            <h2>9. خطة غذائية نموذجية أسبوعية في مرحلة الكمون</h2>
+            <div class="section-summary">ملخص القسم: دليل عملي لتطبيق حمية البحر المتوسط ومبادئ النمط الغذائي الداعم للصحة ببدائل اقتصادية.</div>
+            
+            <div class="note-box">
+                <strong>ملاحظة:</strong> هذا الجدول هو <strong>مثال استرشادي فقط في مرحلة الكمون التام</strong> ويجب تخصيصه لكل مريض (Hashash et al., 2024; Haskey et al., 2022).
+            </div>
+
+            <div class="table-wrapper screen-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>اليوم</th>
+                            <th>الإفطار</th>
+                            <th>وجبة خفيفة 1</th>
+                            <th>الغداء</th>
+                            <th>وجبة خفيفة 2</th>
+                            <th>العشاء</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>1</strong></td>
+                            <td>فول نابت مقشر + زيت زيتون + ربع رغيف</td>
+                            <td>كوب زبادي طبيعي</td>
+                            <td>سمك مشوي + أرز أبيض + سلطة (بدون بذور/قشر)</td>
+                            <td>تفاحة مقشرة</td>
+                            <td>جبن قريش + توست</td>
+                        </tr>
+                        <tr>
+                            <td><strong>2</strong></td>
+                            <td>2 بيضة مسلوقة + جبن أبيض + توست</td>
+                            <td>موزة ناضجة</td>
+                            <td>ربع دجاجة (مسلوقة) + بطاطس فرن + أرز</td>
+                            <td>قبضة مكسرات نيئة (إن احتملتها)</td>
+                            <td>حليب (خالي لاكتوز إذا لزم) + شوفان</td>
+                        </tr>
+                        <tr>
+                            <td><strong>3</strong></td>
+                            <td>جبن قريش بالزعتر + خيار مقشر</td>
+                            <td>تفاحة مسلوقة مهروسة</td>
+                            <td>مكرونة مسلوقة + كبدة مشوحة بزيت الزيتون</td>
+                            <td>بطاطا حلوة مشوية</td>
+                            <td>زبادي + ملعقة عسل صغيرة</td>
+                        </tr>
+                        <tr>
+                            <td><strong>4</strong></td>
+                            <td>شوفان بالحليب + قطع موز</td>
+                            <td>جزر مسلوق ناعم</td>
+                            <td>شوربة خضار مطبوخة جيداً + صدر دجاج مسلوق + أرز</td>
+                            <td>كمثرى مقشرة</td>
+                            <td>بيضة أومليت خفيفة + خبز</td>
+                        </tr>
+                        <tr>
+                            <td><strong>5</strong></td>
+                            <td>بطاطس مهروسة (بدون زبدة) + بيض مسلوق</td>
+                            <td>زبادي طبيعي</td>
+                            <td>سمك مشوي + أرز صيادية خفيف</td>
+                            <td>شرائح بطيخ (بدون بذور)</td>
+                            <td>جبن قريش + ربع رغيف</td>
+                        </tr>
+                        <tr>
+                            <td><strong>6</strong></td>
+                            <td>فول نابت مقشر بشوربة خفيفة + خبز</td>
+                            <td>فاكهة الموسم مقشرة</td>
+                            <td>ملوخية (طشة خفيفة جداً) + أرز + دجاج</td>
+                            <td>بطاطا حلوة مشوية</td>
+                            <td>توست + جبن خفيف الملح + شاي أعشاب</td>
+                        </tr>
+                        <tr>
+                            <td><strong>7</strong></td>
+                            <td>بيض مشوح بلطف + توست + خيار مقشر</td>
+                            <td>لبن رايب</td>
+                            <td><strong>اختياري:</strong> كشري بيتي خفيف (يُؤكل بحذر في الهدوء فقط)</td>
+                            <td>ثمرة موز</td>
+                            <td>شوربة خضار ناعمة + ربع رغيف</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="print-cards">
+                <div class="print-card">
+                    <h4>اليوم الأول</h4>
+                    <p><span class="label">الإفطار:</span> فول نابت مقشر + زيت زيتون + ربع رغيف</p>
+                    <p><span class="label">وجبة خفيفة 1:</span> كوب زبادي طبيعي</p>
+                    <p><span class="label">الغداء:</span> سمك مشوي + أرز أبيض + سلطة (بدون بذور/قشر)</p>
+                    <p><span class="label">وجبة خفيفة 2:</span> تفاحة مقشرة</p>
+                    <p><span class="label">العشاء:</span> جبن قريش + توست</p>
+                </div>
+                <div class="print-card">
+                    <h4>اليوم الثاني</h4>
+                    <p><span class="label">الإفطار:</span> 2 بيضة مسلوقة + جبن أبيض + توست</p>
+                    <p><span class="label">وجبة خفيفة 1:</span> موزة ناضجة</p>
+                    <p><span class="label">الغداء:</span> ربع دجاجة (مسلوقة) + بطاطس فرن + أرز</p>
+                    <p><span class="label">وجبة خفيفة 2:</span> قبضة مكسرات نيئة (إن احتملتها)</p>
+                    <p><span class="label">العشاء:</span> حليب (خالي لاكتوز إذا لزم) + شوفان</p>
+                </div>
+                <div class="print-card">
+                    <h4>اليوم الثالث</h4>
+                    <p><span class="label">الإفطار:</span> جبن قريش بالزعتر + خيار مقشر</p>
+                    <p><span class="label">وجبة خفيفة 1:</span> تفاحة مسلوقة مهروسة</p>
+                    <p><span class="label">الغداء:</span> مكرونة مسلوقة + كبدة مشوحة بزيت الزيتون</p>
+                    <p><span class="label">وجبة خفيفة 2:</span> بطاطا حلوة مشوية</p>
+                    <p><span class="label">العشاء:</span> زبادي + ملعقة عسل صغيرة</p>
+                </div>
+                <div class="print-card">
+                    <h4>اليوم الرابع</h4>
+                    <p><span class="label">الإفطار:</span> شوفان بالحليب + قطع موز</p>
+                    <p><span class="label">وجبة خفيفة 1:</span> جزر مسلوق ناعم</p>
+                    <p><span class="label">الغداء:</span> شوربة خضار مطبوخة جيداً + صدر دجاج مسلوق + أرز</p>
+                    <p><span class="label">وجبة خفيفة 2:</span> كمثرى مقشرة</p>
+                    <p><span class="label">العشاء:</span> بيضة أومليت خفيفة + خبز</p>
+                </div>
+                <div class="print-card">
+                    <h4>اليوم الخامس</h4>
+                    <p><span class="label">الإفطار:</span> بطاطس مهروسة (بدون زبدة) + بيض مسلوق</p>
+                    <p><span class="label">وجبة خفيفة 1:</span> زبادي طبيعي</p>
+                    <p><span class="label">الغداء:</span> سمك مشوي + أرز صيادية خفيف</p>
+                    <p><span class="label">وجبة خفيفة 2:</span> شرائح بطيخ (بدون بذور)</p>
+                    <p><span class="label">العشاء:</span> جبن قريش + ربع رغيف</p>
+                </div>
+                <div class="print-card">
+                    <h4>اليوم السادس</h4>
+                    <p><span class="label">الإفطار:</span> فول نابت مقشر بشوربة خفيفة + خبز</p>
+                    <p><span class="label">وجبة خفيفة 1:</span> فاكهة الموسم مقشرة</p>
+                    <p><span class="label">الغداء:</span> ملوخية (طشة خفيفة جداً) + أرز + دجاج</p>
+                    <p><span class="label">وجبة خفيفة 2:</span> بطاطا حلوة مشوية</p>
+                    <p><span class="label">العشاء:</span> توست + جبن خفيف الملح + شاي أعشاب</p>
+                </div>
+                <div class="print-card">
+                    <h4>اليوم السابع</h4>
+                    <p><span class="label">الإفطار:</span> بيض مشوح بلطف + توست + خيار مقشر</p>
+                    <p><span class="label">وجبة خفيفة 1:</span> لبن رايب</p>
+                    <p><span class="label">الغداء:</span> اختياري: كشري بيتي خفيف (يُؤكل بحذر في الهدوء فقط)</p>
+                    <p><span class="label">وجبة خفيفة 2:</span> ثمرة موز</p>
+                    <p><span class="label">العشاء:</span> شوربة خضار ناعمة + ربع رغيف</p>
+                </div>
+            </div>
+
+            <p><strong>ملاحظة: الكميات يجب أن تُعدل حسب الوزن، الشهية، درجة نشاط المرض، والتحاليل، وتوصية الطبيب أو أخصائي التغذية.</strong></p>
+
+            <h3>9.1 كيف تعدّل الخطة إذا شعرت بانتفاخ؟</h3>
+            <p><span class="badge badge-mod">أدلة متوسطة</span> قلل أو أوقف البصل، الثوم، الفول، والعدس مؤقتاً. استبدل التفاح بالموز، والخبز بالأرز حتى يهدأ الانتفاخ، ثم أعد إدخالها بالتدريج (Peng et al., 2022).</p>
+
+            <h3>9.2 كيف تعدّل الخطة إذا بدأت أعراض انتكاسة خفيفة؟</h3>
+            <p><span class="badge badge-cond">رأي الخبراء</span> أوقف الخضروات والفواكه النيئة فوراً، واعتمد على الشوربات الصافية والبطاطس المهروسة لتعديل "قوام" الطعام والمساعدة في تقليل العبء على الأمعاء (Hashash et al., 2024).</p>
+        </section>
+
+<!-- Section 10 -->
+        <section id="section-10">
+            <h2>10. نصائح الطهي والتحضير</h2>
+            <div class="section-summary">ملخص القسم: طريقة الطهي يمكن أن تجعل الطعام أسهل في الهضم وأكثر أماناً، خاصة مع الألياف والبقوليات.</div>
+
+            <h3>10.1 أفضل طرق الطهي</h3>
+            <p>السلق، الطهي بالبخار، الطهي في الفرن، والتشويح الخفيف (<span class="en-term">Sautéing</span>) بقليل من زيت الزيتون.</p>
+
+            <h3>10.2 تقليل تهيج الألياف (Halmos et al., 2024)</h3>
+            <p>التقشير (التفاح، الخيار)، إزالة البذور (الطماطم)، الطهي الجيد حتى تفقد قرمشتها، والهرس بالخلاط للحصول على قوام كريمي أسهل في الهضم.</p>
+
+            <h3>10.3 التحضير الآمن للبقوليات</h3>
+            <p>النقع الطويل وتغيير الماء، التخلص من ماء النقع، الطهي الجيد جداً، والتخلص من القشور.</p>
+
+            <h3>10.4 استخدام الزيوت والدهون</h3>
+            <p>استخدم زيت الزيتون البكر الممتاز. <span class="badge badge-strong">توصية طبية قوية</span> القلي المتكرر والحرارة العالية قد يزيدان من تكوّن مركبات مؤكسدة غير مرغوبة قد ترتبط بنمط غذائي أقل ملاءمة (Herrador-López et al., 2023).</p>
+
+            <h3>10.5 تجهيز الوجبات وسلامة الغذاء</h3>
+            <p>المرضى على أدوية مثبطة للمناعة أكثر عُرضة للتلوث الغذائي. قم بتجميد الوجبات بشكل آمن، ولا تترك الطعام المطبوخ في الغرفة لأكثر من ساعتين، وسخن المتبقي جيداً.</p>
+
+            <div class="warning-box">
+                <strong>تنبيه مهم لمستخدمي العلاج البيولوجي أو الكورتيزون:</strong><br>
+                إذا كنت تستخدم علاجاً بيولوجياً أو كورتيزوناً لفترات طويلة، فقد تكون أكثر عرضة للعدوى الغذائية. لذلك احرص على تناول الطعام المطهو جيداً، وتجنب الألبان غير المبسترة، والبيض النيئ أو غير كامل النضج، واللحوم أو الكبدة غير المطهية جيداً، والأطعمة المكشوفة أو مجهولة المصدر. اغسل الخضروات والفواكه جيداً، واحفظ الطعام المطبوخ في الثلاجة خلال ساعتين، وسخّنه جيداً قبل تناوله.
+            </div>
+
+            <h3>10.6 تعديل الأطباق المصرية</h3>
+            <ul>
+                <li><strong>الملوخية:</strong> تقليل السمن وتقليل الثوم.</li>
+                <li><strong>الفول:</strong> مقشر ومهروس.</li>
+                <li><strong>الكشري:</strong> تقليل العدس، وتقليل حدة الصلصة وتجنب الشطة.</li>
+            </ul>
+        </section>
+
+        <!-- Section 11 -->
+        <section id="section-11">
+            <h2>11. التغذية والصحة النفسية</h2>
+            <div class="section-summary">ملخص القسم: الأمعاء والدماغ يتواصلان باستمرار. تبني علاقة صحية ومرنة مع الطعام يساعد في رحلة التعافي وتخفيف التوتر.</div>
+
+            
+            <div class="visual-block poster-block">
+                <img src="assets/gut-brain-poster.jpg" alt="العلاقة بين الأمعاء والمخ تؤثر في الأعراض وجودة الحياة." class="poster-visual" loading="lazy">
+                <div class="visual-caption">العلاقة بين الأمعاء والمخ تؤثر في الأعراض وجودة الحياة.</div>
+            </div>
+
+
+            <h3>11.1 المحور المعوي الدماغي (<span class="en-term">Gut-brain axis</span>)</h3>
+            <p>توجد شبكة عصبية كثيفة تربط الدماغ بالجهاز الهضمي. الضغط النفسي المستمر لا "يسبب" المرض، ولكنه قد يسرع حركة الأمعاء ويساهم في تهيج الأعراض (Hashash et al., 2024).</p>
+
+            <h3>11.2 الأكل بوعي (<span class="en-term">Mindful Eating</span>)</h3>
+            <p>امضغ جيداً لتسهيل الهضم. تجنب الأكل وقت الغضب الشديد. توقف قبل الشبع التام لتجنب ضغط المعدة والانتفاخ (Halmos et al., 2024).</p>
+
+            <h3>11.3 الحد من التوتر</h3>
+            <p>المشي الخفيف، تمارين التنفس، والنوم المنتظم يساعدون في استقرار حالة الجسم العامة.</p>
+
+            <h3>11.4 التجمعات الاجتماعية المصرية</h3>
+            <p>في الأفراح أو التجمعات العائلية، يمكنك تناول وجبة آمنة صغيرة قبل الذهاب. اختر الأطعمة المشوية، ولا تتردد في الرفض المهذب للأطعمة التي تتعبك. احمل وجبات خفيفة آمنة دائماً.</p>
+
+            <h3>11.5 رسالة دعم: الخوف من الطعام والشعور بالذنب</h3>
+            <p><span class="badge badge-cond">رأي الخبراء</span> ليس كل مغص هو خطأ ارتكبته في طعامك. المرض متقلب بطبيعته. لا تعاقب نفسك بحميات قاسية أو لوم مستمر. الهدف هو المرونة والاستمتاع بأمان، وليس الوصول للمثالية المطلقة التي تصيبك بالتوتر والقلق.</p>
+
+            <h3>11.6 القهوة والشاي والمسكنات</h3>
+            <p>القهوة قد تزيد حركة الأمعاء والإلحاح لدى بعض المرضى، لذلك يُفضّل تقليلها أو تجنبها أثناء الانتكاسة. الشاي قد يقلل امتصاص الحديد إذا شُرب مع الوجبات الغنية بالحديد، لذلك يُفضّل ترك فاصل ساعة إلى ساعتين بينه وبين مكملات الحديد أو الوجبات الغنية بالحديد. أما المسكنات مثل الإيبوبروفين والديكلوفيناك فلا تُستخدم دون استشارة الطبيب، لأنها قد تهيج الجهاز الهضمي أو تزيد خطر الانتكاسة لدى بعض المرضى. اسأل طبيبك عن البديل الأنسب عند الحاجة.</p>
+        </section>
+
+<!-- Section 12 -->
+        <section id="section-12">
+            <h2>12. متى تُراجع طبيبك أو أخصائي التغذية؟</h2>
+            <div class="section-summary">ملخص القسم: الغذاء العلاجي لا يحل أبداً محل العلاج الدوائي للالتهاب النشط. يجب الوعي بالعلامات التحذيرية التي تتطلب تقييماً طبياً مباشراً.</div>
+
+            <h3>12.1 العلامات التحذيرية الطارئة (<span class="en-term">Red Flags</span>)</h3>
+            <div class="warning-box">
+                <strong>تنبيه مهم:</strong> توجه للطبيب فوراً ولا تكتفِ بتعديل الطعام إذا ظهرت (Raine et al., 2021):
+            </div>
+            
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>العلامة التحذيرية</th>
+                            <th>الدلالة الطبية المحتملة</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>نزيف شرجي كثيف ومستمر</strong></td>
+                            <td>قرح نشطة وشديدة، تتطلب تقييماً فورياً.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>حمى (ارتفاع درجة الحرارة)</strong></td>
+                            <td>احتمالية وجود عدوى، أو نشاط التهابي شديد.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>ألم شديد ومفاجئ في البطن</strong></td>
+                            <td>احتمالية تضيق، انسداد، أو التهاب حاد.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>قيء مستمر</strong></td>
+                            <td>قد يشير لتأثر شديد في الجهاز الهضمي.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>علامات الجفاف</strong></td>
+                            <td>علامات الجفاف مثل جفاف الفم، بول داكن أو قلة التبول، دوخة عند الوقوف، ضعف شديد، أو انقطاع البول لأكثر من ٨ ساعات (Hashash et al., 2024).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>فقدان وزن سريع / إسهال شديد</strong></td>
+                            <td>خطر سوء تغذية حاد، قد يستدعي تغذية طبية متخصصة.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>دوار أو إغماء / إرهاق مستمر</strong></td>
+                            <td>احتمالية نقص في السوائل أو أنيميا حادة (Snook et al., 2021).</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>12.2 متى تستشير أخصائي التغذية؟</h3>
+            <p>في حالات: تكرار عدم تحمل الطعام، فقدان الوزن الملحوظ، التخطيط للحمل، لمتابعة نمو الأطفال، استخدام الكورتيزون المستمر، بدء العلاج البيولوجي، التعافي الجراحي، وتخطيط الصيام.</p>
+
+            <h3>12.3 ما التحاليل التي قد يطلبها الطبيب لمراقبة حالتك؟</h3>
+            <ul>
+                <li>صورة الدم الكاملة (<span class="en-term">CBC</span>).</li>
+                <li>مخزون الحديد وحديد الدم (<span class="en-term">Ferritin and iron profile</span>).</li>
+                <li>دلالات الالتهاب (<span class="en-term">CRP</span> و <span class="en-term">ESR</span>).</li>
+                <li>كالبروتكتين البراز (<span class="en-term">Fecal calprotectin</span>).</li>
+                <li>مستوى فيتامين د (<span class="en-term">Vitamin D</span>).</li>
+                <li>فيتامين ب12 وحمض الفوليك.</li>
+                <li>مستوى الزنك (<span class="en-term">Zinc</span>) عند الإسهال المزمن.</li>
+                <li>الألبومين (<span class="en-term">Albumin</span>) لتقييم بروتين الجسم.</li>
+                <li>الأملاح (<span class="en-term">Electrolytes</span>) أثناء فترات الإسهال الشديد.</li>
+            </ul>
+        </section>
+
+        <!-- Section 13 -->
+        <section id="section-13">
+            <h2>13. الأسئلة الشائعة</h2>
+            <div class="section-summary">ملخص القسم: إجابات عملية ومباشرة على أكثر الأسئلة التي تشغل بال مرضى القولون التقرحي في مصر.</div>
+
+            <article class="faq-card">
+                <strong>1. هل أستطيع أكل الفول؟</strong>
+                <p><span class="badge badge-cond">توصية فردية</span> في الهدوء التام فقط وبكميات صغيرة، ويُفضل تناوله مقشراً (نابت مقشر) لتجنب الغازات الناتجة عن القشور.</p>
+            </article>
+
+            <article class="faq-card">
+                <strong>2. هل الكشري ممنوع؟</strong>
+                <p><span class="badge badge-cond">توصية مشروطة</span> يُؤكل بحذر في فترات الكمون العميق فقط، ويُفضل إعداده منزلياً بنسخة خفيفة وتخفيف الصلصة والبقوليات.</p>
+            </article>
+
+            <article class="faq-card">
+                <strong>3. هل الزيتون مسموح؟</strong>
+                <p><span class="badge badge-strong">أدلة قوية</span> نعم، هو دهون صحية ومفيدة مرتبطة بنمط غذائي داعم للصحة. لكن يُنصح بغسله من الملح إن كنت تعاني من احتباس السوائل أو ضغط الدم.</p>
+            </article>
+
+            <article class="faq-card">
+                <strong>4. هل الطعمية (الفلافل) ممنوعة؟</strong>
+                <p><span class="badge badge-cond">توصية مشروطة</span> يُفضل تجنبها خاصة أثناء الانتكاسة؛ القلي العميق للزيوت وتخمر البقوليات قد يهيج الأمعاء المتقرحة.</p>
+            </article>
+
+            <article class="faq-card">
+                <strong>5. هل الشاي والقهوة ممنوعان؟</strong>
+                <p><span class="badge badge-cond">رأي الخبراء</span> قد يساعد تقليلهما أو إيقافهما وقت الانتكاسة في تخفيف الأعراض لأنهما قد يسرعان من حركة الأمعاء. في فترات الهدوء، يمكن تناولهما باعتدال.</p>
+            </article>
+
+            <article class="faq-card">
+                <strong>6. هل اللبن والزبادي يسببان انتكاسة؟</strong>
+                <p><span class="badge badge-strong">أدلة قوية</span> لا، منتجات الألبان لا تسبب الانتكاسات إلا لمن لديه حساسية لاكتوز مؤكدة. الزبادي يعتبر بروبيوتيك طبيعي ممتاز ومصدراً هاماً للكالسيوم (Hashash et al., 2024).</p>
+            </article>
+
+            <article class="faq-card">
+                <strong>7. هل يجب منع الجلوتين؟</strong>
+                <p><span class="badge badge-mod">أدلة متوسطة</span> يُنصح بعدم منعه عشوائياً ما لم يتم تشخيصك بالداء الزلاقي الملازم، للحفاظ على تنوع الألياف (Peng et al., 2022).</p>
+            </article>
+
+            <article class="faq-card">
+                <strong>8. هل يمكنني الصيام في رمضان؟</strong>
+                <p><span class="badge badge-cond">توصية مشروطة</span> يعتبر آمناً في فترات "الكمون التام" والمستقرة، ولكنه غير منصوح به طبياً أثناء الانتكاسة النشطة تجنباً للجفاف (Negm et al., 2022).</p>
+            </article>
+
+            <article class="faq-card">
+                <strong>9. ماذا آكل أثناء الانتكاسة؟</strong>
+                <p><span class="badge badge-strong">أدلة قوية</span> يُنصح بطعام سهل الهضم وقليل الفضلات: مرق منزوع الدسم، أرز أبيض، توست أبيض، وبطاطس مهروسة ناعمة.</p>
+            </article>
+
+            <article class="faq-card">
+                <strong>10. هل الألياف مفيدة أم ضارة؟</strong>
+                <p><span class="badge badge-strong">أدلة قوية</span> الألياف الذائبة (مثل الشوفان ولب الفاكهة) مفيدة في الهدوء. أما الألياف الخشنة (مثل القشور والبذور) فيُفضل تجنبها أثناء الانتكاسة لتقليل الاحتكاك.</p>
+            </article>
+
+            <article class="faq-card">
+                <strong>11. هل البروبيوتيك مفيد؟</strong>
+                <p><span class="badge badge-mod">أدلة متوسطة</span> نعم، قد تساعد سلالات بكتيرية معينة في حالات التهاب القولون الخفيف (Sood et al., 2009) وفي المساعدة للوقاية من التهاب الجيبة (Mimura et al., 2004).</p>
+            </article>
+
+            <article class="faq-card">
+                <strong>12. هل أوميجا 3 تعالج القولون التقرحي؟</strong>
+                <p><span class="badge badge-cond">أدلة محدودة</span> تناول الأسماك الغنية بأوميجا 3 يفيد للالتهاب العام، لكن الكبسولات وحدها لم يثبت أنها قد تساعد كعلاج أساسي للانتكاسات (Marton et al., 2019).</p>
+            </article>
+
+            <article class="faq-card">
+                <strong>13. هل يمكن علاج القولون التقرحي بالغذاء فقط؟</strong>
+                <p><span class="badge badge-strong">أدلة قوية</span> لا. الغذاء داعم قوي لتقليل الأعراض وتحسين الصحة، لكن إيقاف الدواء والاعتماد على الغذاء فقط قد يعرضك لمضاعفات خطيرة (Abbas et al., 2023).</p>
+            </article>
+
+            <article class="faq-card">
+                <strong>14. ماذا أفعل إذا كل طعام يسبب لي انتفاخ؟</strong>
+                <p><span class="badge badge-cond">توصية مشروطة</span> راجع الطبيب أولاً لاستبعاد أي نشاط للمرض، وقد يُنصح بتطبيق "حمية الفودماب" مؤقتاً لتخفيف الغازات (Peng et al., 2022).</p>
+            </article>
+
+            <article class="faq-card">
+                <strong>15. هل الأطفال المصابون يحتاجون نظامًا مختلفًا؟</strong>
+                <p><span class="badge badge-strong">أدلة قوية</span> نعم، أولوية الأطفال حماية النمو الطولي وكثافة العظام، ويحتاجون دعماً مكثفاً للسعرات الحرارية والبروتين تحت إشراف طبي (Turner et al., 2018).</p>
+            </article>
+
+            <article class="faq-card">
+                <strong>16. ماذا آكل بعد الجراحة أو تركيب الجيبة؟</strong>
+                <p><span class="badge badge-strong">أدلة قوية</span> يُنصح بنظام قليل الفضلات صارم في الأسابيع الأولى، ثم التدرج في إدخال الألياف الذائبة برفق تحت إشراف طبي لمنع الانسداد.</p>
+            </article>
+
+            <article class="faq-card">
+                <strong>17. هل المكملات آمنة بدون تحاليل؟</strong>
+                <p><span class="badge badge-strong">توصية قوية</span> لا، يجب أخذ مكملات كالحديد والكالسيوم والزنك وفيتامين د بناءً على الفحوصات وتحت إشراف طبي لتجنب التسمم أو إرهاق الكلى.</p>
+            </article>
+        </section>
+
+        <!-- Food & Symptom Diary Appendix -->
+        <section id="food-symptom-diary">
+            <h2>ملحق عملي: يوميات الطعام والأعراض لمدة 7 أيام</h2>
+
+            <div class="section-summary">ملخص الملحق: تسجيل الطعام والأعراض يساعدك أنت وطبيبك أو أخصائي التغذية على فهم ما يهيج الأعراض فعلاً، بدلاً من منع أطعمة كثيرة دون دليل.</div>
+
+            <p>استخدم هذا النموذج لمدة أسبوع واحد عند ظهور أعراض متكررة، أو عند إدخال طعام جديد، أو قبل زيارة الطبيب. الهدف ليس القلق من الطعام، بل اكتشاف الأنماط المتكررة بطريقة هادئة ومنظمة.</p>
+
+            <div class="note-box">
+                <strong>طريقة الاستخدام:</strong> لا تغيّر كل شيء في نفس اليوم. جرّب طعاماً واحداً جديداً في كل مرة، وسجل الأعراض خلال 24 ساعة. إذا ظهرت أعراض شديدة أو نزيف أو حرارة، توقف عن التجربة وتواصل مع الطبيب.
+            </div>
+
+            <div class="diary-cards">
+                <div class="diary-card">
+                    <h4>اليوم الأول</h4>
+                    <p><strong>الوجبات:</strong> ........................................................</p>
+                    <p><strong>عدد مرات التبرز:</strong> ............</p>
+                    <p><strong>دم أو مخاط:</strong> نعم / لا</p>
+                    <p><strong>ألم أو انتفاخ:</strong> خفيف / متوسط / شديد</p>
+                    <p><strong>مستوى التوتر:</strong> منخفض / متوسط / مرتفع</p>
+                    <p><strong>ملاحظات:</strong> ........................................................</p>
+                </div>
+                <div class="diary-card">
+                    <h4>اليوم الثاني</h4>
+                    <p><strong>الوجبات:</strong> ........................................................</p>
+                    <p><strong>عدد مرات التبرز:</strong> ............</p>
+                    <p><strong>دم أو مخاط:</strong> نعم / لا</p>
+                    <p><strong>ألم أو انتفاخ:</strong> خفيف / متوسط / شديد</p>
+                    <p><strong>مستوى التوتر:</strong> منخفض / متوسط / مرتفع</p>
+                    <p><strong>ملاحظات:</strong> ........................................................</p>
+                </div>
+                <div class="diary-card">
+                    <h4>اليوم الثالث</h4>
+                    <p><strong>الوجبات:</strong> ........................................................</p>
+                    <p><strong>عدد مرات التبرز:</strong> ............</p>
+                    <p><strong>دم أو مخاط:</strong> نعم / لا</p>
+                    <p><strong>ألم أو انتفاخ:</strong> خفيف / متوسط / شديد</p>
+                    <p><strong>مستوى التوتر:</strong> منخفض / متوسط / مرتفع</p>
+                    <p><strong>ملاحظات:</strong> ........................................................</p>
+                </div>
+                <div class="diary-card">
+                    <h4>اليوم الرابع</h4>
+                    <p><strong>الوجبات:</strong> ........................................................</p>
+                    <p><strong>عدد مرات التبرز:</strong> ............</p>
+                    <p><strong>دم أو مخاط:</strong> نعم / لا</p>
+                    <p><strong>ألم أو انتفاخ:</strong> خفيف / متوسط / شديد</p>
+                    <p><strong>مستوى التوتر:</strong> منخفض / متوسط / مرتفع</p>
+                    <p><strong>ملاحظات:</strong> ........................................................</p>
+                </div>
+                <div class="diary-card">
+                    <h4>اليوم الخامس</h4>
+                    <p><strong>الوجبات:</strong> ........................................................</p>
+                    <p><strong>عدد مرات التبرز:</strong> ............</p>
+                    <p><strong>دم أو مخاط:</strong> نعم / لا</p>
+                    <p><strong>ألم أو انتفاخ:</strong> خفيف / متوسط / شديد</p>
+                    <p><strong>مستوى التوتر:</strong> منخفض / متوسط / مرتفع</p>
+                    <p><strong>ملاحظات:</strong> ........................................................</p>
+                </div>
+                <div class="diary-card">
+                    <h4>اليوم السادس</h4>
+                    <p><strong>الوجبات:</strong> ........................................................</p>
+                    <p><strong>عدد مرات التبرز:</strong> ............</p>
+                    <p><strong>دم أو مخاط:</strong> نعم / لا</p>
+                    <p><strong>ألم أو انتفاخ:</strong> خفيف / متوسط / شديد</p>
+                    <p><strong>مستوى التوتر:</strong> منخفض / متوسط / مرتفع</p>
+                    <p><strong>ملاحظات:</strong> ........................................................</p>
+                </div>
+                <div class="diary-card">
+                    <h4>اليوم السابع</h4>
+                    <p><strong>الوجبات:</strong> ........................................................</p>
+                    <p><strong>عدد مرات التبرز:</strong> ............</p>
+                    <p><strong>دم أو مخاط:</strong> نعم / لا</p>
+                    <p><strong>ألم أو انتفاخ:</strong> خفيف / متوسط / شديد</p>
+                    <p><strong>مستوى التوتر:</strong> منخفض / متوسط / مرتفع</p>
+                    <p><strong>ملاحظات:</strong> ........................................................</p>
+                </div>
+            </div>
+
+            <div class="warning-box">
+                <strong>تنبيه مهم:</strong> يوميات الطعام لا تُستخدم لتشخيص المرض أو إيقاف العلاج. إذا ظهر نزيف متكرر، حرارة، جفاف، فقدان وزن سريع، أو ألم شديد؛ يجب التواصل مع الطبيب فوراً.
+            </div>
+        </section>
+
+<!-- Section 14 -->
+        <section id="section-14">
+            <h2>14. المراجع والمصادر</h2>
+            <div class="section-summary">قائمة المراجع العلمية الداعمة للمعلومات الواردة في هذا الدليل (وفق نظام <span class="en-term">APA 7th</span>).</div>
+
+            <h3>الإرشادات التوجيهية السريرية (<span class="en-term">Guidelines and Clinical Practice Updates</span>)</h3>
+            <ul class="references-list">
+                <li><span class="ltr-text">Gordon, H., Burisch, J., Ellul, P., Karmiris, K., Katsanos, K., Allocca, M., et al. (2023). ECCO Guidelines on Extraintestinal Manifestations in Inflammatory Bowel Disease. <em>Journal of Crohn's and Colitis</em>, 18(1), 1-37. <a class="doi-link" href="https://doi.org/10.1093/ecco-jcc/jjad108" target="_blank">https://doi.org/10.1093/ecco-jcc/jjad108</a></span></li>
+                <li><span class="ltr-text">Hashash, J. G., Elkins, J., Lewis, J. D., & Binion, D. G. (2024). AGA Clinical Practice Update on Diet and Nutritional Therapies in Patients With Inflammatory Bowel Disease: Expert Review. <em>Gastroenterology</em>, 166(3), 521-532. <a class="doi-link" href="https://doi.org/10.1053/j.gastro.2023.11.303" target="_blank">https://doi.org/10.1053/j.gastro.2023.11.303</a></span></li>
+                <li><span class="ltr-text">Kreienbuehl, A., Rogler, G., Burri, E., Biedermann, L., Meier, C., Juillerat, P., et al. (2024). Bone health in patients with inflammatory bowel disease. <em>Swiss Medical Weekly</em>, 154, 3407. <a class="doi-link" href="https://doi.org/10.57187/s.3407" target="_blank">https://doi.org/10.57187/s.3407</a></span></li>
+                <li><span class="ltr-text">Raine, T., Bonovas, S., Burisch, J., Kucharzik, T., Adamina, M., Annese, V., et al. (2021). ECCO Guidelines on Therapeutics in Ulcerative Colitis: Medical Treatment. <em>Journal of Crohn's and Colitis</em>, 16(1), 2-17. <a class="doi-link" href="https://doi.org/10.1093/ecco-jcc/jjab178" target="_blank">https://doi.org/10.1093/ecco-jcc/jjab178</a></span></li>
+                <li><span class="ltr-text">Snook, J., Bhala, N., Beales, I. L. P., Cannings, D., Kightley, C., Logan, R. P. H., et al. (2021). British Society of Gastroenterology guidelines for the management of iron deficiency anaemia in adults. <em>Gut</em>, 70(11), 2030-2051. <a class="doi-link" href="https://doi.org/10.1136/gutjnl-2021-325210" target="_blank">https://doi.org/10.1136/gutjnl-2021-325210</a></span></li>
+                <li><span class="ltr-text">Turner, D., Ruemmele, F. M., Orlanski-Meyer, E., Griffiths, A. M., de Carpi, J. M., Bronsky, J., et al. (2018). Management of Paediatric Ulcerative Colitis, Part 1: Ambulatory Care—An Evidence-based Guideline From European Crohn's and Colitis Organization and European Society of Paediatric Gastroenterology, Hepatology and Nutrition. <em>Journal of Pediatric Gastroenterology and Nutrition</em>, 67(2), 257-291. <a class="doi-link" href="https://doi.org/10.1097/mpg.0000000000002035" target="_blank">https://doi.org/10.1097/mpg.0000000000002035</a></span></li>
+            </ul>
+
+            <h3>المراجعات المنهجية والتحليلات التلوية (<span class="en-term">Systematic Reviews and Meta-Analyses</span>)</h3>
+            <ul class="references-list">
+                <li><span class="ltr-text">Abbas, N., Shakil, M., Akhtar Rana, Z., Basharat Ali, S., Ayub Awan, A., & Gul, S. (2023). A Systematic Review of the Role of Diet in Ulcerative Colitis. <em>Cureus</em>, 15(5), e39350. <a class="doi-link" href="https://doi.org/10.7759/cureus.39350" target="_blank">https://doi.org/10.7759/cureus.39350</a></span></li>
+                <li><span class="ltr-text">Chu, M. K. W., Day, A. S., Broad, L., Costello, S. P., Edwards, S., & Bryant, R. V. (2025). Meta‐Analysis: Exclusive Enteral Nutrition in Adults With Ulcerative Colitis. <em>Alimentary Pharmacology & Therapeutics</em>, 61(4), 756-775. <a class="doi-link" href="https://doi.org/10.1111/apt.18495" target="_blank">https://doi.org/10.1111/apt.18495</a></span></li>
+                <li><span class="ltr-text">Herrador-López, M., Martín-Masot, R., & Navas-López, V. M. (2023). Dietary Interventions in Ulcerative Colitis: A Systematic Review of the Evidence with Meta-Analysis. <em>Nutrients</em>, 15(19), 4194. <a class="doi-link" href="https://doi.org/10.3390/nu15194194" target="_blank">https://doi.org/10.3390/nu15194194</a></span></li>
+                <li><span class="ltr-text">Marton, L. T., Goulart, R. d. A., Carvalho, A. C. A. d., & Barbalho, S. M. (2019). Omega Fatty Acids and Inflammatory Bowel Diseases: An Overview. <em>International Journal of Molecular Sciences</em>, 20(19), 4851. <a class="doi-link" href="https://doi.org/10.3390/ijms20194851" target="_blank">https://doi.org/10.3390/ijms20194851</a></span></li>
+                <li><span class="ltr-text">Nicholson, I., Dalzell, A. M., & El-Matary, W. (2012). Vitamin D as a therapy for colitis: A systematic review. <em>Journal of Crohn's and Colitis</em>, 6(4), 405-411. <a class="doi-link" href="https://doi.org/10.1016/j.crohns.2012.01.007" target="_blank">https://doi.org/10.1016/j.crohns.2012.01.007</a></span></li>
+                <li><span class="ltr-text">Peng, Z., Yi, J., & Liu, X. (2022). A Low-FODMAP Diet Provides Benefits for Functional Gastrointestinal Symptoms but Not for Improving Stool Consistency and Mucosal Inflammation in IBD: A Systematic Review and Meta-Analysis. <em>Nutrients</em>, 14(10), 2072. <a class="doi-link" href="https://doi.org/10.3390/nu14102072" target="_blank">https://doi.org/10.3390/nu14102072</a></span></li>
+            </ul>
+
+            <h3>التجارب السريرية والمقالات المرجعية (<span class="en-term">Trials and Mechanistic Papers</span>)</h3>
+            <ul class="references-list">
+                <li><span class="ltr-text">Halmos, E. P., Godny, L., Vanderstappen, J., Sarbagili-Shabat, C., & Svolos, V. (2024). Role of diet in prevention versus treatment of Crohn’s disease and ulcerative colitis. <em>Frontline Gastroenterology</em>, 15(2), 154-162. <a class="doi-link" href="https://doi.org/10.1136/flgastro-2023-102417" target="_blank">https://doi.org/10.1136/flgastro-2023-102417</a></span></li>
+                <li><span class="ltr-text">Haskey, N., Shim, R. C. K., Davidson-Hunt, A., Ye, J., Singh, S., Dieleman, L. A., et al. (2022). Dietary adherence to the Mediterranean diet pattern in a randomized clinical trial of patients with quiescent ulcerative colitis. <em>Frontiers in Nutrition</em>, 9, 1080156. <a class="doi-link" href="https://doi.org/10.3389/fnut.2022.1080156" target="_blank">https://doi.org/10.3389/fnut.2022.1080156</a></span></li>
+                <li><span class="ltr-text">Li, M., Jiang, C., Wang, B., Guan, Z., & Li, L. (2026). Anti-inflammatory dietary interventions in inflammatory bowel disease: Current insights and future perspectives. <em>Frontiers in Nutrition</em>. <a class="doi-link" href="https://doi.org/10.3389/fnut.2026.1817465" target="_blank">https://doi.org/10.3389/fnut.2026.1817465</a></span></li>
+                <li><span class="ltr-text">Mimura, T., Rizzello, F., Helwig, U., Poggioli, G., Schreiber, S., Talbot, I. C., et al. (2004). Once daily high dose probiotic therapy (VSL#3) for maintaining remission in recurrent or refractory pouchitis. <em>Gut</em>, 53(1), 108–114. <a class="doi-link" href="https://doi.org/10.1136/gut.53.1.108" target="_blank">https://doi.org/10.1136/gut.53.1.108</a></span></li>
+                <li><span class="ltr-text">Negm, M., Bahaa, A., Farrag, A., Lithy, R. M., Badary, H. A., Essam, M., et al. (2022). Effect of Ramadan intermittent fasting on inflammatory markers, disease severity, depression, and quality of life in patients with inflammatory bowel diseases: A prospective cohort study. <em>BMC Gastroenterology</em>, 22, 107. <a class="doi-link" href="https://doi.org/10.1186/s12876-022-02272-3" target="_blank">https://doi.org/10.1186/s12876-022-02272-3</a></span></li>
+                <li><span class="ltr-text">Roncoroni, L., Gori, R., Elli, L., Tontini, G. E., Doneda, L., Norsa, L., et al. (2022). Nutrition in Patients with Inflammatory Bowel Diseases: A Narrative Review. <em>Nutrients</em>, 14(4), 751. <a class="doi-link" href="https://doi.org/10.3390/nu14040751" target="_blank">https://doi.org/10.3390/nu14040751</a></span></li>
+                <li><span class="ltr-text">Sakurai, K., Furukawa, S., Katsurada, T., Otagiri, S., Yamanashi, K., Nagashima, K., et al. (2022). Effectiveness of administering zinc acetate hydrate to patients with inflammatory bowel disease and zinc deficiency: a retrospective observational two-center study. <em>Intestinal Research</em>, 20(1), 78-89. <a class="doi-link" href="https://doi.org/10.5217/ir.2020.00124" target="_blank">https://doi.org/10.5217/ir.2020.00124</a></span></li>
+                <li><span class="ltr-text">Sood, A., Midha, V., Makharia, G. K., Ahuja, V., Singal, D., Goswami, P., & Tandon, R. K. (2009). The probiotic preparation, VSL#3 induces remission in patients with mild-to-moderately active ulcerative colitis. <em>Clinical Gastroenterology and Hepatology</em>, 7(11), 1202–1209. <a class="doi-link" href="https://doi.org/10.1016/j.cgh.2009.07.016" target="_blank">https://doi.org/10.1016/j.cgh.2009.07.016</a></span></li>
+            </ul>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="closing-message">
+            <strong>رسالة ختامية</strong><br><br>
+            رحلتك مع التهاب القولون التقرحي تتطلب صبراً، ووعياً، ومثابرة. أنت لست وحدك في هذه الرحلة، ومعرفة جسمك وما يناسبه من طعام هي خطوة قوية نحو استعادة السيطرة على صحتك وجودة حياتك. تذكر دائماً أن التغذية هي صديق داعم لجسمك ولطبيبك، وليست قيداً يعزلك عن متعة الحياة أو العائلة. استمتع بطعامك بوعي ومرونة، وتخلّ عن السعي للمثالية المطلقة، وكن رفيقاً لطيفاً مع جسمك في أوقات التعافي. نتمنى لك دوام الصحة والعافية والشفاء.
+        </div>
+        
+        <div style="background: rgba(0,0,0,0.2); padding: 1rem; border-radius: 8px; font-size: 0.9rem; margin-top: 2rem;">
+            تنبيه مهم: هذا الدليل لا يحدد جرعات أدوية أو مكملات، ولا يُستخدم لتشخيص أو علاج الانتكاسات دون طبيب.
+        </div>
+        <p style="margin-top: 2rem; font-size: 0.8rem; opacity: 0.7;">تمت المراجعة الطبية والتحريرية النهائية.</p>
+    </footer>
+
+</div>
+
+</body>
+</html>

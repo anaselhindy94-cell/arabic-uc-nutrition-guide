@@ -1,0 +1,369 @@
+/* ══════════════════════════════════════════════════════════════
+   PRINT / PDF CSS — الدليل التغذوي لمرضى القولون التقرحي
+   Drop this file in the ZIP and add:
+     <link rel="stylesheet" media="print" href="print-improved.css">
+   just before </head>  — OR paste the full @media print block
+   below in index.html to replace the existing one.
+   ══════════════════════════════════════════════════════════════ */
+
+@media print {
+
+  /* ── PAGE SETUP ─────────────────────────────────────────── */
+  @page {
+    size: A4 portrait;
+    margin: 2.2cm 2.5cm 2.8cm 2.5cm;
+  }
+
+  @page :first {
+    margin-top: 1.5cm;
+  }
+
+  /* ── BASE ───────────────────────────────────────────────── */
+  *,
+  *::before,
+  *::after {
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  html, body {
+    background: #fff !important;
+    color: #111 !important;
+    font-size: 11pt !important;
+    line-height: 1.75 !important;
+    /* Preserve RTL */
+    direction: rtl;
+  }
+
+  .container {
+    width: 100% !important;
+    max-width: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* ── HIDE WEB-ONLY ELEMENTS ─────────────────────────────── */
+  .no-print,
+  nav.toc { display: none !important; }
+
+  /* ── TYPOGRAPHY ─────────────────────────────────────────── */
+  h1 { font-size: 20pt !important; color: #2F6F8F !important; }
+  h2 { font-size: 15pt !important; color: #2F6F8F !important;
+       border-bottom: 1.5pt solid #5F6F3B !important;
+       padding-bottom: 4pt !important; margin-top: 0 !important; }
+  h3 { font-size: 12.5pt !important; color: #5F6F3B !important; }
+  h4 { font-size: 11.5pt !important; }
+
+  a { color: #111 !important; text-decoration: none !important; }
+  a[href^="http"]::after { content: none !important; }
+
+  /* ── HERO ───────────────────────────────────────────────── */
+  header.hero {
+    text-align: center !important;
+    padding: 1.5cm 1cm 1cm !important;
+    border: 1.5pt solid #5F6F3B !important;
+    border-radius: 8pt !important;
+    margin-bottom: 0.8cm !important;
+    break-after: page !important;
+    page-break-after: always !important;
+  }
+
+  /* Show only ONE cover image — hide poster duplicates later */
+  header.hero img.hero-visual {
+    max-width: 10cm !important;
+    height: auto !important;
+    display: block !important;
+    margin: 1cm auto !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  header.hero svg.icon { display: none !important; }
+
+  /* ── MEDICAL DISCLAIMER ─────────────────────────────────── */
+  .medical-disclaimer {
+    background: #FFF3CD !important;
+    border-right: 5pt solid #D97706 !important;
+    border-radius: 6pt !important;
+    padding: 0.6cm 0.8cm !important;
+    margin-bottom: 0.6cm !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  .medical-disclaimer strong { color: #854F0B !important; }
+
+  /* ── SECTIONS ───────────────────────────────────────────── */
+  section {
+    background: #fff !important;
+    border: 0.5pt solid #ccc !important;
+    border-radius: 6pt !important;
+    padding: 0.7cm 0.9cm !important;
+    margin-bottom: 0.6cm !important;
+    break-inside: auto !important;
+    page-break-inside: auto !important;
+  }
+
+  /* Force page break BEFORE heavy sections */
+  section#section-3,
+  section#section-5,
+  section#section-8,
+  section#section-9,
+  section#section-13,
+  section#section-14 {
+    break-before: page !important;
+    page-break-before: always !important;
+  }
+
+  .section-summary {
+    background: #EEF4E6 !important;
+    color: #3B6D11 !important;
+    border-radius: 5pt !important;
+    padding: 0.4cm 0.6cm !important;
+    margin-bottom: 0.5cm !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    break-inside: avoid !important;
+  }
+
+  /* ── WARNING / NOTE BOXES — keep colors ─────────────────── */
+  .warning-box {
+    background: #FFF3CD !important;
+    border-right: 5pt solid #D97706 !important;
+    border-radius: 6pt !important;
+    padding: 0.5cm 0.7cm !important;
+    margin: 0.5cm 0 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  .warning-box strong { color: #854F0B !important; }
+
+  .note-box {
+    background: #EAF4F8 !important;
+    border-right: 5pt solid #2F6F8F !important;
+    border-radius: 6pt !important;
+    padding: 0.5cm 0.7cm !important;
+    margin: 0.5cm 0 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  .note-box strong { color: #185FA5 !important; }
+
+  /* ── EVIDENCE BADGES — preserve color meaning ───────────── */
+  .badge {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    font-size: 8.5pt !important;
+    border-radius: 3pt !important;
+    padding: 1pt 5pt !important;
+  }
+
+  .badge-strong {
+    background: #EEF4E6 !important;
+    color: #3B6D11 !important;
+    border: 0.5pt solid #5F6F3B !important;
+  }
+
+  .badge-mod {
+    background: #EAF4F8 !important;
+    color: #185FA5 !important;
+    border: 0.5pt solid #2F6F8F !important;
+  }
+
+  .badge-cond {
+    background: #FFF3CD !important;
+    color: #854F0B !important;
+    border: 0.5pt solid #D97706 !important;
+  }
+
+  /* ── TABLES ─────────────────────────────────────────────── */
+  .table-wrapper {
+    overflow: visible !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    margin: 0.4cm 0 !important;
+  }
+
+  table {
+    width: 100% !important;
+    table-layout: fixed !important;
+    border-collapse: collapse !important;
+    font-size: 9pt !important;
+    min-width: 0 !important; /* override min-width:600px for print */
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  th, td {
+    padding: 5pt 6pt !important;
+    border: 0.4pt solid #bbb !important;
+    word-break: break-word !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    vertical-align: top !important;
+  }
+
+  th {
+    background: #2F6F8F !important;
+    color: #fff !important;
+    font-size: 9pt !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  tr:nth-child(even) {
+    background: #f7f7f7 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Section-specific column widths */
+
+  /* Section 3: 6-col diet comparison */
+  #section-3 table th:nth-child(1),
+  #section-3 table td:nth-child(1) { width: 18% !important; }
+
+  #section-3 table th:nth-child(2),
+  #section-3 table td:nth-child(2) { width: 20% !important; }
+
+  #section-3 table th:nth-child(3),
+  #section-3 table td:nth-child(3) { width: 14% !important; }
+
+  #section-3 table th:nth-child(4),
+  #section-3 table td:nth-child(4) { width: 12% !important; }
+
+  #section-3 table th:nth-child(5),
+  #section-3 table td:nth-child(5) { width: 18% !important; }
+
+  #section-3 table th:nth-child(6),
+  #section-3 table td:nth-child(6) { width: 18% !important; }
+
+  #section-3 table { font-size: 8pt !important; }
+
+  /* Section 9: 6-col meal plan */
+  #section-9 table { font-size: 8.5pt !important; }
+  #section-9 table th,
+  #section-9 table td { padding: 4pt 5pt !important; }
+
+  /* ── IMAGES ─────────────────────────────────────────────── */
+  .poster-visual, .visual-block img {
+    max-width: 13cm !important;
+    max-height: 9cm !important;
+    height: auto !important;
+    display: block !important;
+    margin: 0.4cm auto !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  /* For a lean/faster PDF: add class="no-print-img" to poster blocks you want to skip */
+  .no-print-img { display: none !important; }
+
+  .visual-caption {
+    font-size: 9pt !important;
+    color: #555 !important;
+    text-align: center !important;
+    margin-top: 3pt !important;
+  }
+
+  /* ── TIMELINE ───────────────────────────────────────────── */
+  .timeline {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    background: #EAF4F8 !important;
+    border-radius: 6pt !important;
+    padding: 0.4cm !important;
+    gap: 6pt !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    break-inside: avoid !important;
+  }
+
+  .timeline-step {
+    flex: 1 !important;
+    min-width: 3cm !important;
+    font-size: 9.5pt !important;
+    color: #185FA5 !important;
+  }
+
+  .timeline-step:not(:last-child)::after {
+    content: '←' !important;
+    color: #5F6F3B !important;
+  }
+
+  /* ── FAQ CARDS ──────────────────────────────────────────── */
+  .faq-card {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+    border: 0.4pt solid #ccc !important;
+    border-right: 3pt solid #5F6F3B !important;
+    border-radius: 5pt !important;
+    padding: 0.4cm 0.6cm !important;
+    margin-bottom: 0.4cm !important;
+  }
+
+  .faq-card strong { font-size: 10.5pt !important; color: #2F6F8F !important; }
+
+  /* ── REFERENCES ─────────────────────────────────────────── */
+  .ltr-text, .doi-link {
+    font-size: 8.5pt !important;
+    line-height: 1.5 !important;
+    color: #111 !important;
+    direction: ltr !important;
+    text-align: left !important;
+  }
+
+  .doi-link { color: #185FA5 !important; }
+
+  .references-list li {
+    margin-bottom: 0.5cm !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  /* ── FOOTER ─────────────────────────────────────────────── */
+  footer {
+    background: #2F6F8F !important;
+    color: #fff !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    border-radius: 6pt !important;
+    padding: 0.8cm 1cm !important;
+    margin-top: 0.5cm !important;
+    break-before: page !important;
+    page-break-before: always !important;
+  }
+
+  footer .closing-message { font-size: 10.5pt !important; }
+
+  /* ── TABLE COLOR ROWS (Section 4 foods) ─────────────────── */
+  tr[style*="#fffaeb"] {
+    background-color: #fffaeb !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  tr[style*="#fce8e8"] {
+    background-color: #fce8e8 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* ── EN-TERM INLINE ─────────────────────────────────────── */
+  .en-term {
+    font-size: 8.5pt !important;
+    color: #444 !important;
+    direction: ltr !important;
+  }
+
+} /* end @media print */
