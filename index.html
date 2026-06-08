@@ -405,6 +405,140 @@
         .visual-overlay img { width: 100%; height: auto; display: block; border-radius: 16px; box-shadow: 0 8px 20px rgba(0,0,0,0.08); }
         .overlay-label { display: none; }
 
+        /* Social Cards */
+        .social-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .social-card {
+            background: #f9f7f3;
+            border: 2px solid #e0d9ce;
+            border-radius: 12px;
+            padding: 1.5rem;
+            break-inside: avoid;
+            transition: box-shadow 0.3s ease;
+        }
+        .social-card:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        .social-card h4 {
+            color: var(--primary-green);
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        .social-card ul {
+            padding-right: 1.5rem;
+            margin: 0;
+        }
+        .social-card li {
+            margin-bottom: 0.7rem;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* Label Guide */
+        .label-guide {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        .label-item {
+            display: flex;
+            gap: 1rem;
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            align-items: flex-start;
+            break-inside: avoid;
+        }
+        .label-item.red {
+            background: #fce8e8;
+            border-left: 4px solid #d63031;
+        }
+        .label-item.yellow {
+            background: #fff3cd;
+            border-left: 4px solid #d97706;
+        }
+        .label-item.green {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+        }
+        .label-dot {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        .label-dot.red {
+            background: #d63031;
+        }
+        .label-dot.yellow {
+            background: #d97706;
+        }
+        .label-dot.green {
+            background: #28a745;
+        }
+        .label-text {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        .label-text strong {
+            font-weight: 700;
+            font-size: 1rem;
+        }
+        .label-text span {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: #333;
+        }
+
+        /* Row coloring in tables */
+        .safe-row {
+            background-color: #f0f7e9 !important;
+        }
+        .caut-row {
+            background-color: #fffaeb !important;
+        }
+        .avoid-row {
+            background-color: #fce8e8 !important;
+        }
+        .safe-label,
+        .caut-label,
+        .avoid-label {
+            display: inline-block;
+            padding: 0.25rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.85em;
+            font-weight: 700;
+        }
+        .safe-label {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #155724;
+        }
+        .caut-label {
+            background: #fff3cd;
+            color: #d97706;
+            border: 1px solid #d97706;
+        }
+        .avoid-label {
+            background: #fce8e8;
+            color: #d63031;
+            border: 1px solid #d63031;
+        }
+
+        /* Badge styles */
+        .badge-expert {
+            background: #e8f5e9;
+            color: #1b5e20;
+            border: 1px solid #1b5e20;
+        }
+
         /* ===== MOBILE RESPONSIVE ===== */
         @media (max-width: 768px) {
             body {
@@ -785,9 +919,20 @@
             </li>
             <li><a href="#section-6">القسم 6: الحساسيات والتعذرات الغذائية</a></li>
             <li><a href="#section-7">القسم 7: التغذية المدعمة للميكروبيوم</a></li>
+                            <ul>
+                                <li><a href="#subsection-7-5">7.5 الأعشاب والعلاجات الشعبية</a></li>
+                            </ul>
             <li><a href="#section-8">القسم 8: العناصر الغذائية والمكملات</a></li>
+                            <ul>
+                                <li><a href="#subsection-8-7">8.7 تأثير الأدوية على الاحتياجات الغذائية</a></li>
+                            </ul>
             <li><a href="#section-9">القسم 9: خطة غذائية نموذجية أسبوعية</a></li>
             <li><a href="#section-10">القسم 10: نصائح الطهي والتحضير</a></li>
+                            <ul>
+                                <li><a href="#subsection-10-6">10.6 الأكل في المناسبات الاجتماعية والسفر</a></li>
+                                <li><a href="#subsection-10-7">10.7 تعديل الأطباق المصرية</a></li>
+                                <li><a href="#subsection-10-8">10.8 قراءة بطاقة المكونات</a></li>
+                            </ul>
             <li><a href="#section-11">القسم 11: التغذية والصحة النفسية</a></li>
             <li><a href="#section-12">القسم 12: متى تُراجع طبيبك؟</a></li>
             <li><a href="#section-13">القسم 13: الأسئلة الشائعة</a></li>
@@ -2124,6 +2269,225 @@
     </footer>
 
 </div>
+                                                                        <h3>10.6 الأكل في المناسبات الاجتماعية والسفر</h3>
+                                                                        <div class="section-summary">
+                                                                            كثير من مرضى القولون يلتزمون في البيت لكنهم يجدون صعوبة في المواقف الاجتماعية. العزومات، الأفراح، السفر، وبيئة العمل — كلها مواقف يمكن التعامل معها بذكاء دون إحراج ودون التضحية بصحتك.
+                                                                        </div>
+                                                                        <div class="social-cards">
+                                                                            <div class="social-card">
+                                                                                <h4>الأفراح والعزومات</h4>
+                                                                                <ul>
+                                                                                    <li>كُل قبل الخروج وجبة خفيفة تُقلل الجوع وتمنع الإفراط لاحقاً</li>
+                                                                                    <li>الأرز الأبيض والدجاج المشوي والخضار المطبوخة عادةً متوفرة وآمنة</li>
+                                                                                    <li>تجنّب الفتة الغنية بالدهون والكريمة ومتعدد المكونات في يوم الانتكاسة</li>
+                                                                                    <li>يمكنك قول "لا أحب هذا الطبق" ببساطة — لست ملزماً بالشرح</li>
+                                                                                    <li>اشرب ماءً كافياً بين الأطباق لتجنب الإفراط في الأكل</li>
+                                                                                </ul>
+                                                                            </div>
+                                                                            <div class="social-card ramadan">
+                                                                                <h4>رمضان والصيام</h4>
+                                                                                <ul>
+                                                                                    <li>السحور: وجبة متوازنة من البروتين والكربوهيدرات الناعمة + ماء كافٍ</li>
+                                                                                    <li>الإفطار: ابدأ بتمر وماء ثم شوربة صافية قبل الطبق الرئيسي</li>
+                                                                                    <li>تجنّب الإفراط في الحلويات السكرية والقلي في رمضان — يُهيّج الأمعاء</li>
+                                                                                    <li>تناول أدوية UC في مواعيد جديدة بعد الاستشارة مع طبيبك قبل رمضان</li>
+                                                                                    <li>إذا ظهرت انتكاسة أثناء الصيام، استشر طبيبك فالمرض قد يُبيح الإفطار</li>
+                                                                                </ul>
+                                                                            </div>
+                                                                            <div class="social-card travel">
+                                                                                <h4>السفر والتنقل</h4>
+                                                                                <ul>
+                                                                                    <li>احمل وجبات خفيفة آمنة معك: تمر، موز، بسكويت سادة، زبادي</li>
+                                                                                    <li>في السفريات الطويلة، تجنّب المطاعم السريعة — اختر فندقاً فيه إفطار</li>
+                                                                                    <li>اشرب الماء المعبأ فقط خارج المنزل — تجنّب الثلج في الدول غير المعروفة</li>
+                                                                                    <li>احمل قائمة أدويتك بالعربي والإنجليزي عند السفر للخارج</li>
+                                                                                    <li>اعرف أين أقرب مستشفى أو صيدلية في وجهتك</li>
+                                                                                </ul>
+                                                                            </div>
+                                                                            <div class="social-card work">
+                                                                                <h4>بيئة العمل والمدرسة</h4>
+                                                                                <ul>
+                                                                                    <li>حضّر وجبتك من المنزل — أسهل وأأمن من الكافيتيريا في يوم صعب</li>
+                                                                                    <li>احتفظ بوجبات خفيفة آمنة في درج مكتبك (تمر، بسكويت سادة)</li>
+                                                                                    <li>إذا كنت في انتكاسة، يحق لك طلب تقليل الاجتماعات الطويلة أو التأخير</li>
+                                                                                    <li>لست مضطراً لشرح مرضك — "أتبع نظاماً غذائياً خاصاً" كافية</li>
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <h3>10.7 تعديل الأطباق المصرية</h3>
+                                                                        <h3>10.8 كيف تقرأ بطاقة المكونات على المنتجات المعبأة</h3>
+                                                                        <div class="section-summary">
+                                                                            مهارة عملية تحميك كل يوم. المنتجات المصرية المعبأة تحتوي على إضافات قد تهيّج الأمعاء دون أن تشعر. ثلاث دقائق على الرف تُغير نتيجة اليوم.
+                                                                        </div>
+                                                                        <div class="label-guide">
+                                                                            <div class="label-item red">
+                                                                                <div class="label-dot red"></div>
+                                                                                <div class="label-text">
+                                                                                    <strong>تنبيه: المستحلبات الاصطناعية</strong>
+                                                                                    <span>ابحث عن أرقام E433, E471, E472, E476, E407 في قائمة المكونات — هذه مستحلبات تشير الأبحاث إلى أنها قد تُضعف جدار الأمعاء. كلما وجدتها، ضع المنتج جانباً.</span>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="label-item red">
+                                                                                <div class="label-dot red"></div>
+                                                                                <div class="label-text">
+                                                                                    <strong>تنبيه: المحلّيات الصناعية (سوربيتول، مانيتول، زايليتول)</strong>
+                                                                                    <span>تُسبب إسهالاً لدى كثير من الأشخاص — وتُعدّ من مواد FODMAP المؤكدة. تجدها في علكة بدون سكر، حلوى دايت، مشروبات دايت.</span>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="label-item yellow">
+                                                                                <div class="label-dot yellow"></div>
+                                                                                <div class="label-text">
+                                                                                    <strong>انتبه: الصوديوم العالي (أكثر من 1.5 جم لكل 100 جم)</strong>
+                                                                                    <span>خاصة مع الكورتيزون — الملح يُفاقم احتباس السوائل وارتفاع الضغط. الشوربات المعلبة والوجبات الجاهزة والمخللات التجارية عادةً عالية جداً في الصوديوم.</span>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="label-item yellow">
+                                                                                <div class="label-dot yellow"></div>
+                                                                                <div class="label-text">
+                                                                                    <strong>انتبه: قائمة مكونات طويلة جداً (أكثر من 10 مكونات)</strong>
+                                                                                    <span>كلما طالت القائمة، كلما كان المنتج أكثر تصنيعاً. هذا لا يعني أنه خطر دائماً، لكنه إشارة للتفحص الجيد.</span>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="label-item green">
+                                                                                <div class="label-dot green"></div>
+                                                                                <div class="label-text">
+                                                                                    <strong>مطمئن: قائمة مكونات قصيرة ومفهومة</strong>
+                                                                                    <span>زبادي مكوّن من: "حليب، بكتيريا لاكتيك" — هذا ما تريده. كلما كانت المكونات أسماء معروفة، كلما كان المنتج أقل تصنيعاً وأكثر أماناً للأمعاء الحساسة.</span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                <h3>8.7 كيف تؤثر أدويتك على احتياجاتك الغذائية</h3>
+                                                <div class="section-summary">
+                                                    أدوية UC الشائعة لها تأثيرات مباشرة على التغذية تختلف من دواء لآخر. معرفة هذه التأثيرات تساعدك على تعديل نظامك الغذائي بذكاء دون الحاجة لتوقيف أي دواء. هذا الجدول للتثقيف — لا تعدّل أدويتك بناءً عليه.
+                                                </div>
+                                                <div class="table-wrapper">
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <th>الدواء</th>
+                                                                <th>التأثير على التغذية</th>
+                                                                <th>ما يمكنك فعله غذائياً</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td><strong>الكورتيزون / بريدنيزولون</strong><br><small style="color:var(--muted);"><span class="en-term ltr-text nowrap">Prednisolone</span></small></td>
+                                                                <td>يحتجز الصوديوم (ملح)، يستنزف البوتاسيوم والكالسيوم، يرفع سكر الدم، يزيد الشهية ويُصعب السيطرة على الوزن</td>
+                                                                <td>
+                                                                    قلّل الملح المضاف للطعام<br>
+                                                                    أكثر من الموز والبطاطس المسلوقة والزبادي (بوتاسيوم)<br>
+                                                                    تابع مستوى السكر لو لديك استعداد<br>
+                                                                    كالسيوم وفيتامين د بوصفة طبيبك
+                                                                </td>
+                                                            </tr>
+                                                            <tr style="background:#faf8f4;">
+                                                                <td><strong>سولفاسالازين</strong><br><small style="color:var(--muted);"><span class="en-term ltr-text nowrap">Sulfasalazine</span></small></td>
+                                                                <td>يتعارض مع امتصاص حمض الفوليك (فولات) — قد يسبب نقصه مع الوقت</td>
+                                                                <td>
+                                                                    حمض الفوليك يومياً بوصفة طبيبك (لا تتناوله دون استشارة)<br>
+                                                                    تجنّب شرب الشاي مباشرة بعد الجرعة (ساعة فاصل)
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><strong>ميزالازين / مزالازين</strong><br><small style="color:var(--muted);"><span class="en-term ltr-text nowrap">Mesalazine / Mesalamine</span></small></td>
+                                                                <td>تأثير غذائي مباشر محدود — قد يسبب غثياناً خاصة على معدة فارغة</td>
+                                                                <td>تناوله مع وجبة أو بعدها مباشرة لتقليل الغثيان</td>
+                                                            </tr>
+                                                            <tr style="background:#faf8f4;">
+                                                                <td><strong>أزاثيوبرين / 6-MP</strong><br><small style="color:var(--muted);"><span class="en-term ltr-text nowrap">Azathioprine / 6-Mercaptopurine</span></small></td>
+                                                                <td>لا تفاعلات غذائية مباشرة معروفة — لكن يضعف المناعة</td>
+                                                                <td>تطبيق إرشادات سلامة الغذاء بشكل صارم (انظر القسم 10)</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><strong>ميثوتريكسات</strong><br><small style="color:var(--muted);"><span class="en-term ltr-text nowrap">Methotrexate</span></small></td>
+                                                                <td>يتعارض مع الفولات بشكل مباشر (آلية المفعول الدوائي ذاتها)</td>
+                                                                <td>
+                                                                    حمض الفوليك إجباري بوصفة طبيبك (لا تُهمله أبداً)<br>
+                                                                    تجنّب الكحول تماماً — خطر على الكبد
+                                                                </td>
+                                                            </tr>
+                                                            <tr style="background:#faf8f4;">
+                                                                <td><strong>العلاج البيولوجي</strong><br><small style="color:var(--muted);"><span class="en-term ltr-text nowrap">Biologics (Infliximab / Vedolizumab / إلخ)</span></small></td>
+                                                                <td>لا تأثيرات غذائية مباشرة — لكن يُضعف المناعة بشكل ملحوظ</td>
+                                                                <td>تطبيق إرشادات سلامة الغذاء بشكل مشدّد — انظر تنبيه القسم 10</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                        <h3>7.5 الأعشاب والعلاجات الشعبية: ما تقوله العلوم
+                                        <h3 id="subsection-7-5">7.5 الأعشاب والعلاجات الشعبية: ما تقوله العلوم
+                                        <h3 id="subsection-8-7">8.7 كيف تؤثر أدويتك على احتياجاتك الغذائية</h3>
+                                        <h3 id="subsection-10-6">10.6 الأكل في المناسبات الاجتماعية والسفر</h3>
+                                        <h3 id="subsection-10-7">10.7 تعديل الأطباق المصرية</h3>
+                                        <h3 id="subsection-10-8">10.8 كيف تقرأ بطاقة المكونات على المنتجات المعبأة</h3>
+                            <span class="badge badge-expert">رأي الخبراء + دليل محدود</span>
+                        </h3>
+                        <div class="section-summary">
+                            يلجأ كثير من مرضى القولون التقرحي إلى الأعشاب والعلاجات الشعبية، خاصة في البيئة المصرية حيث تنتشر توصيات من الصيدلية أو العائلة أو الإنترنت. بعض هذه العلاجات له قاعدة بحثية أولية، وبعضها قد يتعارض مع الأدوية الموصوفة أو يُفاقم الأعراض. هذا القسم يضع الصورة الصادقة أمامك.
+                        </div>
+                        <div class="warning-box">
+                            <strong>تنبيه مهم قبل القراءة:</strong> أخبر طبيبك بأي عشبة أو مكمل تستخدمه حتى لو بدا طبيعياً. بعض الأعشاب تتفاعل مع أدوية UC وبعضها يُضعف مفعولها. لا تستبدل أي دواء موصوف بعشبة بناءً على هذا الدليل.
+                        </div>
+                        <div class="table-wrapper">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>العشبة أو العلاج</th>
+                                        <th>ما تقوله الأبحاث</th>
+                                        <th>التصنيف</th>
+                                        <th>ملاحظة للمريض المصري</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="safe-row">
+                                        <td><strong>كركمين (كركم)</strong><br><small><span class="en-term ltr-text nowrap">Curcumin</span></small></td>
+                                        <td>دراسات أولية إيجابية في UC الخفيف كمضاف للعلاج الدوائي — لا يُغني عن الدواء</td>
+                                        <td><span class="badge badge-mod">دليل أولي</span></td>
+                                        <td>الكركم في الطعام آمن. مكملات الكركمين تحتاج موافقة طبيبك، خاصة مع مُخففات الدم.</td>
+                                    </tr>
+                                    <tr class="safe-row">
+                                        <td><strong>بذور الكتان</strong><br><small><span class="en-term ltr-text nowrap">Flaxseed</span></small></td>
+                                        <td>مصدر ألياف ذائبة وأوميجا 3 — دليل غير مباشر من فوائد الألياف الذائبة</td>
+                                        <td><span class="badge badge-mod">مقبول</span></td>
+                                        <td>كمية صغيرة (ملعقة صغيرة مطحونة مع الطعام) في مرحلة الهدوء — تجنّبي أثناء الانتكاسة.</td>
+                                    </tr>
+                                    <tr class="caut-row">
+                                        <td><strong>حلبة</strong><br><small><span class="en-term ltr-text nowrap">Fenugreek</span></small></td>
+                                        <td>دليل محدود جداً في IBD — قد تزيد الإسهال لدى بعض المرضى</td>
+                                        <td><span class="badge badge-mod">بحذر</span></td>
+                                        <td>شائعة جداً في مصر كمشروب أو بذور. تجنّبي أثناء الانتكاسة. اسأل طبيبك قبل الاستمرار.</td>
+                                    </tr>
+                                    <tr class="caut-row">
+                                        <td><strong>الزنجبيل</strong><br><small><span class="en-term ltr-text nowrap">Ginger</span></small></td>
+                                        <td>خصائص مضادة للالتهاب في المختبر — أدلة سريرية محدودة في UC تحديداً</td>
+                                        <td><span class="badge badge-mod">مقبول باعتدال</span></td>
+                                        <td>في الطعام آمن وقد يساعد على تهدئة الغثيان. المكملات بجرعات عالية تحتاج استشارة.</td>
+                                    </tr>
+                                    <tr class="avoid-row">
+                                        <td><strong>ألوفيرا / صبّار</strong><br><small><span class="en-term ltr-text nowrap">Aloe vera</span></small></td>
+                                        <td>دراسات مبدئية جداً — الجل له تأثير مُلين قد يُفاقم الإسهال</td>
+                                        <td><span class="badge badge-mod">يُحذر منه</span></td>
+                                        <td>لا تتناوله كمشروب أثناء الانتكاسة. مرهم خارجي للجلد غير معني بهذه التحذير.</td>
+                                    </tr>
+                                    <tr class="avoid-row">
+                                        <td><strong>عرق السوس</strong><br><small><span class="en-term ltr-text nowrap">Liquorice root</span></small></td>
+                                        <td>قد يرفع ضغط الدم ويؤثر على مستوى الكورتيزول — لا دليل سريري في UC</td>
+                                        <td><span class="badge badge-mod">غير مُنصح</span></td>
+                                        <td>خاصة مع الكورتيزون — تأثيرات هرمونية متداخلة. تجنّب تماماً حتى تستشير طبيبك.</td>
+                                    </tr>
+                                    <tr class="avoid-row">
+                                        <td><strong>زيت الحبة السوداء</strong><br><small><span class="en-term ltr-text nowrap">Black seed oil</span></small></td>
+                                        <td>دراسات مبدئية، لا توصية سريرية في IBD حتى الآن</td>
+                                        <td><span class="badge badge-mod">غير مُثبت</span></td>
+                                        <td>شائع جداً في مصر. لا ضرر واضح بكميات صغيرة في الطعام، لكن لا تعتمد عليه علاجاً.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="note-box">
+                            <strong>قاعدة عملية:</strong> إذا كنت تستخدم أي عشبة أو مكمل طبيعي، اكتبه في قائمة صغيرة وأحضرها معك لزيارتك القادمة للطبيب. التفاعلات الدوائية قد تكون غير متوقعة، وصدق الطبيب في هذا الأمر لمصلحتك.
+                        </div>
 
 </body>
 </html>
