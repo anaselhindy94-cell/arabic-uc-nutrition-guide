@@ -416,6 +416,43 @@
             transform: translateY(0);
         }
 
+        .back-to-toc {
+            position: fixed;
+            left: 18px;
+            bottom: 22px;
+            z-index: 9999;
+            background: var(--primary-blue);
+            color: #fff;
+            text-decoration: none;
+            padding: 0.65rem 0.9rem;
+            border-radius: 999px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+            transition: transform 0.2s ease, opacity 0.2s ease;
+        }
+
+        .back-to-toc:hover {
+            transform: translateY(-2px);
+            opacity: 0.95;
+        }
+
+        @media (max-width: 768px) {
+            .back-to-toc {
+                left: 12px;
+                bottom: 14px;
+                font-size: 0.78rem;
+                padding: 0.55rem 0.75rem;
+            }
+        }
+
+        @media print {
+            .back-to-toc,
+            .no-print {
+                display: none !important;
+            }
+        }
+
         /* Lists */
         ul { padding-right: 1.5rem; }
         li { margin-bottom: 0.5rem; }
@@ -968,7 +1005,7 @@
 <button class="print-btn no-print" onclick="window.print()">طباعة الدليل / حفظ PDF</button>
 
     <!-- Table of Contents -->
-    <nav class="toc">
+    <nav id="toc" class="toc">
         <h2>جدول المحتويات</h2>
         <ul class="toc-list">
             <li><a href="#executive-summary">التنويه الطبي والملخص التنفيذي</a></li>
@@ -2514,6 +2551,8 @@
         </section>
 
     </main>
+
+    <a href="#toc" class="back-to-toc no-print" aria-label="عودة للفهرس">عودة للفهرس</a>
 
     <!-- Footer -->
     <footer>
