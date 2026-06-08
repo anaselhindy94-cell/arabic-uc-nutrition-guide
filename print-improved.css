@@ -11,11 +11,11 @@
   /* ── PAGE SETUP ─────────────────────────────────────────── */
   @page {
     size: A4 portrait;
-    margin: 2.2cm 2.5cm 2.8cm 2.5cm;
+    margin: 14mm 16mm 16mm 16mm;
   }
 
   @page :first {
-    margin-top: 1.5cm;
+    margin-top: 14mm;
   }
 
   /* ── BASE ───────────────────────────────────────────────── */
@@ -65,18 +65,30 @@
     padding-bottom: 0.8cm !important;
   }
 
-  nav.toc ul {
+  nav.toc ul,
+  .toc-list {
     display: block !important;
     list-style: none !important;
     padding: 0 !important;
     margin: 0 !important;
   }
 
-  nav.toc li {
+  nav.toc li,
+  .toc-list li {
     display: block !important;
     margin-bottom: 0.6cm !important;
     break-inside: avoid !important;
     page-break-inside: avoid !important;
+  }
+
+  .toc-list {
+    gap: 0.35rem 0.5rem !important;
+  }
+
+  .toc-list a {
+    padding: 0.45rem 0.65rem !important;
+    font-size: 9.5pt !important;
+    line-height: 1.45 !important;
   }
 
   nav.toc li ul {
@@ -108,12 +120,45 @@
   /* ── HERO ───────────────────────────────────────────────── */
   header.hero {
     text-align: center !important;
-    padding: 1.5cm 1cm 1cm !important;
+    padding: 18mm 16mm !important;
     border: 1.5pt solid #5F6F3B !important;
     border-radius: 8pt !important;
     margin-bottom: 0.8cm !important;
     break-after: page !important;
     page-break-after: always !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    min-height: auto !important;
+    max-height: calc(297mm - 30mm) !important;
+    height: calc(297mm - 30mm) !important;
+    box-sizing: border-box !important;
+  }
+
+  .hero h1 {
+    font-size: 26pt !important;
+    line-height: 1.35 !important;
+    margin: 0 !important;
+  }
+
+  .hero .subtitle {
+    font-size: 16pt !important;
+    margin: 0 !important;
+  }
+
+  .hero .disclaimer-small {
+    font-size: 11pt !important;
+    margin: 0 !important;
+  }
+
+  .cover-illustration {
+    width: 170px !important;
+    max-width: 170px !important;
+    height: auto !important;
+    margin: 10mm auto !important;
+    display: block !important;
   }
 
   /* Show only ONE cover image — hide poster duplicates later */
@@ -137,6 +182,20 @@
     margin-bottom: 0.6cm !important;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  .publication-note {
+    background: #F7F2E8 !important;
+    border-right: 5pt solid #5F6F3B !important;
+    border-radius: 6pt !important;
+    color: #4F4F4F !important;
+    padding: 0.35cm 0.45cm !important;
+    margin: 0.4cm 0 !important;
+    text-align: center !important;
+    font-size: 9pt !important;
+    line-height: 1.4 !important;
     break-inside: avoid !important;
     page-break-inside: avoid !important;
   }

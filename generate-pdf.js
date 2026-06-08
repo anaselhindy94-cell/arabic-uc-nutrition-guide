@@ -32,13 +32,13 @@ const CONFIG = {
   noImages: process.argv.includes("--no-images"),
   paperFormat: "A4",
   printBackground: true,
-  margins: { top: "14mm", right: "12mm", bottom: "16mm", left: "12mm" },
+  margins: { top: "14mm", right: "16mm", bottom: "16mm", left: "16mm" },
   waitAfterLoad: 2500, // ms — lets fonts + images finish loading
 
   headerHtml: `
     <div style="
       width: 100%;
-      padding: 0 2.5cm;
+      padding: 0 14mm;
       font-size: 8.5pt;
       color: #2F6F8F;
       text-align: right;
@@ -47,6 +47,7 @@ const CONFIG = {
       border-bottom: 0.5pt solid #ccc;
       padding-bottom: 4pt;
       box-sizing: border-box;
+      white-space: nowrap;
     ">
       الدليل التغذوي لمرضى التهاب القولون التقرحي في مصر
     </div>
@@ -54,22 +55,22 @@ const CONFIG = {
 
   footerHtml: `
     <div style="
-      width: 100%;
-      padding: 0 2.5cm;
-      font-size: 8pt;
-      color: #666;
-      text-align: right;
-      direction: rtl;
-      font-family: 'Cairo', 'Tajawal', Arial, sans-serif;
-      border-top: 0.5pt solid #ddd;
-      padding-top: 6pt;
-      box-sizing: border-box;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      width:100%;
+      font-size:8px;
+      color:#666;
+      padding:0 14mm;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      direction:rtl;
+      font-family:Arial, sans-serif;
+      white-space:nowrap;
+      box-sizing:border-box;
     ">
-      <span style="text-align: right; flex: 1;">نسخة تثقيفية — لا تغني عن الاستشارة الطبية</span>
-      <span style="text-align: left; flex: 0; margin-left: 1cm;">صفحة <span class="pageNumber"></span> من <span class="totalPages"></span></span>
+      <span style="white-space:nowrap;">نسخة تثقيفية — لا تغني عن الاستشارة الطبية</span>
+      <span style="white-space:nowrap; direction:rtl;">
+        صفحة <span class="pageNumber"></span> من <span class="totalPages"></span>
+      </span>
     </div>
   `,
 };
