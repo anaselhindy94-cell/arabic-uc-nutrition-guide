@@ -304,8 +304,23 @@
             margin-bottom: 1.5rem;
             padding-bottom: 1rem;
             border-bottom: 1px dashed #CCC;
+            max-width: 100%;
+            overflow-x: hidden;
         }
         .references-list li:last-child { border-bottom: none; }
+
+        /* Reference-specific wrapping override */
+        #section-14 .references-list,
+        #section-14 .references-list li,
+        #section-14 .references-list .ltr-text,
+        #section-14 .references-list .en-term,
+        #section-14 .references-list .doi-link {
+            max-width: 100%;
+            overflow-x: hidden;
+            overflow-wrap: anywhere !important;
+            word-break: normal !important;
+            white-space: normal !important;
+        }
 
         /* Footer */
         footer {
