@@ -263,10 +263,36 @@
         }
 
         /* English Terms / LTR */
-        .en-term {
+        /* English Terms and LTR Content */
+        .en-term,
+        .ltr-text,
+        .nowrap {
             direction: ltr;
+            unicode-bidi: isolate;
+            white-space: nowrap;
+        }
+        
+        .en-term {
             display: inline-block;
             font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+            overflow-wrap: anywhere;
+            word-break: break-word;
+        }
+        
+        .ltr-text {
+            display: inline-block;
+            text-align: left;
+            width: 100%;
+            overflow-wrap: anywhere;
+            word-break: break-word;
+        }
+        
+        .doi-link {
+            direction: ltr;
+            unicode-bidi: isolate;
+            overflow-wrap: anywhere;
+            word-break: break-word;
+            display: inline-block;
         }
         
         /* References */
@@ -280,26 +306,6 @@
             border-bottom: 1px dashed #CCC;
         }
         .references-list li:last-child { border-bottom: none; }
-        .ltr-text {
-            direction: ltr;
-            unicode-bidi: isolate;
-            display: inline-block;
-            text-align: left;
-            width: 100%;
-            overflow-wrap: anywhere;
-            word-break: break-word;
-        }
-        .doi-link {
-            direction: ltr;
-            unicode-bidi: isolate;
-            overflow-wrap: anywhere;
-            word-break: break-word;
-            display: inline-block;
-        }
-        .en-term {
-            overflow-wrap: anywhere;
-            word-break: break-word;
-        }
 
         /* Footer */
         footer {
@@ -617,7 +623,8 @@
             }
 
             .nowrap,
-            .en-term {
+            .en-term,
+            .ltr-text {
                 white-space: nowrap;
                 direction: ltr;
                 unicode-bidi: isolate;
@@ -758,7 +765,7 @@
     <button class="print-btn no-print" onclick="window.print()">🖨️ طباعة الدليل / حفظ PDF</button>
 
     <!-- Table of Contents -->
-    <nav class="toc no-print">
+    <nav class="toc">
         <h2>جدول المحتويات</h2>
         <ul>
             <li><a href="#summary">الملخص التنفيذي</a></li>

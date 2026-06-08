@@ -43,8 +43,56 @@
   }
 
   /* ── HIDE WEB-ONLY ELEMENTS ─────────────────────────────── */
-  .no-print,
-  nav.toc { display: none !important; }
+  .no-print { display: none !important; }
+
+  /* ── TABLE OF CONTENTS (PRINT-FRIENDLY) ─────────────────── */
+  nav.toc {
+    break-after: page !important;
+    page-break-after: always !important;
+    background: #fff !important;
+    border: none !important;
+    padding: 1.5cm !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+  }
+
+  nav.toc h2 {
+    margin-top: 0 !important;
+    margin-bottom: 1.5cm !important;
+    text-align: center !important;
+    color: #2F6F8F !important;
+    border-bottom: 2pt solid #5F6F3B !important;
+    padding-bottom: 0.8cm !important;
+  }
+
+  nav.toc ul {
+    display: block !important;
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  nav.toc li {
+    display: block !important;
+    margin-bottom: 0.6cm !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  nav.toc li ul {
+    margin-top: 0.3cm !important;
+    margin-right: 1.5cm !important;
+  }
+
+  nav.toc li ul li {
+    margin-bottom: 0.4cm !important;
+    font-size: 9.5pt !important;
+  }
+
+  nav.toc a {
+    text-decoration: none !important;
+    color: #2F6F8F !important;
+  }
 
   /* ── TYPOGRAPHY ─────────────────────────────────────────── */
   h1 { font-size: 20pt !important; color: #2F6F8F !important; }

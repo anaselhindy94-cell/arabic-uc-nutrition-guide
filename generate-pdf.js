@@ -32,7 +32,7 @@ const CONFIG = {
   noImages: process.argv.includes("--no-images"),
   paperFormat: "A4",
   printBackground: true,
-  margins: { top: "2.2cm", bottom: "2.8cm", left: "2.5cm", right: "2.5cm" },
+  margins: { top: "14mm", right: "12mm", bottom: "16mm", left: "12mm" },
   waitAfterLoad: 2500, // ms — lets fonts + images finish loading
 
   headerHtml: `
@@ -56,18 +56,20 @@ const CONFIG = {
     <div style="
       width: 100%;
       padding: 0 2.5cm;
-      font-size: 8.5pt;
+      font-size: 8pt;
       color: #666;
-      text-align: center;
+      text-align: right;
       direction: rtl;
       font-family: 'Cairo', 'Tajawal', Arial, sans-serif;
       border-top: 0.5pt solid #ddd;
-      padding-top: 4pt;
+      padding-top: 6pt;
       box-sizing: border-box;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     ">
-      نسخة تثقيفية — لا تغني عن الاستشارة الطبية
-      &nbsp;|&nbsp;
-      صفحة <span class="pageNumber"></span> من <span class="totalPages"></span>
+      <span style="text-align: right; flex: 1;">نسخة تثقيفية — لا تغني عن الاستشارة الطبية</span>
+      <span style="text-align: left; flex: 0; margin-left: 1cm;">صفحة <span class="pageNumber"></span> من <span class="totalPages"></span></span>
     </div>
   `,
 };
@@ -82,11 +84,15 @@ const CONFIG = {
   console.log("⏳  تشغيل المتصفح...");
   const browser = await puppeteer.launch({
     headless: "new",
+    executablePath: process.env.CHROME_BIN || undefined,
     args: [
       "--no-sandbox",
       "--disable-setuid-sandbox",
-      "--disable-web-security",         // allow local file:// cross-origin assets
+      "--disable-dev-shm-usage",
+      "--disable-gpu",
+      "--disable-web-security",
       "--allow-file-access-from-files",
+      "--disable-features=IsolateOrigins,site-per-process",
     ],
   });
 
