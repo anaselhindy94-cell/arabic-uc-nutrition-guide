@@ -28,18 +28,14 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Generate full PDF
+      - name: Generate PDF with images
         run: node generate-pdf.js
-
-      - name: Generate lightweight PDF without images
-        run: node generate-pdf.js --no-images
 
       - name: List generated PDFs
         run: ls -lh *.pdf
 
-      - name: Upload PDF artifacts
+      - name: Upload PDF artifact
         uses: actions/upload-artifact@v4
         with:
-          name: uc-nutrition-guide-pdfs
-          path: |
-            *.pdf
+          name: uc-nutrition-guide-pdf
+          path: "*.pdf"

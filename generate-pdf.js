@@ -1,160 +1,120 @@
-/**
- * generate-pdf.js
- * ──────────────────────────────────────────────────────────────
- * Generates a print-ready A4 PDF from the Arabic UC guide.
- *
- * SETUP (one-time):
- *   npm install puppeteer
- *
- * USAGE:
- *   node generate-pdf.js
- *   node generate-pdf.js --no-images   ← lightweight PDF, skips all posters
- *   node generate-pdf.js --section 5   ← debug: open specific anchor
- *
- * OUTPUT: دليل_القولون_التقرحي.pdf  (same folder as this script)
- *
- * REQUIREMENTS:
- *   - Node.js 18+
- *   - puppeteer  (npm i puppeteer — downloads Chromium automatically)
- *   - index.html + assets/ folder in the same directory as this script
- * ──────────────────────────────────────────────────────────────
- */
-
-const puppeteer = require("puppeteer");
-const path = require("path");
 const fs = require("fs");
+const path = require("path");
+const puppeteer = require("puppeteer");
 
-/* ── CONFIG ─────────────────────────────────────────────────── */
-const CONFIG = {
-  htmlFile: path.resolve(__dirname, "index.html"),
-  printCssFile: path.resolve(__dirname, "print-improved.css"),
-  outputPdf: path.resolve(__dirname, "دليل_القولون_التقرحي.pdf"),
-  noImages: process.argv.includes("--no-images"),
-  paperFormat: "A4",
-  printBackground: true,
-  margins: { top: "14mm", right: "16mm", bottom: "16mm", left: "16mm" },
-  waitAfterLoad: 2500, // ms — lets fonts + images finish loading
+const OUTPUT_FILE = "uc-nutrition-guide-full.pdf";
 
-  headerHtml: `
-    <div style="
-      width: 100%;
-      padding: 0 14mm;
-      font-size: 8.5pt;
-      color: #2F6F8F;
-      text-align: right;
-      direction: rtl;
-      font-family: 'Cairo', 'Tajawal', Arial, sans-serif;
-      border-bottom: 0.5pt solid #ccc;
-      padding-bottom: 4pt;
-      box-sizing: border-box;
-      white-space: nowrap;
-    ">
-      الدليل التغذوي لمرضى التهاب القولون التقرحي في مصر
-    </div>
-  `,
+async function main() {
+  const rootDir = process.cwd();
+  const htmlPath = path.join(rootDir, "index.html");
+  const printCssPath = path.join(rootDir, "print-improved.css");
+  const outputPath = path.join(rootDir, OUTPUT_FILE);
 
-  footerHtml: `
-    <div style="
-      width:100%;
-      font-size:8px;
-      color:#666;
-      padding:0 14mm;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      direction:rtl;
-      font-family:Arial, sans-serif;
-      white-space:nowrap;
-      box-sizing:border-box;
-    ">
-      <span style="white-space:nowrap;">نسخة تثقيفية — لا تغني عن الاستشارة الطبية</span>
-      <span style="white-space:nowrap; direction:rtl;">
-        صفحة <span class="pageNumber"></span> من <span class="totalPages"></span>
-      </span>
-    </div>
-  `,
-};
-
-/* ── MAIN ───────────────────────────────────────────────────── */
-(async () => {
-  if (!fs.existsSync(CONFIG.htmlFile)) {
-    console.error(`❌  لم يُعثر على index.html في: ${CONFIG.htmlFile}`);
-    process.exit(1);
+  if (!fs.existsSync(htmlPath)) {
+    throw new Error("index.html not found");
   }
 
   console.log("⏳  تشغيل المتصفح...");
+
   const browser = await puppeteer.launch({
     headless: "new",
-    executablePath: process.env.CHROME_BIN || undefined,
+    protocolTimeout: 180000,
     args: [
       "--no-sandbox",
       "--disable-setuid-sandbox",
-      "--disable-dev-shm-usage",
-      "--disable-gpu",
-      "--disable-web-security",
-      "--allow-file-access-from-files",
-      "--disable-features=IsolateOrigins,site-per-process",
-    ],
+      "--disable-dev-shm-usage"
+    ]
   });
 
-  const page = await browser.newPage();
+  try {
+    const page = await browser.newPage();
+    page.setDefaultTimeout(120000);
+    page.setDefaultNavigationTimeout(120000);
 
-  /* Set viewport similar to A4 width at 96dpi */
-  await page.setViewport({ width: 794, height: 1123 });
+    const fileUrl = "file://" + htmlPath;
+    console.log("📄  تحميل: " + fileUrl);
 
-  /* Load local HTML */
-  const fileUrl = `file://${CONFIG.htmlFile}`;
-  console.log(`📄  تحميل: ${fileUrl}`);
-  await page.goto(fileUrl, { waitUntil: "networkidle0", timeout: 60_000 });
-
-  /* Inject improved print CSS */
-  if (fs.existsSync(CONFIG.printCssFile)) {
-    const printCss = fs.readFileSync(CONFIG.printCssFile, "utf8");
-    await page.addStyleTag({ content: printCss });
-    console.log("🎨  تم تطبيق CSS المحسّن للطباعة");
-  }
-
-  /* Optional: hide all poster images for a lightweight PDF */
-  if (CONFIG.noImages) {
-    await page.addStyleTag({
-      content: `
-        @media print {
-          .poster-visual, .visual-block img, .hero-visual { display: none !important; }
-          .visual-caption { display: none !important; }
-        }
-      `,
+    await page.goto(fileUrl, {
+      waitUntil: "networkidle0",
+      timeout: 120000
     });
-    console.log("🖼️  تم إيقاف الصور (وضع خفيف)");
+
+    await page.emulateMediaType("print");
+
+    if (fs.existsSync(printCssPath)) {
+      await page.addStyleTag({ path: printCssPath });
+      console.log("🎨  تم تطبيق CSS المحسّن للطباعة");
+    }
+
+    console.log("⏳  انتظار تحميل الخطوط والصور...");
+
+    // Wait for fonts/images, but do not block PDF generation forever.
+    await Promise.race([
+      page.evaluate(async () => {
+        if (document.fonts && document.fonts.ready) {
+          await document.fonts.ready;
+        }
+
+        const images = Array.from(document.images);
+        await Promise.all(
+          images.map((img) => {
+            if (img.complete) return Promise.resolve();
+            return new Promise((resolve) => {
+              const timer = setTimeout(resolve, 8000);
+              img.onload = () => {
+                clearTimeout(timer);
+                resolve();
+              };
+              img.onerror = () => {
+                clearTimeout(timer);
+                resolve();
+              };
+            });
+          })
+        );
+      }),
+      new Promise((resolve) => setTimeout(resolve, 15000))
+    ]);
+
+    console.log("📑  توليد PDF...");
+
+    await page.pdf({
+      path: outputPath,
+      format: "A4",
+      printBackground: true,
+      displayHeaderFooter: true,
+      margin: {
+        top: "14mm",
+        right: "16mm",
+        bottom: "16mm",
+        left: "16mm"
+      },
+      headerTemplate: `
+        <div style="width:100%;font-size:8px;color:#777;text-align:center;padding-top:4px;">
+          الدليل التغذوي لمرضى التهاب القولون التقرحي في مصر
+        </div>
+      `,
+      footerTemplate: `
+        <div style="width:100%;font-size:8px;color:#777;text-align:center;padding-bottom:4px;white-space:nowrap;">
+          صفحة <span class="pageNumber"></span> من <span class="totalPages"></span>
+        </div>
+      `
+    });
+
+    const stats = fs.statSync(outputPath);
+    const sizeKb = Math.round(stats.size / 1024);
+    const sizeMb = (stats.size / (1024 * 1024)).toFixed(2);
+
+    console.log("✅  تم إنشاء PDF بنجاح:");
+    console.log("   الملف: " + OUTPUT_FILE);
+    console.log(`   الحجم: ${sizeMb} MB (${sizeKb.toLocaleString()} KB)`);
+  } finally {
+    await browser.close();
   }
+}
 
-  /* Wait for fonts + any lazy-loaded resources */
-  await page.waitForFunction(() => document.fonts.ready);
-  await new Promise((r) => setTimeout(r, CONFIG.waitAfterLoad));
-  console.log("⏳  انتظار تحميل الخطوط والصور...");
-
-  /* Generate PDF */
-  console.log("📑  توليد PDF...");
-  await page.pdf({
-    path: CONFIG.noImages ? "uc-nutrition-guide-no-images.pdf" : "uc-nutrition-guide-full.pdf",
-    format: CONFIG.paperFormat,
-    printBackground: CONFIG.printBackground,
-    displayHeaderFooter: true,
-    headerTemplate: CONFIG.headerHtml,
-    footerTemplate: CONFIG.footerHtml,
-    margin: CONFIG.margins,
-    preferCSSPageSize: false,
-    tagged: true,          // enable tagged PDF for accessibility
-  });
-
-  await browser.close();
-
-  const sizeKb = Math.round(fs.statSync(CONFIG.outputPdf).size / 1024);
-  const sizeMb = (sizeKb / 1024).toFixed(1);
-  console.log(`\n✅  PDF جاهز: ${CONFIG.outputPdf}`);
-  console.log(`   الحجم: ${sizeMb} MB (${sizeKb.toLocaleString()} KB)`);
-  if (sizeKb > 30_000) {
-    console.warn(
-      "⚠️  الحجم كبير — جرّب: node generate-pdf.js --no-images"
-    );
-  }
-})();
+main().catch((err) => {
+  console.error("❌  فشل توليد PDF:");
+  console.error(err);
+  process.exit(1);
+});
