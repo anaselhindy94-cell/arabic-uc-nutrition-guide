@@ -135,7 +135,7 @@ const CONFIG = {
   /* Generate PDF */
   console.log("📑  توليد PDF...");
   await page.pdf({
-    path: noImages ? "uc-nutrition-guide-no-images.pdf" : "uc-nutrition-guide-full.pdf",
+    path: CONFIG.noImages ? "uc-nutrition-guide-no-images.pdf" : "uc-nutrition-guide-full.pdf",
     format: CONFIG.paperFormat,
     printBackground: CONFIG.printBackground,
     displayHeaderFooter: true,
