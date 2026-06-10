@@ -1,10 +1,16 @@
 name: Generate PDF
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
-  workflow_dispatch:
+    paths:
+      - "index.html"
+      - "print-improved.css"
+      - "generate-pdf.js"
+      - ".github/workflows/generate-pdf.yml"
+      - "assets/**"
 
 jobs:
   generate-pdf:
@@ -17,27 +23,10 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: "20"
 
       - name: Install dependencies
         run: npm install
-
-      - name: Install Chromium dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y \
-            libnss3 \
-            libatk1.0-0 \
-            libatk-bridge2.0-0 \
-            libcups2 \
-            libxcomposite1 \
-            libxdamage1 \
-            libxrandr2 \
-            libgbm1 \
-            libasound2t64 \
-            libpangocairo-1.0-0 \
-            libpango-1.0-0 \
-            libgtk-3-0
 
       - name: Generate full PDF
         run: node generate-pdf.js
@@ -45,8 +34,12 @@ jobs:
       - name: Generate lightweight PDF without images
         run: node generate-pdf.js --no-images
 
-      - name: Upload PDF artifact
+      - name: List generated PDFs
+        run: ls -lh *.pdf
+
+      - name: Upload PDF artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: arabic-uc-nutrition-guide-pdf
-          path: "*.pdf"
+          name: uc-nutrition-guide-pdfs
+          path: |
+            *.pdf
