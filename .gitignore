@@ -1,1 +1,7 @@
 .vscode/
+
+# Local generated/debug files
+*.log
+*.backup.js
+index.backup-*.html
+uc-nutrition-guide-full.pdf
