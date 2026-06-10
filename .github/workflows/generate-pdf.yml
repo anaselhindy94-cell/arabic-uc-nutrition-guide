@@ -39,8 +39,11 @@ jobs:
             libpango-1.0-0 \
             libgtk-3-0
 
-      - name: Generate PDF
+      - name: Generate full PDF
         run: node generate-pdf.js
+
+      - name: Generate lightweight PDF without images
+        run: node generate-pdf.js --no-images
 
       - name: Upload PDF artifact
         uses: actions/upload-artifact@v4
