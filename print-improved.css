@@ -563,3 +563,62 @@
   break-inside: avoid;
   page-break-inside: avoid;
 }
+
+
+/* Final reference overflow fix */
+#section-15,
+#section-15 ~ *,
+#section-15 ~ * *,
+a[href*="doi.org"],
+a[href*="http"],
+a[href*="www."] {
+  max-width: 100% !important;
+  min-width: 0 !important;
+  white-space: normal !important;
+  overflow-wrap: anywhere !important;
+  word-break: break-word !important;
+  overflow: visible !important;
+  text-overflow: clip !important;
+}
+
+#section-15 ~ ul,
+#section-15 ~ ol {
+  display: block !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  overflow: visible !important;
+  padding-inline-start: 1.2rem !important;
+  box-sizing: border-box !important;
+}
+
+#section-15 ~ ul li,
+#section-15 ~ ol li,
+#section-15 ~ p,
+#section-15 ~ div {
+  width: auto !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  white-space: normal !important;
+  overflow: visible !important;
+  overflow-wrap: anywhere !important;
+  word-break: break-word !important;
+  text-overflow: clip !important;
+  line-height: 1.85 !important;
+}
+
+#section-15 ~ ul li a,
+#section-15 ~ ol li a,
+#section-15 ~ p a,
+#section-15 ~ div a {
+  display: inline !important;
+  white-space: normal !important;
+  overflow-wrap: anywhere !important;
+  word-break: break-word !important;
+}
+
+#section-15 ~ ul li,
+#section-15 ~ ol li,
+#section-15 ~ p {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
