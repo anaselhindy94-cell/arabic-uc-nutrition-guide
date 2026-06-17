@@ -1239,6 +1239,47 @@
   }
 </style>
 
+
+<style id="reference-line-break-fix">
+  /* منع قطع المراجع والروابط الطويلة في آخر السطر */
+  #section-15,
+  #section-15 ~ p,
+  #section-15 ~ ul,
+  #section-15 ~ ol,
+  #section-15 ~ div,
+  #section-15 ~ section {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  #section-15 a,
+  #section-15 ~ a,
+  #section-15 ~ p a,
+  #section-15 ~ li a {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  @media print {
+    #section-15,
+    #section-15 ~ p,
+    #section-15 ~ ul,
+    #section-15 ~ ol,
+    #section-15 ~ div,
+    #section-15 ~ section {
+      overflow-wrap: anywhere !important;
+      word-break: break-word !important;
+      page-break-inside: auto;
+    }
+
+    #section-15 ~ li,
+    #section-15 ~ p {
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+  }
+</style>
+
 </head>
 <body>
 
