@@ -1126,91 +1126,17 @@
 </style>
 
 
-<style id="toc-anchor-fix-style">
-  .toc-anchor-fix {
-    display: block;
-    position: relative;
-    top: -90px;
-    height: 1px;
-    visibility: hidden;
-  }
-  @media print {
-    .toc-anchor-fix {
-      display: none !important;
-    }
-  }
-</style>
-
-
-<style id="hard-toc-mobile-polish">
-  html { scroll-behavior: smooth; }
-  h2[id], h3[id], h4[id], .toc-anchor-fix { scroll-margin-top: 95px; }
-  .toc-anchor-fix {
-    display: block;
-    position: relative;
-    top: -95px;
-    height: 1px;
-    visibility: hidden;
-  }
-  #toc .toc-list a { text-decoration: none; }
-  #toc .toc-list a:hover, #toc .toc-list a:focus { text-decoration: underline; }
-  img { max-width: 100%; height: auto; }
-  table { max-width: 100%; }
-  @media (max-width: 768px) {
-    body { font-size: 16px; line-height: 1.85; overflow-x: hidden; }
-    main, .container, .content, .wrapper {
-      max-width: 100% !important;
-      padding-left: 14px !important;
-      padding-right: 14px !important;
-    }
-    h1 { font-size: 1.65rem !important; line-height: 1.45 !important; }
-    h2 { font-size: 1.35rem !important; line-height: 1.5 !important; }
-    h3 { font-size: 1.15rem !important; line-height: 1.5 !important; }
-    #toc { padding: 14px !important; margin: 16px 10px !important; }
-    #toc .toc-list {
-      display: grid !important;
-      grid-template-columns: 1fr !important;
-      gap: 8px !important;
-      padding: 0 !important;
-      margin: 0 !important;
-      list-style: none !important;
-    }
-    #toc .toc-list a {
-      display: block !important;
-      padding: 11px 12px !important;
-      border-radius: 10px !important;
-      background: rgba(47,111,143,.08);
-      border: 1px solid rgba(47,111,143,.18);
-    }
-    table {
-      display: block;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
-      white-space: normal;
-    }
-    th, td { min-width: 130px; vertical-align: top; }
-    .badge, .label, .en-term, .ltr-text { overflow-wrap: anywhere; }
-    .warning-box, .note, .clinical-note {
-      padding: 14px !important;
-      margin: 14px 0 !important;
-    }
-    .back-to-toc {
-      left: 12px !important;
-      bottom: 12px !important;
-      font-size: 13px !important;
-      padding: 9px 12px !important;
-      border-radius: 999px !important;
-    }
-  }
-  @media print {
-    .back-to-toc, .toc-anchor-fix { display: none !important; }
-  }
-</style>
 
 
 
 
-<style id="static-toc-final-style">
+
+
+
+
+
+
+<style id="fixed-toc-only-style">
   html { scroll-behavior: smooth; }
   h2[id], h3[id] { scroll-margin-top: 95px; }
 
@@ -1346,6 +1272,8 @@
 
 
 
+
+
 <nav id="toc" class="toc" aria-label="جدول المحتويات">
   <h2>جدول المحتويات</h2>
   <ol class="toc-list">
@@ -1366,8 +1294,10 @@
     <li><a href="#section-14">الأسئلة الشائعة</a></li>
     <li><a href="#section-15">المراجع والمصادر</a></li>
   </ol>
-  <p class="toc-note">يعرض الفهرس الأقسام الرئيسية للدليل، وتوجد داخل كل قسم تفاصيل وعناوين فرعية إضافية.</p>
+  <p class="toc-note">يعرض الفهرس الأقسام الرئيسية للدليل، وتوجد داخل كل قسم عناوين فرعية وتفاصيل عملية إضافية.</p>
 </nav>
+
+
 
 
 
