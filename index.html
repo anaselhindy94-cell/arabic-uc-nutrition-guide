@@ -976,6 +976,171 @@
         }
     </style>
     <link rel="stylesheet" media="print" href="print-improved.css">
+
+<style id="final-mobile-and-layout-polish">
+  html {
+    scroll-behavior: smooth;
+  }
+
+  h2[id], h3[id], h4[id] {
+    scroll-margin-top: 90px;
+  }
+
+  .toc {
+    max-width: 1050px;
+    margin-inline: auto;
+  }
+
+  .toc-list {
+    list-style-position: inside;
+  }
+
+  .toc-list a {
+    text-decoration: none;
+  }
+
+  .toc-list a:hover,
+  .toc-list a:focus {
+    text-decoration: underline;
+  }
+
+  table {
+    max-width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .back-to-toc {
+    z-index: 9999;
+  }
+
+  @media (max-width: 768px) {
+    body {
+      font-size: 16px;
+      line-height: 1.85;
+      overflow-x: hidden;
+    }
+
+    main,
+    .container,
+    .content,
+    .wrapper {
+      width: 100%;
+      max-width: 100%;
+      padding-left: 14px !important;
+      padding-right: 14px !important;
+    }
+
+    h1 {
+      font-size: 1.65rem !important;
+      line-height: 1.45 !important;
+    }
+
+    h2 {
+      font-size: 1.35rem !important;
+      line-height: 1.5 !important;
+    }
+
+    h3 {
+      font-size: 1.15rem !important;
+      line-height: 1.5 !important;
+    }
+
+    .toc {
+      padding: 14px !important;
+      margin: 16px 10px !important;
+    }
+
+    .toc-list {
+      display: grid !important;
+      grid-template-columns: 1fr !important;
+      gap: 8px !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      list-style: none !important;
+    }
+
+    .toc-list li {
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    .toc-list a {
+      display: block !important;
+      padding: 11px 12px !important;
+      border-radius: 10px !important;
+      background: rgba(47, 111, 143, 0.08);
+      border: 1px solid rgba(47, 111, 143, 0.18);
+    }
+
+    table {
+      display: block;
+      width: 100%;
+      overflow-x: auto;
+      white-space: normal;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    th,
+    td {
+      min-width: 130px;
+      vertical-align: top;
+    }
+
+    .badge,
+    .label,
+    .en-term,
+    .ltr-text {
+      overflow-wrap: anywhere;
+      word-break: normal;
+    }
+
+    .warning-box,
+    .note,
+    .clinical-note {
+      padding: 14px !important;
+      margin: 14px 0 !important;
+    }
+
+    .back-to-toc {
+      left: 12px !important;
+      bottom: 12px !important;
+      font-size: 13px !important;
+      padding: 9px 12px !important;
+      border-radius: 999px !important;
+    }
+  }
+
+  @media print {
+    .back-to-toc {
+      display: none !important;
+    }
+
+    h2[id], h3[id], h4[id] {
+      scroll-margin-top: 0;
+    }
+  }
+</style>
+
+
+<style id="toc-anchor-fix-style">
+  .toc-anchor-fix {
+    display: block;
+    position: relative;
+    top: -90px;
+    height: 1px;
+    visibility: hidden;
+  }
+  @media print {
+    .toc-anchor-fix {
+      display: none !important;
+    }
+  }
+</style>
+
 </head>
 <body>
 
@@ -1005,32 +1170,34 @@
 <button class="print-btn no-print" onclick="window.print()">طباعة الدليل / حفظ PDF</button>
 
     <!-- Table of Contents -->
-    <nav id="toc" class="toc">
-        <h2>جدول المحتويات</h2>
-        <ul class="toc-list">
-            <li><a href="#executive-summary">التنويه الطبي والملخص التنفيذي</a></li>
-            <li><a href="#section-1">المقدمة: ما هو التهاب القولون التقرحي؟</a></li>
-            <li><a href="#symptoms-severity">الأعراض الشائعة وتصنيف شدة المرض</a></li>
-            <li><a href="#section-2">كيف يؤثر الغذاء على التهاب القولون؟</a></li>
-            <li><a href="#section-3">الأنظمة الغذائية المعتمدة علميًا</a></li>
-            <li><a href="#section-4">الأطعمة المصرية: المسموح والممنوع</a></li>
-            <li><a href="#section-5">التغذية أثناء الانتكاسة والترطيب</a></li>
-            <li><a href="#section-6">الحساسيات والتعذرات الغذائية</a></li>
-            <li><a href="#section-7">دعم الميكروبيوم والأعشاب الشعبية</a></li>
-            <li><a href="#section-8">العناصر الغذائية والمكملات</a></li>
-            <li><a href="#section-9">خطة غذائية نموذجية أسبوعية</a></li>
-            <li><a href="#section-10">نصائح الطهي والمناسبات وقراءة الملصقات</a></li>
-            <li><a href="#section-11">التغذية والصحة النفسية</a></li>
-            <li><a href="#section-12">متى تراجع طبيبك؟</a></li>
-            <li><a href="#section-13">الأسئلة الشائعة ويوميات الطعام</a></li>
-            <li><a href="#section-14">المراجع والمصادر</a></li>
-        </ul>
-    </nav>
+    
+<nav id="toc" class="toc" aria-label="جدول المحتويات">
+  <h2>جدول المحتويات</h2>
+  <ol class="toc-list">
+    <li><a href="#section-0">التنويه الطبي والملخص التنفيذي</a></li>
+    <li><a href="#section-1">المقدمة: ما هو التهاب القولون التقرحي؟</a></li>
+    <li><a href="#section-2">الأعراض الشائعة وتصنيف شدة المرض</a></li>
+    <li><a href="#section-3">كيف يؤثر الغذاء على التهاب القولون؟</a></li>
+    <li><a href="#section-4">الأنظمة الغذائية المعتمدة علميًا</a></li>
+    <li><a href="#section-5">الأطعمة المصرية: المسموح والممنوع</a></li>
+    <li><a href="#section-6">التغذية أثناء الانتكاسة والترطيب</a></li>
+    <li><a href="#section-7">الحساسيات والتعذرات الغذائية</a></li>
+    <li><a href="#section-8">دعم الميكروبيوم والأعشاب الشعبية</a></li>
+    <li><a href="#section-9">العناصر الغذائية والمكملات</a></li>
+    <li><a href="#section-10">خطة غذائية نموذجية أسبوعية</a></li>
+    <li><a href="#section-11">نصائح الطهي والمناسبات وقراءة الملصقات</a></li>
+    <li><a href="#section-12">التغذية والصحة النفسية</a></li>
+    <li><a href="#section-13">متى تراجع طبيبك؟</a></li>
+    <li><a href="#section-14">الأسئلة الشائعة ويوميات الطعام</a></li>
+    <li><a href="#section-15">المراجع والمصادر</a></li>
+  </ol>
+</nav>
+
 
     <main>
         <!-- Executive Summary -->
         <section id="executive-summary">
-            <h2>الملخص التنفيذي</h2>
+            <h2 id="section-0">الملخص التنفيذي</h2>
 
 <!-- REV3_CORE_SAFETY_NUTRITION_LIMIT -->
 <div class="warning-box rev3-core">
@@ -1044,7 +1211,7 @@
         </section>
 
         <!-- Section 1 -->
-        <section id="section-1">
+        <section>
             <h2 id="section-1">1. المقدمة: ما هو التهاب القولون التقرحي؟</h2>
             <div class="section-summary">ملخص القسم: التهاب القولون التقرحي هو مرض مناعي مزمن يصيب الأمعاء ويتميز بفترات من النشاط والكمون. تلعب التغذية دوراً داعماً ومحورياً في تحسين جودة الحياة وتقليل الأعراض، لكنها لا تغني أبداً عن الالتزام بالعلاج الطبي.</div>
             
@@ -1058,7 +1225,7 @@
             <p>يعد الغذاء أداة يومية داعمة ومهمة بيد المريض للمساعدة في إدارة مرضه جنباً إلى جنب مع علاجه الطبي. الأنظمة الغذائية الغربية المليئة بالأطعمة فائقة المعالجة، والدهون المشبعة، والسكريات، ترتبط بتغييرات سلبية في بيئة الأمعاء قد تساهم في تهيج الالتهابات (Herrador-López et al., 2023). وفي المقابل، قد تدعم التغذية السليمة المتوازنة جودة الغذاء وصحة الميكروبيوم وتحمل الطعام، لكنها لا تضمن استمرار الهدوء أو منع الانتكاسات وحدها.</p>
             <p><span class="badge badge-mod">توصية داعمة</span> التعديلات الغذائية تُعد تدخلاً داعماً يهدف إلى تحسين جودة الحياة وتخفيف العبء على الأمعاء، لكنها لا تعالج الالتهاب ولا تُعد بديلاً عن الأدوية والمتابعة الطبية (Hashash et al., 2024).</p>
 
-            <h3 id="symptoms-severity">1.4 الأعراض الشائعة وتصنيف شدة المرض</h3>
+            <h3 id="section-2">1.4 الأعراض الشائعة وتصنيف شدة المرض</h3>
 
 <!-- REV3_ASUC_DEFINITION -->
 <div class="warning-box rev3-core">
@@ -1166,8 +1333,8 @@
         </section>
 
         <!-- Section 2 -->
-        <section id="section-2">
-            <h2 id="section-2">2. كيف يؤثر الغذاء على التهاب القولون؟</h2>
+        <section>
+            <h2 id="section-3">2. كيف يؤثر الغذاء على التهاب القولون؟</h2>
             <div class="section-summary">ملخص القسم: يتفاعل الغذاء بشكل مباشر مع البكتيريا النافعة وجدار الأمعاء. الخيارات الغذائية الصحية قد تدعم جودة الغذاء والميكروبيوم وتحمل الطعام، في حين أن الأطعمة فائقة المعالجة قد ترتبط بانخفاض جودة الغذاء وتهيج الأعراض لدى بعض المرضى.</div>
 
             
@@ -1191,8 +1358,8 @@
         </section>
 
 <!-- Section 3 -->
-        <section id="section-3">
-            <h2>3. الأنظمة الغذائية المعتمدة علمياً</h2>
+        <section>
+            <h2 id="section-4">3. الأنظمة الغذائية المعتمدة علمياً</h2>
             <div class="section-summary">ملخص القسم: لا يوجد نظام غذائي واحد ثابت يناسب الجميع في كل المراحل. الجدول التالي يوضح الخيارات المدروسة علمياً، وكيفية توظيفها ومحاذيرها بشكل صحيح لمرضى التهاب القولون التقرحي.</div>
 
             <h3>3.1 حمية البحر الأبيض المتوسط: الأساس العملي في فترة الهدوء</h3>
@@ -1369,8 +1536,8 @@
         </section>
 
         <!-- Section 4 -->
-        <section id="section-4">
-            <h2 id="section-4">4. الأطعمة المسموح بها والتي تُستخدم بحذر والتي يُفضّل تجنبها</h2>
+        <section>
+            <h2 id="section-5">4. الأطعمة المسموح بها والتي تُستخدم بحذر والتي يُفضّل تجنبها</h2>
             <div class="section-summary">ملخص القسم: تطبيق التوصيات العلمية على الأطعمة المصرية اليومية يساعد في اتخاذ قرارات واقعية.</div>
             
             <div class="note-box">
@@ -1587,8 +1754,8 @@
         </section>
 
 <!-- Section 5 -->
-        <section id="section-5">
-            <h2 id="section-5">5. التغذية في فترة الانتكاس</h2>
+        <section>
+            <h2>5. التغذية في فترة الانتكاس</h2>
             <div class="section-summary">ملخص القسم: خلال فترة نشاط المرض، يكون القولون ملتهباً، مما يتطلب تقليل العبء الهضمي مؤقتاً بأطعمة سهلة الهضم، والسوائل للمساعدة في تعويض الجفاف، مع التدرج في إدخال الطعام عند تحسن الحالة.</div>
 
             
@@ -1598,7 +1765,7 @@
             </div>
 
 
-            <h3>5.1 ماذا يحدث للقولون أثناء الانتكاسة؟</h3>
+            <h3 id="section-6">5.1 ماذا يحدث للقولون أثناء الانتكاسة؟</h3>
 
 <!-- REV3_FLARE_HOME_CARE_LIMIT -->
 <div class="warning-box rev3-core">
@@ -1697,7 +1864,7 @@
                     <p>إذا استمرت الأعراض أكثر من يومين، أو زاد الدم، أو تكرر الإسهال، أو ظهر تعب واضح، تواصل مع طبيب الجهاز الهضمي لتقييم الحالة.</p>
                 </div>
                 <div class="severity-card danger-card">
-                    <h4>6. اذهب للطوارئ عند علامات الخطر</h4>
+                    <h4 id="section-13">6. اذهب للطوارئ عند علامات الخطر</h4>
                     <p>اذهب للطوارئ فوراً عند نزيف شديد، حرارة، قيء مستمر، ألم شديد، دوخة، إغماء، جفاف، ضعف شديد، أو انقطاع البول لأكثر من ٨ ساعات.</p>
                 </div>
             </div>
@@ -1705,8 +1872,8 @@
         </section>
 
         <!-- Section 6 -->
-        <section id="section-6">
-            <h2>6. دليل التعامل مع الحساسيات والتعذرات الغذائية</h2>
+        <section>
+            <h2 id="section-7">6. دليل التعامل مع الحساسيات والتعذرات الغذائية</h2>
             <div class="section-summary">ملخص القسم: من الضروري التفريق بين حساسية الطعام الحقيقية التي تثير المناعة، وعدم تحمل الطعام الذي يسبب غازات. يُنصح بتجنب حميات المنع القاسية العشوائية.</div>
 
             <h3>6.1 الحساسية الحقيقية مقابل عدم التحمل</h3>
@@ -1737,8 +1904,8 @@
         </section>
 
         <!-- Section 7 -->
-        <section id="section-7">
-            <h2 id="section-7">7. التغذية المدعمة للميكروبيوم</h2>
+        <section>
+            <h2>7. التغذية المدعمة للميكروبيوم</h2>
             <div class="section-summary">ملخص القسم: الأمعاء الصحية تعتمد على مجتمع بكتيري متنوع. دعم هذا التنوع بالبكتيريا النافعة (البروبيوتيك) والألياف المغذية لها (الالبريبيوتيك) قد يساعد في حماية الجدار.</div>
 
             
@@ -1777,7 +1944,7 @@
                 <strong>تنبيه مهم وقت الانتكاسات والمناعة الضعيفة:</strong>
                 لا تقم بتجربة أطعمة متخمرة جديدة أو زيادة الألياف، أو تناول البروبيوتيك من تلقاء نفسك أثناء الانتكاسة الشديدة أو إذا كنت تتناول أدوية مثبطة للمناعة دون استشارة طبية.
             </div>
-            <h3 id="subsection-7-5">7.5 الأعشاب والعلاجات الشعبية: ما تقوله العلوم</h3>
+            <h3 id="section-8">7.5 الأعشاب والعلاجات الشعبية: ما تقوله العلوم</h3>
             <div class="section-summary">
                 يلجأ كثير من مرضى القولون التقرحي إلى الأعشاب والعلاجات الشعبية، خاصة في البيئة المصرية حيث تنتشر توصيات من الصيدلية أو العائلة أو الإنترنت. بعض هذه العلاجات له قاعدة بحثية أولية، وبعضها قد يتعارض مع الأدوية الموصوفة أو يُفاقم الأعراض. هذا القسم يضع الصورة الصادقة أمامك.
             </div>
@@ -1846,8 +2013,8 @@
         </section>
 
 <!-- Section 8 -->
-        <section id="section-8">
-            <h2>8. العناصر الغذائية الحرجة والمكملات الغذائية</h2>
+        <section>
+            <h2 id="section-9">8. العناصر الغذائية الحرجة والمكملات الغذائية</h2>
             <div class="section-summary">ملخص القسم: مرضى القولون التقرحي عُرضة لنقص الفيتامينات والمعادن نتيجة النزيف المستمر وضعف الامتصاص. التعويض السليم قد يساعد في الحماية من الأنيميا وهشاشة العظام.</div>
 
             
@@ -2035,8 +2202,8 @@
         </section>
 
         <!-- Section 9 -->
-        <section id="section-9">
-            <h2>9. خطة غذائية نموذجية أسبوعية في مرحلة الكمون</h2>
+        <section>
+            <h2 id="section-10">9. خطة غذائية نموذجية أسبوعية في مرحلة الكمون</h2>
             <div class="section-summary">ملخص القسم: دليل عملي لتطبيق حمية البحر المتوسط ومبادئ النمط الغذائي الداعم للصحة ببدائل اقتصادية.</div>
             
             <div class="note-box">
@@ -2185,8 +2352,8 @@
         </section>
 
 <!-- Section 10 -->
-        <section id="section-10">
-            <h2>10. نصائح الطهي والتحضير</h2>
+        <section>
+            <h2 id="section-11">10. نصائح الطهي والتحضير</h2>
             <div class="section-summary">ملخص القسم: طريقة الطهي يمكن أن تجعل الطعام أسهل في الهضم وأكثر أماناً، خاصة مع الألياف والبقوليات.</div>
 
             <h3>10.1 أفضل طرق الطهي</h3>
@@ -2305,8 +2472,8 @@
         </section>
 
         <!-- Section 11 -->
-        <section id="section-11">
-            <h2>11. التغذية والصحة النفسية</h2>
+        <section>
+            <h2 id="section-12">11. التغذية والصحة النفسية</h2>
             <div class="section-summary">ملخص القسم: الأمعاء والدماغ يتواصلان باستمرار. تبني علاقة صحية ومرنة مع الطعام يساعد في رحلة التعافي وتخفيف التوتر.</div>
 
             
@@ -2336,7 +2503,7 @@
         </section>
 
 <!-- Section 12 -->
-        <section id="section-12">
+        <section>
             <h2>12. متى تُراجع طبيبك أو أخصائي التغذية؟</h2>
             <div class="section-summary">ملخص القسم: الغذاء العلاجي لا يحل أبداً محل العلاج الدوائي للالتهاب النشط. يجب الوعي بالعلامات التحذيرية التي تتطلب تقييماً طبياً مباشراً.</div>
 
@@ -2404,8 +2571,8 @@
         </section>
 
         <!-- Section 13 -->
-        <section id="section-13">
-            <h2>13. الأسئلة الشائعة</h2>
+        <section>
+            <h2 id="section-14">13. الأسئلة الشائعة</h2>
             <div class="section-summary">ملخص القسم: إجابات عملية ومباشرة على أكثر الأسئلة التي تشغل بال مرضى القولون التقرحي في مصر.</div>
 
             <article class="faq-card">
@@ -2639,8 +2806,8 @@
   </p>
 </section>
 
-<section id="section-14">
-            <h2>14. المراجع والمصادر</h2>
+<section>
+            <h2 id="section-15">14. المراجع والمصادر</h2>
             <div class="section-summary">قائمة المراجع العلمية الداعمة للمعلومات الواردة في هذا الدليل (وفق نظام <span class="en-term">APA 7th</span>).</div>
 
             <h3>الإرشادات التوجيهية السريرية (<span class="en-term">Guidelines and Clinical Practice Updates</span>)</h3>
@@ -2696,12 +2863,3 @@
 </div>
 </body>
 </html>
-
-<section id='references'><h2>المراجع</h2><ol>                <li><span class="ltr-text">Bischoff, S. C., et al. (2023). ESPEN guideline on Clinical Nutrition in inflammatory bowel disease. <em>Clinical Nutrition</em>.</span></li>
-                <li><span class="ltr-text">Rubin, D. T., et al. (2025). ACG Clinical Guideline Update: Ulcerative Colitis in Adults. <em>American Journal of Gastroenterology</em>.</span></li>
-                <li><span class="ltr-text">National Institute for Health and Care Excellence. (2025/2026). <em>NICE NG130: Ulcerative colitis: management</em>.</span></li>
-                <li><span class="ltr-text">European Crohn’s and Colitis Organisation. (2022). ECCO Guidelines on Therapeutics in Ulcerative Colitis.</span></li>
-                <li><span class="ltr-text">British Dietetic Association. (2023). Consensus guidelines on nutritional assessment and dietary management of inflammatory bowel disease.</span></li>
-                <li><span class="ltr-text">International Organization for the Study of Inflammatory Bowel Diseases. (2020). Dietary Guidance for Patients with Inflammatory Bowel Disease.</span></li>
-                <li><span class="ltr-text">European Crohn’s and Colitis Organisation. (2024). ECCO Guidelines on Extraintestinal Manifestations in Inflammatory Bowel Disease.</span></li>                <li><span class="ltr-text">Travis, S. P. L., et al. (1996/updated criteria). Criteria for acute severe ulcerative colitis: ≥6 bloody stools/day plus systemic toxicity markers.</span></li>
-</ol></section>
