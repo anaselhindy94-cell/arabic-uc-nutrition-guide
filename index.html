@@ -1207,6 +1207,68 @@
   }
 </style>
 
+
+<style id="auto-toc-final-style">
+  html { scroll-behavior: smooth; }
+  h2[id], h3[id] { scroll-margin-top: 95px; }
+  #toc { max-width: 1050px; margin: 24px auto; }
+  #toc .toc-list a { text-decoration: none; }
+  #toc .toc-list a:hover, #toc .toc-list a:focus { text-decoration: underline; }
+  img { max-width: 100%; height: auto; }
+  table { max-width: 100%; }
+
+  @media (max-width: 768px) {
+    body { font-size: 16px; line-height: 1.85; overflow-x: hidden; }
+    main, .container, .content, .wrapper {
+      max-width: 100% !important;
+      padding-left: 14px !important;
+      padding-right: 14px !important;
+    }
+    h1 { font-size: 1.65rem !important; line-height: 1.45 !important; }
+    h2 { font-size: 1.35rem !important; line-height: 1.5 !important; }
+    h3 { font-size: 1.15rem !important; line-height: 1.5 !important; }
+
+    #toc {
+      padding: 14px !important;
+      margin: 16px 10px !important;
+    }
+    #toc .toc-list {
+      display: grid !important;
+      grid-template-columns: 1fr !important;
+      gap: 8px !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      list-style: none !important;
+    }
+    #toc .toc-list a {
+      display: block !important;
+      padding: 11px 12px !important;
+      border-radius: 10px !important;
+      background: rgba(47,111,143,.08);
+      border: 1px solid rgba(47,111,143,.18);
+    }
+
+    table {
+      display: block;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      white-space: normal;
+    }
+    th, td { min-width: 130px; vertical-align: top; }
+    .back-to-toc {
+      left: 12px !important;
+      bottom: 12px !important;
+      font-size: 13px !important;
+      padding: 9px 12px !important;
+      border-radius: 999px !important;
+    }
+  }
+
+  @media print {
+    .back-to-toc { display: none !important; }
+  }
+</style>
+
 </head>
 <body>
 
@@ -1231,34 +1293,19 @@
         تم إعداد هذا الدليل للأغراض التثقيفية والتعليمية فقط، وهو مبني على أحدث الأدلة العلمية والمبادئ التوجيهية العالمية. التغذية السليمة هي جزء داعم ومكمل لخطة العلاج، ولكنها لا تحل أبداً محل الأدوية الموصوفة أو الاستشارة الطبية المباشرة من الطبيب المعالج. يجب استشارة طبيبك أو أخصائي التغذية العلاجية قبل إجراء أي تغييرات جذرية على نظامك الغذائي، خاصة أثناء فترات نشاط المرض.
     </div>
 
-    <div class="publication-note">الإصدار: Rev. 3 — نسخة تثقيفية محدثة وفق مراجعة علمية مبدئية ومراجع AGA, ESPEN, ECCO, ACG, NICE, BDA, IOIBD. • تاريخ النشر: 2026 • نوع الوثيقة: نسخة تثقيفية للمرضى</div>
+    <div class="publication-note">الإصدار: Rev. 3 Final — نسخة تثقيفية محدثة ومنسقة للنشر • تاريخ النشر: 2026 • نوع الوثيقة: نسخة تثقيفية للمرضى</div>
 
 <button class="print-btn no-print" onclick="window.print()">طباعة الدليل / حفظ PDF</button>
 
     <!-- Table of Contents -->
     
 
+
 <nav id="toc" class="toc" aria-label="جدول المحتويات">
   <h2>جدول المحتويات</h2>
-  <ol class="toc-list">
-    <li><a href="#section-0">الملخص التنفيذي</a></li>
-    <li><a href="#section-1">المقدمة: ما هو التهاب القولون التقرحي؟</a></li>
-    <li><a href="#section-2">الأعراض الشائعة وتصنيف شدة المرض</a></li>
-    <li><a href="#section-3">كيف يؤثر الغذاء على التهاب القولون؟</a></li>
-    <li><a href="#section-4">الأنظمة الغذائية المعتمدة علميًا</a></li>
-    <li><a href="#section-5">الأطعمة المصرية: المسموح والممنوع</a></li>
-    <li><a href="#section-6">التغذية أثناء الانتكاسة والترطيب</a></li>
-    <li><a href="#section-7">الحساسيات والتعذرات الغذائية</a></li>
-    <li><a href="#section-8">دعم الميكروبيوم والأعشاب الشعبية</a></li>
-    <li><a href="#section-9">العناصر الغذائية والمكملات</a></li>
-    <li><a href="#section-10">خطة غذائية نموذجية أسبوعية</a></li>
-    <li><a href="#section-11">نصائح الطهي والمناسبات وقراءة الملصقات</a></li>
-    <li><a href="#section-12">التغذية والصحة النفسية</a></li>
-    <li><a href="#section-13">متى تراجع طبيبك؟</a></li>
-    <li><a href="#section-14">الأسئلة الشائعة ويوميات الطعام</a></li>
-    <li><a href="#section-15">المراجع والمصادر</a></li>
-  </ol>
+  <ol id="toc-list" class="toc-list"></ol>
 </nav>
+
 
 
 
@@ -2945,6 +2992,68 @@ document.addEventListener("DOMContentLoaded", function () {
       target.scrollIntoView({ behavior: "smooth", block: "start" });
       history.replaceState(null, "", "#" + id);
     });
+  });
+});
+</script>
+
+
+<script id="auto-toc-final-script">
+document.addEventListener("DOMContentLoaded", function () {
+  const tocList = document.getElementById("toc-list");
+  if (!tocList) return;
+
+  const wanted = [
+    "الملخص التنفيذي",
+    "المقدمة: ما هو التهاب القولون التقرحي؟",
+    "الأعراض الشائعة وتصنيف شدة المرض",
+    "كيف يؤثر الغذاء على التهاب القولون؟",
+    "الأنظمة الغذائية المعتمدة علمياً",
+    "الأطعمة المسموح بها والتي تُستخدم بحذر والتي يُفضّل تجنبها",
+    "التغذية أثناء الانتكاسة والترطيب",
+    "الحساسيات والتعذرات الغذائية",
+    "دعم الميكروبيوم والأعشاب الشعبية",
+    "العناصر الغذائية والمكملات",
+    "خطة غذائية نموذجية أسبوعية",
+    "نصائح الطهي والمناسبات وقراءة الملصقات",
+    "التغذية والصحة النفسية",
+    "متى تُراجع طبيبك أو أخصائي التغذية؟",
+    "الأسئلة الشائعة",
+    "المراجع والمصادر"
+  ];
+
+  const headings = Array.from(document.querySelectorAll("h2, h3"));
+  const normalize = s => (s || "")
+    .replace(/[0-9٠-٩]+[\.\-–)]\s*/g, "")
+    .replace(/[:：؟?]/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+
+  function findHeading(label) {
+    const nLabel = normalize(label);
+    return headings.find(h => normalize(h.textContent).includes(nLabel) || nLabel.includes(normalize(h.textContent)));
+  }
+
+  tocList.innerHTML = "";
+
+  wanted.forEach((label, index) => {
+    const h = findHeading(label);
+    if (!h) return;
+
+    const id = "toc-final-" + (index + 1);
+    h.id = id;
+
+    const li = document.createElement("li");
+    const a = document.createElement("a");
+    a.href = "#" + id;
+    a.textContent = label;
+    a.addEventListener("click", function (e) {
+      e.preventDefault();
+      h.scrollIntoView({ behavior: "smooth", block: "start" });
+      history.replaceState(null, "", "#" + id);
+    });
+
+    li.appendChild(a);
+    tocList.appendChild(li);
   });
 });
 </script>
